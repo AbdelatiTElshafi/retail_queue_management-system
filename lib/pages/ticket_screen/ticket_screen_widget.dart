@@ -387,7 +387,7 @@ class _TicketScreenWidgetState extends State<TicketScreenWidget> {
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 16.0),
+                        EdgeInsetsDirectional.fromSTEB(24.0, 16.0, 24.0, 16.0),
                     child: Container(
                       child: FFButtonWidget(
                         onPressed: () async {
