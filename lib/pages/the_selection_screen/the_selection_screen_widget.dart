@@ -4,6 +4,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/instant_timer.dart';
+import '/custom_code/actions/index.dart' as actions;
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -740,6 +741,99 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                           height: 200.0,
                                           decoration: BoxDecoration(
                                             color: Colors.transparent,
+                                          ),
+                                          child: Padding(
+                                            padding: EdgeInsets.all(12.0),
+                                            child: Row(
+                                              mainAxisSize: MainAxisSize.min,
+                                              children: [
+                                                Container(
+                                                  width: 12.0,
+                                                  height: double.infinity,
+                                                  decoration: BoxDecoration(
+                                                    color: Color(0xFFF5A623),
+                                                    borderRadius:
+                                                        BorderRadius.only(
+                                                      bottomLeft:
+                                                          Radius.circular(0.0),
+                                                      bottomRight:
+                                                          Radius.circular(12.0),
+                                                      topLeft:
+                                                          Radius.circular(12.0),
+                                                      topRight:
+                                                          Radius.circular(0.0),
+                                                    ),
+                                                  ),
+                                                ),
+                                                Align(
+                                                  alignment:
+                                                      AlignmentDirectional(
+                                                          1.0, 0.0),
+                                                  child: FFButtonWidget(
+                                                    onPressed: () async {
+                                                      await actions
+                                                          .testIminPrinter();
+                                                    },
+                                                    text: 'Fish |أسماك',
+                                                    icon: Icon(
+                                                      Icons.set_meal,
+                                                      size: 60.0,
+                                                    ),
+                                                    options: FFButtonOptions(
+                                                      width: 366.7,
+                                                      height: 152.8,
+                                                      padding:
+                                                          EdgeInsetsDirectional
+                                                              .fromSTEB(
+                                                                  16.0,
+                                                                  0.0,
+                                                                  16.0,
+                                                                  0.0),
+                                                      iconAlignment:
+                                                          IconAlignment.start,
+                                                      iconPadding:
+                                                          EdgeInsets.all(6.0),
+                                                      iconColor:
+                                                          Color(0xFF3A3F47),
+                                                      color: Colors.white,
+                                                      textStyle:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .titleLarge
+                                                              .override(
+                                                                font: GoogleFonts
+                                                                    .interTight(
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .bold,
+                                                                  fontStyle: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .titleLarge
+                                                                      .fontStyle,
+                                                                ),
+                                                                color: Color(
+                                                                    0xFF3A3F47),
+                                                                fontSize: 30.0,
+                                                                letterSpacing:
+                                                                    0.0,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold,
+                                                                fontStyle: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .titleLarge
+                                                                    .fontStyle,
+                                                              ),
+                                                      elevation: 0.0,
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              8.0),
+                                                    ),
+                                                    showLoadingIndicator: false,
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
                                           ),
                                         ),
                                       ),
