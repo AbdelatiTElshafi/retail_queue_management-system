@@ -74,7 +74,7 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                     children: [
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
-                            24.0, 20.0, 24.0, 20.0),
+                            24.0, 10.0, 24.0, 10.0),
                         child: Container(
                           width: double.infinity,
                           decoration: BoxDecoration(
@@ -84,6 +84,7 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                             padding: EdgeInsets.all(16.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
                                   'Select a Department | اختر قسم',
@@ -772,7 +773,11 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                                   child: FFButtonWidget(
                                                     onPressed: () async {
                                                       await actions
-                                                          .testIminPrinter();
+                                                          .printQueueTicket(
+                                                        '6',
+                                                        6,
+                                                        '12',
+                                                      );
                                                     },
                                                     text: 'Fish |أسماك',
                                                     icon: Icon(
@@ -939,7 +944,7 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                     children: [
                                       Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
-                                            370.0, 10.0, 0.0, 0.0),
+                                            370.0, 0.0, 0.0, 0.0),
                                         child: ClipRRect(
                                           borderRadius:
                                               BorderRadius.circular(8.0),
