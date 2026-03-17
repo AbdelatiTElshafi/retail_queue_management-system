@@ -66,6 +66,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: TheSelectionScreenWidget.routeName,
           path: TheSelectionScreenWidget.routePath,
           builder: (context, params) => TheSelectionScreenWidget(),
+        ),
+        FFRoute(
+          name: TheSelectionScreenCopyWidget.routeName,
+          path: TheSelectionScreenCopyWidget.routePath,
+          builder: (context, params) => TheSelectionScreenCopyWidget(),
+        ),
+        FFRoute(
+          name: LoginWidget.routeName,
+          path: LoginWidget.routePath,
+          builder: (context, params) => LoginWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

@@ -17,6 +17,7 @@ class TakeANumberAPIGroupGroup {
   static GetDepartServingnoCall getDepartServingnoCall =
       GetDepartServingnoCall();
   static PrintNumberCall printNumberCall = PrintNumberCall();
+  static ResetDepartQueueCall resetDepartQueueCall = ResetDepartQueueCall();
 }
 
 class GetDepartServingnoCall {
@@ -87,6 +88,34 @@ class PrintNumberCall {
         response,
         r'''$.ticketNumber''',
       ));
+}
+
+class ResetDepartQueueCall {
+  Future<ApiCallResponse> call({
+    String? depart = '',
+  }) async {
+    final baseUrl = TakeANumberAPIGroupGroup.getBaseUrl();
+
+    final ffApiRequestBody = '''
+{
+  "Depart": "${escapeStringForJson(depart)}"
+}''';
+    return ApiManager.instance.makeApiCall(
+      callName: 'ResetDepartQueue',
+      apiUrl: '${baseUrl}/Reset_Departs_Queue',
+      callType: ApiCallType.POST,
+      headers: {},
+      params: {},
+      body: ffApiRequestBody,
+      bodyType: BodyType.JSON,
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+      isStreamingApi: false,
+      alwaysAllowBody: false,
+    );
+  }
 }
 
 /// End TakeANumberAPIGroup Group Code

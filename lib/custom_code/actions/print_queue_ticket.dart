@@ -35,13 +35,13 @@ Future<void> printQueueTicket(
     DepartName,
     style: IminTextStyle(
       align: IminPrintAlign.center,
-      fontSize: 40,
+      fontSize: 60,
       fontStyle: IminFontStyle.bold,
     ),
   );
 
   await printer.printText(
-    '------------------------',
+    '------------------------------------------------',
     style: IminTextStyle(
       align: IminPrintAlign.center,
       fontSize: 20,
@@ -64,7 +64,7 @@ Future<void> printQueueTicket(
     'YOUR NUMBER',
     style: IminTextStyle(
       align: IminPrintAlign.center,
-      fontSize: 28,
+      fontSize: 50,
     ),
   );
 

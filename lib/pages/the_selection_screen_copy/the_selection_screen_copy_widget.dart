@@ -8,29 +8,30 @@ import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'the_selection_screen_model.dart';
-export 'the_selection_screen_model.dart';
+import 'the_selection_screen_copy_model.dart';
+export 'the_selection_screen_copy_model.dart';
 
-class TheSelectionScreenWidget extends StatefulWidget {
-  const TheSelectionScreenWidget({super.key});
+class TheSelectionScreenCopyWidget extends StatefulWidget {
+  const TheSelectionScreenCopyWidget({super.key});
 
-  static String routeName = 'TheSelectionScreen';
-  static String routePath = '/theSelectionScreen';
+  static String routeName = 'TheSelectionScreenCopy';
+  static String routePath = '/theSelectionScreenCopy';
 
   @override
-  State<TheSelectionScreenWidget> createState() =>
-      _TheSelectionScreenWidgetState();
+  State<TheSelectionScreenCopyWidget> createState() =>
+      _TheSelectionScreenCopyWidgetState();
 }
 
-class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
-  late TheSelectionScreenModel _model;
+class _TheSelectionScreenCopyWidgetState
+    extends State<TheSelectionScreenCopyWidget> {
+  late TheSelectionScreenCopyModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => TheSelectionScreenModel());
+    _model = createModel(context, () => TheSelectionScreenCopyModel());
 
     // On page load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
@@ -87,7 +88,7 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  'Select a Department | اختر قسم',
+                                  'Reset Page ',
                                   textAlign: TextAlign.center,
                                   style: FlutterFlowTheme.of(context)
                                       .headlineMedium
@@ -174,14 +175,9 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                                         AlignmentDirectional(
                                                             1.0, 0.0),
                                                     child: FFButtonWidget(
-                                                      onPressed: () async {
-                                                        await _model
-                                                            .getDepartQueueData(
-                                                          context,
-                                                          depart: 'Meat',
-                                                          departDisplayName:
-                                                              'Meat | لحوم',
-                                                        );
+                                                      onPressed: () {
+                                                        print(
+                                                            'Button pressed ...');
                                                       },
                                                       text: 'Meat | لحوم',
                                                       icon: Icon(
@@ -296,14 +292,9 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                                         AlignmentDirectional(
                                                             1.0, 0.0),
                                                     child: FFButtonWidget(
-                                                      onPressed: () async {
-                                                        await _model
-                                                            .getDepartQueueData(
-                                                          context,
-                                                          depart: 'Cheese',
-                                                          departDisplayName:
-                                                              'Cheese |الجبن',
-                                                        );
+                                                      onPressed: () {
+                                                        print(
+                                                            'Button pressed ...');
                                                       },
                                                       text: 'Cheese |الجبن',
                                                       icon: Icon(
@@ -418,14 +409,9 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                                         AlignmentDirectional(
                                                             1.0, 0.0),
                                                     child: FFButtonWidget(
-                                                      onPressed: () async {
-                                                        await _model
-                                                            .getDepartQueueData(
-                                                          context,
-                                                          depart: 'Bakery',
-                                                          departDisplayName:
-                                                              'Bakery |مخبوزات  ',
-                                                        );
+                                                      onPressed: () {
+                                                        print(
+                                                            'Button pressed ...');
                                                       },
                                                       text: 'Bakery |مخبوزات  ',
                                                       icon: Icon(
@@ -541,15 +527,9 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                                     ),
                                                   ),
                                                   FFButtonWidget(
-                                                    onPressed: () async {
-                                                      await _model
-                                                          .getDepartQueueData(
-                                                        context,
-                                                        depart:
-                                                            'Fruits&Vegetables',
-                                                        departDisplayName:
-                                                            'Fruits & Vegetables | خضار وفاكهة',
-                                                      );
+                                                    onPressed: () {
+                                                      print(
+                                                          'Button pressed ...');
                                                     },
                                                     text:
                                                         'Fruits & Vegetables | خضار وفاكهة',
@@ -662,14 +642,9 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                                         AlignmentDirectional(
                                                             1.0, 0.0),
                                                     child: FFButtonWidget(
-                                                      onPressed: () async {
-                                                        await _model
-                                                            .getDepartQueueData(
-                                                          context,
-                                                          depart: 'Fish',
-                                                          departDisplayName:
-                                                              'Fish |أسماك',
-                                                        );
+                                                      onPressed: () {
+                                                        print(
+                                                            'Button pressed ...');
                                                       },
                                                       text: 'Fish |أسماك',
                                                       icon: Icon(
@@ -851,11 +826,12 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                         child: FFButtonWidget(
                                           onPressed: () async {
                                             context.pushNamed(
-                                                LoginWidget.routeName);
+                                                TheSelectionScreenWidget
+                                                    .routeName);
                                           },
                                           text: '',
                                           icon: Icon(
-                                            Icons.settings_rounded,
+                                            Icons.home,
                                             size: 20.0,
                                           ),
                                           options: FFButtonOptions(

@@ -1,6 +1,7 @@
 import '/backend/api_requests/api_calls.dart';
 import '/components/loading/loading_widget.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/instant_timer.dart';
 import '/index.dart';
 import 'ticket_screen_widget.dart' show TicketScreenWidget;
 import 'package:flutter/material.dart';
@@ -12,6 +13,7 @@ class TicketScreenModel extends FlutterFlowModel<TicketScreenWidget> {
 
   ///  State fields for stateful widgets in this page.
 
+  InstantTimer? instantTimer;
   // Stores action output result for [Backend Call - API (PrintNumber)] action in Button widget.
   ApiCallResponse? printNumberApiResult;
   // Model for Loading component.
@@ -24,6 +26,7 @@ class TicketScreenModel extends FlutterFlowModel<TicketScreenWidget> {
 
   @override
   void dispose() {
+    instantTimer?.cancel();
     loadingModel.dispose();
   }
 }
