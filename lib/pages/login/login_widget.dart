@@ -475,8 +475,8 @@ class _LoginWidgetState extends State<LoginWidget> {
                                               (_model.passwordTextController
                                                       .text ==
                                                   'Admin')
-                                          ? false
-                                          : true) {
+                                          ? true
+                                          : false) {
                                         context.pushNamed(
                                             TheSelectionScreenCopyWidget
                                                 .routeName);

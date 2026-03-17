@@ -64,7 +64,7 @@ Future<void> printQueueTicket(
     'YOUR NUMBER',
     style: IminTextStyle(
       align: IminPrintAlign.center,
-      fontSize: 50,
+      fontSize: 70,
     ),
   );
 
@@ -72,7 +72,7 @@ Future<void> printQueueTicket(
     ticketNumber,
     style: IminTextStyle(
       align: IminPrintAlign.center,
-      fontSize: 42,
+      fontSize: 70,
       fontStyle: IminFontStyle.bold,
     ),
   );
