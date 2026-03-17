@@ -261,7 +261,7 @@ class _TicketScreenWidgetState extends State<TicketScreenWidget> {
                                   ),
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
-                                        32.0, 28.0, 32.0, 32.0),
+                                        32.0, 28.0, 32.0, 25.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       mainAxisAlignment:
