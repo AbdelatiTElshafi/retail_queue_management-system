@@ -68,7 +68,7 @@ class _TicketScreenWidgetState extends State<TicketScreenWidget> {
                 children: [
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(24.0, 20.0, 24.0, 20.0),
+                        EdgeInsetsDirectional.fromSTEB(24.0, 10.0, 24.0, 10.0),
                     child: Container(
                       width: double.infinity,
                       decoration: BoxDecoration(
