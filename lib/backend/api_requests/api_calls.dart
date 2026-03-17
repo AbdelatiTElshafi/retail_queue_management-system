@@ -12,7 +12,7 @@ const _kPrivateApiFunctionName = 'ffPrivateApiCall';
 
 class TakeANumberAPIGroupGroup {
   static String getBaseUrl() =>
-      'https://2b25-41-235-170-1.ngrok-free.app/BackEnd_Server';
+      'https://29f2-156-204-84-232.ngrok-free.app/BackEnd_Server';
   static Map<String, String> headers = {};
   static GetDepartServingnoCall getDepartServingnoCall =
       GetDepartServingnoCall();
@@ -82,6 +82,11 @@ class PrintNumberCall {
       alwaysAllowBody: false,
     );
   }
+
+  String? ticketNumber(dynamic response) => castToType<String>(getJsonField(
+        response,
+        r'''$.ticketNumber''',
+      ));
 }
 
 /// End TakeANumberAPIGroup Group Code

@@ -13,19 +13,29 @@ import 'package:imin_printer/imin_style.dart';
 
 Future<void> printQueueTicket(
   String ticketNumber,
-  int peopleAhead,
-  String estimatedWait,
+  String peopleAhead,
+  String DepartName,
 ) async {
   final printer = IminPrinter();
 
   await printer.initPrinter();
 
+  // 🕒 Get current date & time
+  final now = DateTime.now();
+
+  final formattedDate = "${now.day.toString().padLeft(2, '0')}/"
+      "${now.month.toString().padLeft(2, '0')}/"
+      "${now.year}";
+
+  final formattedTime = "${now.hour.toString().padLeft(2, '0')}:"
+      "${now.minute.toString().padLeft(2, '0')}";
+
   // Header
   await printer.printText(
-    'QUEUE SYSTEM',
+    DepartName,
     style: IminTextStyle(
       align: IminPrintAlign.center,
-      fontSize: 28,
+      fontSize: 40,
       fontStyle: IminFontStyle.bold,
     ),
   );
@@ -38,12 +48,23 @@ Future<void> printQueueTicket(
     ),
   );
 
+  // Date & Time
+  await printer.printText(
+    "$formattedDate  $formattedTime",
+    style: IminTextStyle(
+      align: IminPrintAlign.center,
+      fontSize: 22,
+    ),
+  );
+
+  await printer.printText('', style: IminTextStyle(fontSize: 10));
+
   // Ticket Number
   await printer.printText(
     'YOUR NUMBER',
     style: IminTextStyle(
       align: IminPrintAlign.center,
-      fontSize: 22,
+      fontSize: 28,
     ),
   );
 
@@ -68,14 +89,6 @@ Future<void> printQueueTicket(
   );
 
   await printer.printText(
-    'Estimated Wait: $estimatedWait',
-    style: IminTextStyle(
-      align: IminPrintAlign.center,
-      fontSize: 22,
-    ),
-  );
-
-  await printer.printText(
     '------------------------',
     style: IminTextStyle(
       align: IminPrintAlign.center,
@@ -92,11 +105,6 @@ Future<void> printQueueTicket(
   );
 
   // Feed + Cut
-  await printer.printAndFeedPaper(80);
-
-// CUT
+  await printer.printAndFeedPaper(100);
   await printer.partialCut();
-
-  // لو لقيت method دي شغالة عندك:
-  // await printer.partialCut();
 }
