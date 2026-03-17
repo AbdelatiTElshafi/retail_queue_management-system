@@ -94,6 +94,9 @@ Future<void> printQueueTicket(
   // Feed + Cut
   await printer.printAndFeedPaper(80);
 
+// CUT
+  await printer.partialCut();
+
   // لو لقيت method دي شغالة عندك:
   // await printer.partialCut();
 }
