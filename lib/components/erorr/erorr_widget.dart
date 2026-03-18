@@ -57,7 +57,9 @@ class _ErorrWidgetState extends State<ErorrWidget> {
           Padding(
             padding: EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
             child: Text(
-              'Please alert a member of our staff, and they will be happy to help you ',
+              FFLocalizations.of(context).getText(
+                'iedjyt7s' /* Please alert a member of our s... */,
+              ),
               style: FlutterFlowTheme.of(context).headlineMedium.override(
                     font: GoogleFonts.interTight(
                       fontWeight: FontWeight.bold,

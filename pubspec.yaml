@@ -119,6 +119,28 @@ flutter:
     - assets/pdfs/
     - assets/jsons/
 
+  fonts:
+    - family: FreshMeat
+      fonts:
+        - asset: assets/fonts/Fresh_Meat.ttf
+    - family: Grocery
+      fonts:
+        - asset: assets/fonts/Grocery.ttf
+    - family: Bakery
+      fonts:
+        - asset: assets/fonts/bakery.ttf
+    - family: Spices
+      fonts:
+        - asset: assets/fonts/spices.ttf
+    - family: FrozenMeat
+      fonts:
+        - asset: assets/fonts/Frozen_Meat.ttf
+    - family: Fish
+      fonts:
+        - asset: assets/fonts/Fish.ttf
+    - family: Chicken
+      fonts:
+        - asset: assets/fonts/Chicken.ttf
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

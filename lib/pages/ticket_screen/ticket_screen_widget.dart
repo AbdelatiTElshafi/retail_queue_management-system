@@ -157,7 +157,9 @@ class _TicketScreenWidgetState extends State<TicketScreenWidget> {
                                         CrossAxisAlignment.center,
                                     children: [
                                       Text(
-                                        'Now Serving',
+                                        FFLocalizations.of(context).getText(
+                                          '2y9zj1eh' /* Now Serving */,
+                                        ),
                                         textAlign: TextAlign.center,
                                         style: FlutterFlowTheme.of(context)
                                             .titleMedium
@@ -182,7 +184,9 @@ class _TicketScreenWidgetState extends State<TicketScreenWidget> {
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 4.0, 0.0, 0.0),
                                         child: Text(
-                                          'يخدم الآن',
+                                          FFLocalizations.of(context).getText(
+                                            'c1lo91gu' /* يخدم الآن */,
+                                          ),
                                           textAlign: TextAlign.center,
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
@@ -274,7 +278,9 @@ class _TicketScreenWidgetState extends State<TicketScreenWidget> {
                                         CrossAxisAlignment.center,
                                     children: [
                                       Text(
-                                        'People Ahead',
+                                        FFLocalizations.of(context).getText(
+                                          'ed7deqlu' /* People Ahead */,
+                                        ),
                                         textAlign: TextAlign.center,
                                         style: FlutterFlowTheme.of(context)
                                             .titleMedium
@@ -299,7 +305,9 @@ class _TicketScreenWidgetState extends State<TicketScreenWidget> {
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 4.0, 0.0, 0.0),
                                         child: Text(
-                                          'العدد امامك',
+                                          FFLocalizations.of(context).getText(
+                                            '3gdk4osi' /* العدد امامك */,
+                                          ),
                                           textAlign: TextAlign.center,
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
@@ -419,7 +427,9 @@ class _TicketScreenWidgetState extends State<TicketScreenWidget> {
 
                           safeSetState(() {});
                         },
-                        text: 'Print Number | طباعة رقم',
+                        text: FFLocalizations.of(context).getText(
+                          '78h3g5dz' /* Print Number | طباعة رقم */,
+                        ),
                         icon: Icon(
                           Icons.print_rounded,
                           size: 24.0,
@@ -468,7 +478,9 @@ class _TicketScreenWidgetState extends State<TicketScreenWidget> {
                             context
                                 .pushNamed(TheSelectionScreenWidget.routeName);
                           },
-                          text: 'Back',
+                          text: FFLocalizations.of(context).getText(
+                            '037xemsv' /* Back */,
+                          ),
                           icon: Icon(
                             Icons.arrow_back_rounded,
                             size: 18.0,

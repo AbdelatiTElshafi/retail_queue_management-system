@@ -163,7 +163,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 10.0, 0.0, 0.0),
                                         child: Text(
-                                          '|',
+                                          FFLocalizations.of(context).getText(
+                                            'xc0gizz0' /* | */,
+                                          ),
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
@@ -194,7 +196,11 @@ class _LoginWidgetState extends State<LoginWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 40.0, 0.0, 0.0),
                                           child: Text(
-                                            'Retail Tec \nQueue Management System',
+                                            FFLocalizations.of(context).getText(
+                                              '71iosem1' /* Retail Tec 
+Queue Management S... */
+                                              ,
+                                            ),
                                             textAlign: TextAlign.start,
                                             style: FlutterFlowTheme.of(context)
                                                 .displayMedium
@@ -237,7 +243,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  'Admin Login ',
+                                  FFLocalizations.of(context).getText(
+                                    'ds7tymza' /* Admin Login  */,
+                                  ),
                                   style: FlutterFlowTheme.of(context)
                                       .displayMedium
                                       .override(
@@ -275,7 +283,10 @@ class _LoginWidgetState extends State<LoginWidget> {
                                       autofillHints: [AutofillHints.email],
                                       obscureText: false,
                                       decoration: InputDecoration(
-                                        labelText: 'User Name',
+                                        labelText:
+                                            FFLocalizations.of(context).getText(
+                                          '48psayxp' /* User Name */,
+                                        ),
                                         labelStyle: FlutterFlowTheme.of(context)
                                             .labelMedium
                                             .override(
@@ -368,7 +379,10 @@ class _LoginWidgetState extends State<LoginWidget> {
                                       autofillHints: [AutofillHints.password],
                                       obscureText: !_model.passwordVisibility,
                                       decoration: InputDecoration(
-                                        labelText: 'Password',
+                                        labelText:
+                                            FFLocalizations.of(context).getText(
+                                          'lqm785uj' /* Password */,
+                                        ),
                                         labelStyle: FlutterFlowTheme.of(context)
                                             .labelMedium
                                             .override(
@@ -512,7 +526,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                 false;
                                       }
                                     },
-                                    text: 'LOGIN',
+                                    text: FFLocalizations.of(context).getText(
+                                      'uvmx5hqi' /* LOGIN */,
+                                    ),
                                     options: FFButtonOptions(
                                       width: 370.0,
                                       height: 44.0,

@@ -88,7 +88,9 @@ class _TheSelectionScreenCopyWidgetState
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  'Reset Page ',
+                                  FFLocalizations.of(context).getText(
+                                    'veiyz4p0' /* Reset Page  */,
+                                  ),
                                   textAlign: TextAlign.center,
                                   style: FlutterFlowTheme.of(context)
                                       .headlineMedium
@@ -179,7 +181,11 @@ class _TheSelectionScreenCopyWidgetState
                                                         print(
                                                             'Button pressed ...');
                                                       },
-                                                      text: 'Meat | لحوم',
+                                                      text: FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        'wk8r3npa' /* Meat | لحوم */,
+                                                      ),
                                                       icon: Icon(
                                                         Icons.lunch_dining,
                                                         size: 60.0,
@@ -296,7 +302,11 @@ class _TheSelectionScreenCopyWidgetState
                                                         print(
                                                             'Button pressed ...');
                                                       },
-                                                      text: 'Cheese |الجبن',
+                                                      text: FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        '9xbxlkv0' /* Cheese |الجبن */,
+                                                      ),
                                                       icon: Icon(
                                                         Icons.breakfast_dining,
                                                         size: 60.0,
@@ -413,7 +423,11 @@ class _TheSelectionScreenCopyWidgetState
                                                         print(
                                                             'Button pressed ...');
                                                       },
-                                                      text: 'Bakery |مخبوزات  ',
+                                                      text: FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        'ucv5vyk2' /* Bakery |مخبوزات   */,
+                                                      ),
                                                       icon: Icon(
                                                         Icons.bakery_dining,
                                                         size: 60.0,
@@ -531,8 +545,11 @@ class _TheSelectionScreenCopyWidgetState
                                                       print(
                                                           'Button pressed ...');
                                                     },
-                                                    text:
-                                                        'Fruits & Vegetables | خضار وفاكهة',
+                                                    text: FFLocalizations.of(
+                                                            context)
+                                                        .getText(
+                                                      'lqt13w4g' /* Fruits & Vegetables | خضار وفا... */,
+                                                    ),
                                                     icon: Icon(
                                                       Icons.eco,
                                                       size: 60.0,
@@ -646,7 +663,11 @@ class _TheSelectionScreenCopyWidgetState
                                                         print(
                                                             'Button pressed ...');
                                                       },
-                                                      text: 'Fish |أسماك',
+                                                      text: FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        'kvkpipsp' /* Fish |أسماك */,
+                                                      ),
                                                       icon: Icon(
                                                         Icons.set_meal,
                                                         size: 60.0,
@@ -744,7 +765,11 @@ class _TheSelectionScreenCopyWidgetState
                                   children: [
                                     Text(
                                       dateTimeFormat(
-                                          "EEEE", getCurrentTimestamp),
+                                        "EEEE",
+                                        getCurrentTimestamp,
+                                        locale: FFLocalizations.of(context)
+                                            .languageCode,
+                                      ),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
@@ -767,7 +792,11 @@ class _TheSelectionScreenCopyWidgetState
                                     ),
                                     Text(
                                       dateTimeFormat(
-                                          "d/M/y", getCurrentTimestamp),
+                                        "d/M/y",
+                                        getCurrentTimestamp,
+                                        locale: FFLocalizations.of(context)
+                                            .languageCode,
+                                      ),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
@@ -790,7 +819,11 @@ class _TheSelectionScreenCopyWidgetState
                                     ),
                                     Text(
                                       dateTimeFormat(
-                                          "jms", getCurrentTimestamp),
+                                        "jms",
+                                        getCurrentTimestamp,
+                                        locale: FFLocalizations.of(context)
+                                            .languageCode,
+                                      ),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
@@ -888,7 +921,9 @@ class _TheSelectionScreenCopyWidgetState
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 10.0, 0.0, 0.0),
                                         child: Text(
-                                          '|',
+                                          FFLocalizations.of(context).getText(
+                                            'gktqnzsz' /* | */,
+                                          ),
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
@@ -919,7 +954,11 @@ class _TheSelectionScreenCopyWidgetState
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 10.0, 0.0, 0.0),
                                           child: Text(
-                                            'Retail Tec \nQueue Management System',
+                                            FFLocalizations.of(context).getText(
+                                              '0u9uqu2m' /* Retail Tec 
+Queue Management S... */
+                                              ,
+                                            ),
                                             textAlign: TextAlign.start,
                                             style: FlutterFlowTheme.of(context)
                                                 .displayMedium
