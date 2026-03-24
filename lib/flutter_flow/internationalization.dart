@@ -233,14 +233,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'بقالة',
       'ar': '',
     },
-    'mkxglwfa': {
-      'en': '|',
-      'ar': '|',
-    },
-    'wjvufijh': {
-      'en': 'Retail Tec \nQueue Management System',
-      'ar': 'تكنولوجيا البيع بالتجزئة\nنظام إدارة الطوابير',
-    },
     'a4tmznao': {
       'en': 'Home',
       'ar': 'بيت',

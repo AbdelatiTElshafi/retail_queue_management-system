@@ -1239,85 +1239,20 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                             children: [
                               Row(
                                 mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        270.0, 0.0, 0.0, 0.0),
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.only(
-                                        bottomLeft: Radius.circular(0.0),
-                                        bottomRight: Radius.circular(0.0),
-                                        topLeft: Radius.circular(0.0),
-                                        topRight: Radius.circular(0.0),
-                                      ),
-                                      child: Image.network(
-                                        'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/retail-queue-management-system-h9s0zi/assets/xofpht0hlvl8/output-onlinepngtools_1_200x200.png',
-                                        width: 230.8,
-                                        height: 94.99,
-                                        fit: BoxFit.cover,
-                                      ),
+                                  ClipRRect(
+                                    borderRadius: BorderRadius.only(
+                                      bottomLeft: Radius.circular(0.0),
+                                      bottomRight: Radius.circular(0.0),
+                                      topLeft: Radius.circular(0.0),
+                                      topRight: Radius.circular(0.0),
                                     ),
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 10.0, 0.0, 0.0),
-                                    child: Text(
-                                      FFLocalizations.of(context).getText(
-                                        'mkxglwfa' /* | */,
-                                      ),
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .override(
-                                            font: GoogleFonts.inter(
-                                              fontWeight: FontWeight.normal,
-                                              fontStyle:
-                                                  FlutterFlowTheme.of(context)
-                                                      .bodyMedium
-                                                      .fontStyle,
-                                            ),
-                                            color: Color(0xFF3A3F47),
-                                            fontSize: 40.0,
-                                            letterSpacing: 0.0,
-                                            fontWeight: FontWeight.normal,
-                                            fontStyle:
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyMedium
-                                                    .fontStyle,
-                                          ),
-                                    ),
-                                  ),
-                                  Align(
-                                    alignment: AlignmentDirectional(0.0, -1.0),
-                                    child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          0.0, 10.0, 0.0, 0.0),
-                                      child: Text(
-                                        FFLocalizations.of(context).getText(
-                                          'wjvufijh' /* Retail Tec 
-Queue Management S... */
-                                          ,
-                                        ),
-                                        textAlign: TextAlign.start,
-                                        style: FlutterFlowTheme.of(context)
-                                            .displayMedium
-                                            .override(
-                                              font: GoogleFonts.interTight(
-                                                fontWeight: FontWeight.w800,
-                                                fontStyle:
-                                                    FlutterFlowTheme.of(context)
-                                                        .displayMedium
-                                                        .fontStyle,
-                                              ),
-                                              color: Color(0xFF3A3F47),
-                                              fontSize: 19.0,
-                                              letterSpacing: 0.0,
-                                              fontWeight: FontWeight.w800,
-                                              fontStyle:
-                                                  FlutterFlowTheme.of(context)
-                                                      .displayMedium
-                                                      .fontStyle,
-                                            ),
-                                      ),
+                                    child: Image.asset(
+                                      'assets/images/Gemini_Generated_Image_k80ie9k80ie9k80i.png',
+                                      width: 230.8,
+                                      height: 94.99,
+                                      fit: BoxFit.cover,
                                     ),
                                   ),
                                 ],
