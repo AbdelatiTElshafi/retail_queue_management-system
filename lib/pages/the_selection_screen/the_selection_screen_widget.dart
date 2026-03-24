@@ -113,7 +113,7 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                           crossAxisCount: 4,
                           crossAxisSpacing: 10.0,
                           mainAxisSpacing: 10.0,
-                          childAspectRatio: 1.3,
+                          childAspectRatio: 1.5,
                         ),
                         scrollDirection: Axis.vertical,
                         children: [
