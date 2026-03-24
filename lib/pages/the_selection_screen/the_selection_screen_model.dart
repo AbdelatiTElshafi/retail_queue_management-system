@@ -15,6 +15,10 @@ class TheSelectionScreenModel
 
   bool error = false;
 
+  bool visable = true;
+
+  bool nonVisable = false;
+
   ///  State fields for stateful widgets in this page.
 
   InstantTimer? instantTimer;
