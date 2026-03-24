@@ -15,6 +15,7 @@ Future<void> printQueueTicket(
   String ticketNumber,
   String peopleAhead,
   String DepartName,
+  String DepartChar,
 ) async {
   final printer = IminPrinter();
 
@@ -29,6 +30,26 @@ Future<void> printQueueTicket(
 
   final formattedTime = "${now.hour.toString().padLeft(2, '0')}:"
       "${now.minute.toString().padLeft(2, '0')}";
+
+  await printer.printText('', style: IminTextStyle(fontSize: 10));
+  // Ticket Number
+  await printer.printText(
+    'أسواق فتح الله',
+    style: IminTextStyle(
+      align: IminPrintAlign.center,
+      fontSize: 50,
+    ),
+  );
+
+  await printer.printText('', style: IminTextStyle(fontSize: 10));
+  // Ticket Number
+  await printer.printText(
+    'مدينه الرحاب',
+    style: IminTextStyle(
+      align: IminPrintAlign.center,
+      fontSize: 20,
+    ),
+  );
 
   // Header
   await printer.printText(
@@ -54,17 +75,6 @@ Future<void> printQueueTicket(
     style: IminTextStyle(
       align: IminPrintAlign.center,
       fontSize: 22,
-    ),
-  );
-
-  await printer.printText('', style: IminTextStyle(fontSize: 10));
-
-  // Ticket Number
-  await printer.printText(
-    'YOUR NUMBER',
-    style: IminTextStyle(
-      align: IminPrintAlign.center,
-      fontSize: 70,
     ),
   );
 

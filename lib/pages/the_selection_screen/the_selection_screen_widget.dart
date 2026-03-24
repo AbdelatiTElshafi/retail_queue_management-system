@@ -128,6 +128,7 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                 depart: 'Fresh Meat',
                                 departDisplayName:
                                     'Fresh Meat | اللحوم الطازجه',
+                                departchar: 'FM',
                               );
                             },
                             child: Material(
@@ -277,6 +278,7 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                 context,
                                 depart: 'Poultry',
                                 departDisplayName: 'Poultry | الطيور',
+                                departchar: 'P',
                               );
                             },
                             child: Material(
@@ -420,6 +422,7 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                 context,
                                 depart: 'Fish',
                                 departDisplayName: 'Fish | الاسماك',
+                                departchar: 'F',
                               );
                             },
                             child: Material(
@@ -564,6 +567,7 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                 context,
                                 depart: 'Spices',
                                 departDisplayName: 'Spices| العطاره',
+                                departchar: 'S',
                               );
                             },
                             child: Material(
@@ -711,6 +715,7 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                 depart: 'Frozen Meat',
                                 departDisplayName:
                                     'Frozen Meat | اللحوم المجمدة',
+                                departchar: 'FM',
                               );
                             },
                             child: Material(
@@ -854,6 +859,7 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                 context,
                                 depart: 'Bakery',
                                 departDisplayName: 'Bakery | المخبوزات',
+                                departchar: 'B',
                               );
                             },
                             child: Material(
@@ -1003,6 +1009,7 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                 context,
                                 depart: 'Grocery',
                                 departDisplayName: 'Grocery | البقالة',
+                                departchar: 'G',
                               );
                             },
                             child: Material(

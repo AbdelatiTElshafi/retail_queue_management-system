@@ -60,6 +60,10 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               'depart',
               ParamType.String,
             ),
+            departChar: params.getParam(
+              'departChar',
+              ParamType.String,
+            ),
           ),
         ),
         FFRoute(

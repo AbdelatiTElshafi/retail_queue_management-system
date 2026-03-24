@@ -19,12 +19,14 @@ class TicketScreenWidget extends StatefulWidget {
     required this.peopleAhead,
     required this.nowServing,
     required this.depart,
+    required this.departChar,
   });
 
   final String? deptCode;
   final String? peopleAhead;
   final String? nowServing;
   final String? depart;
+  final String? departChar;
 
   static String routeName = 'TicketScreen';
   static String routePath = '/ticketScreen';
@@ -414,6 +416,7 @@ class _TicketScreenWidgetState extends State<TicketScreenWidget> {
                               )!,
                               widget.peopleAhead!,
                               widget.deptCode!,
+                              widget.departChar!,
                             );
                             _model.loadingticket = false;
                             safeSetState(() {});

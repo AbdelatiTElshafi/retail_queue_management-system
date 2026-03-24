@@ -40,6 +40,7 @@ class TheSelectionScreenModel
     BuildContext context, {
     required String? depart,
     required String? departDisplayName,
+    String? departchar,
   }) async {
     ApiCallResponse? getMeatServingnoApiResult;
 
@@ -71,6 +72,10 @@ class TheSelectionScreenModel
           ),
           'depart': serializeParam(
             depart,
+            ParamType.String,
+          ),
+          'departChar': serializeParam(
+            departchar,
             ParamType.String,
           ),
         }.withoutNulls,
