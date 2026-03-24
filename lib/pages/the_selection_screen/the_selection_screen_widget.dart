@@ -123,12 +123,11 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                             hoverColor: Colors.transparent,
                             highlightColor: Colors.transparent,
                             onTap: () async {
-                              await _model.getDepartQueueData(
+                              await _model.wholePrint(
                                 context,
                                 depart: 'Fresh Meat',
-                                departDisplayName:
-                                    'Fresh Meat | اللحوم الطازجه',
-                                departchar: 'FM',
+                                departDisplayName: 'Fresh Meat | ',
+                                departChar: 'FM',
                               );
                             },
                             child: Material(
@@ -274,11 +273,11 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                             hoverColor: Colors.transparent,
                             highlightColor: Colors.transparent,
                             onTap: () async {
-                              await _model.getDepartQueueData(
+                              await _model.wholePrint(
                                 context,
                                 depart: 'Poultry',
                                 departDisplayName: 'Poultry | الطيور',
-                                departchar: 'P',
+                                departChar: 'P',
                               );
                             },
                             child: Material(
@@ -418,11 +417,11 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                             hoverColor: Colors.transparent,
                             highlightColor: Colors.transparent,
                             onTap: () async {
-                              await _model.getDepartQueueData(
+                              await _model.wholePrint(
                                 context,
                                 depart: 'Fish',
                                 departDisplayName: 'Fish | الاسماك',
-                                departchar: 'F',
+                                departChar: 'F',
                               );
                             },
                             child: Material(
@@ -563,11 +562,11 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                             hoverColor: Colors.transparent,
                             highlightColor: Colors.transparent,
                             onTap: () async {
-                              await _model.getDepartQueueData(
+                              await _model.wholePrint(
                                 context,
                                 depart: 'Spices',
-                                departDisplayName: 'Spices| العطاره',
-                                departchar: 'S',
+                                departDisplayName: 'Spices | العطاره',
+                                departChar: 'S',
                               );
                             },
                             child: Material(
@@ -710,12 +709,12 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                             hoverColor: Colors.transparent,
                             highlightColor: Colors.transparent,
                             onTap: () async {
-                              await _model.getDepartQueueData(
+                              await _model.wholePrint(
                                 context,
                                 depart: 'Frozen Meat',
                                 departDisplayName:
                                     'Frozen Meat | اللحوم المجمدة',
-                                departchar: 'FM',
+                                departChar: 'FOM',
                               );
                             },
                             child: Material(
@@ -855,11 +854,12 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                             hoverColor: Colors.transparent,
                             highlightColor: Colors.transparent,
                             onTap: () async {
-                              await _model.getDepartQueueData(
+                              await _model.wholePrint(
                                 context,
                                 depart: 'Bakery',
-                                departDisplayName: 'Bakery | المخبوزات',
-                                departchar: 'B',
+                                departDisplayName:
+                                    'Bakery | المخبوزات | المخبوزات',
+                                departChar: 'B',
                               );
                             },
                             child: Material(
@@ -1005,11 +1005,11 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                             hoverColor: Colors.transparent,
                             highlightColor: Colors.transparent,
                             onTap: () async {
-                              await _model.getDepartQueueData(
+                              await _model.wholePrint(
                                 context,
                                 depart: 'Grocery',
                                 departDisplayName: 'Grocery | البقالة',
-                                departchar: 'G',
+                                departChar: 'G',
                               );
                             },
                             child: Material(

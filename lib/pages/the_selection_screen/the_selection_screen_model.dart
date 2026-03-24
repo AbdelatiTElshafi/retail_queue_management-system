@@ -3,6 +3,7 @@ import '/components/erorr/erorr_widget.dart';
 import '/components/loading/loading_widget.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/instant_timer.dart';
+import '/custom_code/actions/index.dart' as actions;
 import '/index.dart';
 import 'package:flutter/material.dart';
 
@@ -81,6 +82,81 @@ class TheSelectionScreenModel
         }.withoutNulls,
       );
 
+      loadingVisability = false;
+    } else {
+      await Future.delayed(
+        Duration(
+          milliseconds: 2000,
+        ),
+      );
+      loadingVisability = false;
+      error = true;
+      await Future.delayed(
+        Duration(
+          milliseconds: 4000,
+        ),
+      );
+      error = false;
+    }
+  }
+
+  Future printNumber(
+    BuildContext context, {
+    String? depart,
+    required String? ticketNumber,
+    String? peopleAhead,
+    String? departname,
+    String? departchar,
+  }) async {
+    ApiCallResponse? printNumberApiResult;
+
+    printNumberApiResult = await TakeANumberAPIGroupGroup.printNumberCall.call(
+      depart: depart,
+    );
+
+    if ((printNumberApiResult.succeeded ?? true)) {
+      await actions.printQueueTicket(
+        ticketNumber!,
+        peopleAhead!,
+        departname!,
+        departchar!,
+      );
+    }
+  }
+
+  Future wholePrint(
+    BuildContext context, {
+    String? depart,
+    String? departDisplayName,
+    String? departChar,
+  }) async {
+    ApiCallResponse? getServingnoApiResult;
+    ApiCallResponse? printNumberApiResult;
+
+    loadingVisability = true;
+    getServingnoApiResult =
+        await TakeANumberAPIGroupGroup.getDepartServingnoCall.call(
+      departName: depart,
+    );
+
+    if ((getServingnoApiResult.succeeded ?? true)) {
+      printNumberApiResult =
+          await TakeANumberAPIGroupGroup.printNumberCall.call(
+        depart: depart,
+      );
+
+      if ((printNumberApiResult.succeeded ?? true)) {
+        await actions.printQueueTicket(
+          TakeANumberAPIGroupGroup.printNumberCall.ticketNumber(
+            (printNumberApiResult.jsonBody ?? ''),
+          )!,
+          TakeANumberAPIGroupGroup.getDepartServingnoCall.peopleAhead(
+            (getServingnoApiResult.jsonBody ?? ''),
+          )!,
+          departDisplayName!,
+          departChar!,
+        );
+      }
       loadingVisability = false;
     } else {
       await Future.delayed(
