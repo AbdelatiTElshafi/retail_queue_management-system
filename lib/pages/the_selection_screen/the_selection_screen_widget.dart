@@ -415,7 +415,7 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                 ),
                               ),
                             ),
-                          if (_model.visable)
+                          if (_model.nonVisable)
                             InkWell(
                               splashColor: Colors.transparent,
                               focusColor: Colors.transparent,
