@@ -70,18 +70,10 @@ Future<void> printQueueTicket(
 
   // Info
   await printer.printText(
-    'People Ahead: $peopleAhead',
+    'People Ahead | العملاء في النتظار : $peopleAhead',
     style: IminTextStyle(
       align: IminPrintAlign.center,
       fontSize: 22,
-    ),
-  );
-
-  await printer.printText(
-    'Please wait for your turn',
-    style: IminTextStyle(
-      align: IminPrintAlign.center,
-      fontSize: 20,
     ),
   );
 
