@@ -31,23 +31,12 @@ Future<void> printQueueTicket(
   final formattedTime = "${now.hour.toString().padLeft(2, '0')}:"
       "${now.minute.toString().padLeft(2, '0')}";
 
-  await printer.printText('', style: IminTextStyle(fontSize: 10));
-  // Ticket Number
-  await printer.printText(
-    'أسواق فتح الله',
-    style: IminTextStyle(
-      align: IminPrintAlign.center,
-      fontSize: 50,
-    ),
-  );
-
-  await printer.printText('', style: IminTextStyle(fontSize: 10));
   // Ticket Number
   await printer.printText(
     'مدينه الرحاب',
     style: IminTextStyle(
       align: IminPrintAlign.center,
-      fontSize: 20,
+      fontSize: 50,
     ),
   );
 
@@ -58,14 +47,6 @@ Future<void> printQueueTicket(
       align: IminPrintAlign.center,
       fontSize: 60,
       fontStyle: IminFontStyle.bold,
-    ),
-  );
-
-  await printer.printText(
-    '------------------------------------------------',
-    style: IminTextStyle(
-      align: IminPrintAlign.center,
-      fontSize: 20,
     ),
   );
 
@@ -87,22 +68,12 @@ Future<void> printQueueTicket(
     ),
   );
 
-  await printer.printText('', style: IminTextStyle(fontSize: 10));
-
   // Info
   await printer.printText(
     'People Ahead: $peopleAhead',
     style: IminTextStyle(
       align: IminPrintAlign.center,
       fontSize: 22,
-    ),
-  );
-
-  await printer.printText(
-    '------------------------',
-    style: IminTextStyle(
-      align: IminPrintAlign.center,
-      fontSize: 20,
     ),
   );
 
