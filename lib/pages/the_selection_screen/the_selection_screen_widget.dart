@@ -8,6 +8,7 @@ import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'the_selection_screen_model.dart';
 export 'the_selection_screen_model.dart';
 
@@ -53,6 +54,8 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
 
   @override
   Widget build(BuildContext context) {
+    context.watch<FFAppState>();
+
     return GestureDetector(
       onTap: () {
         FocusScope.of(context).unfocus();
@@ -105,8 +108,8 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                   ),
                   Expanded(
                     child: Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(
-                          24.0, 10.0, 24.0, 10.0),
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
                       child: GridView(
                         padding: EdgeInsets.zero,
                         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -117,7 +120,7 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                         ),
                         scrollDirection: Axis.vertical,
                         children: [
-                          if (_model.nonVisable)
+                          if (FFAppState().FreshMeatVis)
                             InkWell(
                               splashColor: Colors.transparent,
                               focusColor: Colors.transparent,
@@ -179,38 +182,22 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                                 size: 85.0,
                                               ),
                                             ),
-                                            Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      10.0, 0.0, 0.0, 0.0),
-                                              child: Column(
-                                                mainAxisSize: MainAxisSize.max,
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                children: [
-                                                  Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      '7uqnxzvd' /* Fresh Meat */,
-                                                    ),
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .displaySmall
-                                                        .override(
-                                                          font: GoogleFonts
-                                                              .interTight(
-                                                            fontWeight:
-                                                                FontWeight.w800,
-                                                            fontStyle:
-                                                                FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .displaySmall
-                                                                    .fontStyle,
-                                                          ),
-                                                          color:
-                                                              Color(0xFF3A3F47),
-                                                          fontSize: 30.0,
-                                                          letterSpacing: 0.0,
+                                            Column(
+                                              mainAxisSize: MainAxisSize.max,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: [
+                                                Text(
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    'ribst16h' /* Fresh Meat */,
+                                                  ),
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .displaySmall
+                                                      .override(
+                                                        font: GoogleFonts
+                                                            .interTight(
                                                           fontWeight:
                                                               FontWeight.w800,
                                                           fontStyle:
@@ -219,33 +206,30 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                                                   .displaySmall
                                                                   .fontStyle,
                                                         ),
+                                                        color:
+                                                            Color(0xFF3A3F47),
+                                                        fontSize: 30.0,
+                                                        letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FontWeight.w800,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .displaySmall
+                                                                .fontStyle,
+                                                      ),
+                                                ),
+                                                Text(
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    'k6w5hxba' /* اللحوم الطازجه */,
                                                   ),
-                                                  Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      '4oxfdkqx' /* اللحوم الطازجه */,
-                                                    ),
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .displaySmall
-                                                        .override(
-                                                          font: GoogleFonts
-                                                              .interTight(
-                                                            fontWeight:
-                                                                FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .displaySmall
-                                                                    .fontWeight,
-                                                            fontStyle:
-                                                                FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .displaySmall
-                                                                    .fontStyle,
-                                                          ),
-                                                          color:
-                                                              Color(0xFF3A3F47),
-                                                          fontSize: 30.0,
-                                                          letterSpacing: 0.0,
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .displaySmall
+                                                      .override(
+                                                        font: GoogleFonts
+                                                            .interTight(
                                                           fontWeight:
                                                               FlutterFlowTheme.of(
                                                                       context)
@@ -257,9 +241,23 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                                                   .displaySmall
                                                                   .fontStyle,
                                                         ),
-                                                  ),
-                                                ],
-                                              ),
+                                                        color:
+                                                            Color(0xFF3A3F47),
+                                                        fontSize: 30.0,
+                                                        letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .displaySmall
+                                                                .fontWeight,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .displaySmall
+                                                                .fontStyle,
+                                                      ),
+                                                ),
+                                              ],
                                             ),
                                           ],
                                         ),
@@ -269,7 +267,7 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                 ),
                               ),
                             ),
-                          if (_model.nonVisable)
+                          if (FFAppState().PoultryVis)
                             InkWell(
                               splashColor: Colors.transparent,
                               focusColor: Colors.transparent,
@@ -290,7 +288,7 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                   borderRadius: BorderRadius.circular(12.0),
                                 ),
                                 child: Container(
-                                  height: 200.0,
+                                  height: 150.0,
                                   decoration: BoxDecoration(
                                     color: Colors.white,
                                     borderRadius: BorderRadius.circular(12.0),
@@ -328,41 +326,25 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                               child: Icon(
                                                 FFIcons.kchicken,
                                                 color: Color(0xFF3A3F47),
-                                                size: 100.0,
+                                                size: 85.0,
                                               ),
                                             ),
-                                            Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      10.0, 0.0, 0.0, 0.0),
-                                              child: Column(
-                                                mainAxisSize: MainAxisSize.max,
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                children: [
-                                                  Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      'upqjqovr' /* Poultry */,
-                                                    ),
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .displaySmall
-                                                        .override(
-                                                          font: GoogleFonts
-                                                              .interTight(
-                                                            fontWeight:
-                                                                FontWeight.w800,
-                                                            fontStyle:
-                                                                FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .displaySmall
-                                                                    .fontStyle,
-                                                          ),
-                                                          color:
-                                                              Color(0xFF3A3F47),
-                                                          fontSize: 30.0,
-                                                          letterSpacing: 0.0,
+                                            Column(
+                                              mainAxisSize: MainAxisSize.max,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: [
+                                                Text(
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    'gl62fo0h' /* Poultry */,
+                                                  ),
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .displaySmall
+                                                      .override(
+                                                        font: GoogleFonts
+                                                            .interTight(
                                                           fontWeight:
                                                               FontWeight.w800,
                                                           fontStyle:
@@ -371,30 +353,30 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                                                   .displaySmall
                                                                   .fontStyle,
                                                         ),
+                                                        color:
+                                                            Color(0xFF3A3F47),
+                                                        fontSize: 30.0,
+                                                        letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FontWeight.w800,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .displaySmall
+                                                                .fontStyle,
+                                                      ),
+                                                ),
+                                                Text(
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    'a5ho6g8q' /* دواجن */,
                                                   ),
-                                                  Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      '1fmjwzrl' /* دواجن */,
-                                                    ),
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .displaySmall
-                                                        .override(
-                                                          font: GoogleFonts
-                                                              .interTight(
-                                                            fontWeight:
-                                                                FontWeight.w800,
-                                                            fontStyle:
-                                                                FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .displaySmall
-                                                                    .fontStyle,
-                                                          ),
-                                                          color:
-                                                              Color(0xFF3A3F47),
-                                                          fontSize: 30.0,
-                                                          letterSpacing: 0.0,
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .displaySmall
+                                                      .override(
+                                                        font: GoogleFonts
+                                                            .interTight(
                                                           fontWeight:
                                                               FontWeight.w800,
                                                           fontStyle:
@@ -403,9 +385,20 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                                                   .displaySmall
                                                                   .fontStyle,
                                                         ),
-                                                  ),
-                                                ],
-                                              ),
+                                                        color:
+                                                            Color(0xFF3A3F47),
+                                                        fontSize: 30.0,
+                                                        letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FontWeight.w800,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .displaySmall
+                                                                .fontStyle,
+                                                      ),
+                                                ),
+                                              ],
                                             ),
                                           ],
                                         ),
@@ -415,7 +408,7 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                 ),
                               ),
                             ),
-                          if (_model.visable)
+                          if (FFAppState().FishVis)
                             InkWell(
                               splashColor: Colors.transparent,
                               focusColor: Colors.transparent,
@@ -474,7 +467,7 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                               child: Icon(
                                                 FFIcons.kfish,
                                                 color: Color(0xFF3A3F47),
-                                                size: 100.0,
+                                                size: 75.0,
                                               ),
                                             ),
                                             Column(
@@ -485,7 +478,7 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                                 Text(
                                                   FFLocalizations.of(context)
                                                       .getText(
-                                                    '4uw1l33k' /* Fish */,
+                                                    'i5bly60w' /* Fish */,
                                                   ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
@@ -503,7 +496,7 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                                         ),
                                                         color:
                                                             Color(0xFF3A3F47),
-                                                        fontSize: 32.0,
+                                                        fontSize: 30.0,
                                                         letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.w800,
@@ -517,7 +510,7 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                                 Text(
                                                   FFLocalizations.of(context)
                                                       .getText(
-                                                    '0tnm2nt0' /* اسماك */,
+                                                    '8gyilj9f' /* اسماك */,
                                                   ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
@@ -538,7 +531,7 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                                         ),
                                                         color:
                                                             Color(0xFF3A3F47),
-                                                        fontSize: 32.0,
+                                                        fontSize: 30.0,
                                                         letterSpacing: 0.0,
                                                         fontWeight:
                                                             FlutterFlowTheme.of(
@@ -562,7 +555,7 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                 ),
                               ),
                             ),
-                          if (_model.nonVisable)
+                          if (FFAppState().SpicesVis)
                             InkWell(
                               splashColor: Colors.transparent,
                               focusColor: Colors.transparent,
@@ -583,7 +576,7 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                   borderRadius: BorderRadius.circular(12.0),
                                 ),
                                 child: Container(
-                                  height: 200.0,
+                                  height: 400.0,
                                   decoration: BoxDecoration(
                                     color: Colors.white,
                                     borderRadius: BorderRadius.circular(12.0),
@@ -619,17 +612,17 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                               Padding(
                                                 padding: EdgeInsetsDirectional
                                                     .fromSTEB(
-                                                        20.0, 0.0, 0.0, 20.0),
+                                                        20.0, 0.0, 0.0, 0.0),
                                                 child: Icon(
                                                   FFIcons.kspices,
                                                   color: Color(0xFF3A3F47),
-                                                  size: 100.0,
+                                                  size: 85.0,
                                                 ),
                                               ),
                                               Padding(
                                                 padding: EdgeInsetsDirectional
                                                     .fromSTEB(
-                                                        30.0, 0.0, 0.0, 0.0),
+                                                        50.0, 0.0, 0.0, 0.0),
                                                 child: Column(
                                                   mainAxisSize:
                                                       MainAxisSize.max,
@@ -640,7 +633,7 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                                       FFLocalizations.of(
                                                               context)
                                                           .getText(
-                                                        'xjr8y3d2' /* Spices */,
+                                                        'fdcnn2sj' /* Spices */,
                                                       ),
                                                       style: FlutterFlowTheme
                                                               .of(context)
@@ -658,7 +651,7 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                                             ),
                                                             color: Color(
                                                                 0xFF3A3F47),
-                                                            fontSize: 32.0,
+                                                            fontSize: 30.0,
                                                             letterSpacing: 0.0,
                                                             fontWeight:
                                                                 FontWeight.w800,
@@ -673,7 +666,7 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                                       FFLocalizations.of(
                                                               context)
                                                           .getText(
-                                                        '19xgs1ul' /* عطارة */,
+                                                        'sh743yud' /* عطارة */,
                                                       ),
                                                       style: FlutterFlowTheme
                                                               .of(context)
@@ -691,7 +684,7 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                                             ),
                                                             color: Color(
                                                                 0xFF3A3F47),
-                                                            fontSize: 32.0,
+                                                            fontSize: 30.0,
                                                             letterSpacing: 0.0,
                                                             fontWeight:
                                                                 FontWeight.w800,
@@ -714,7 +707,7 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                 ),
                               ),
                             ),
-                          if (_model.nonVisable)
+                          if (FFAppState().FrozenMeatVis)
                             InkWell(
                               splashColor: Colors.transparent,
                               focusColor: Colors.transparent,
@@ -736,7 +729,7 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                   borderRadius: BorderRadius.circular(12.0),
                                 ),
                                 child: Container(
-                                  height: 65.01,
+                                  height: 400.0,
                                   decoration: BoxDecoration(
                                     color: Colors.white,
                                     borderRadius: BorderRadius.circular(12.0),
@@ -777,38 +770,22 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                                 size: 85.0,
                                               ),
                                             ),
-                                            Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      10.0, 0.0, 0.0, 0.0),
-                                              child: Column(
-                                                mainAxisSize: MainAxisSize.max,
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                children: [
-                                                  Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      'o62lacte' /* Frozen Meat */,
-                                                    ),
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .displaySmall
-                                                        .override(
-                                                          font: GoogleFonts
-                                                              .interTight(
-                                                            fontWeight:
-                                                                FontWeight.w800,
-                                                            fontStyle:
-                                                                FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .displaySmall
-                                                                    .fontStyle,
-                                                          ),
-                                                          color:
-                                                              Color(0xFF3A3F47),
-                                                          fontSize: 30.0,
-                                                          letterSpacing: 0.0,
+                                            Column(
+                                              mainAxisSize: MainAxisSize.max,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: [
+                                                Text(
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    'a512uads' /* Frozen Meat */,
+                                                  ),
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .displaySmall
+                                                      .override(
+                                                        font: GoogleFonts
+                                                            .interTight(
                                                           fontWeight:
                                                               FontWeight.w800,
                                                           fontStyle:
@@ -817,30 +794,30 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                                                   .displaySmall
                                                                   .fontStyle,
                                                         ),
+                                                        color:
+                                                            Color(0xFF3A3F47),
+                                                        fontSize: 30.0,
+                                                        letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FontWeight.w800,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .displaySmall
+                                                                .fontStyle,
+                                                      ),
+                                                ),
+                                                Text(
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    'q0t6l157' /* اللحوم المجمدة */,
                                                   ),
-                                                  Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      'wzjgqlk7' /* اللحوم المجمدة */,
-                                                    ),
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .displaySmall
-                                                        .override(
-                                                          font: GoogleFonts
-                                                              .interTight(
-                                                            fontWeight:
-                                                                FontWeight.bold,
-                                                            fontStyle:
-                                                                FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .displaySmall
-                                                                    .fontStyle,
-                                                          ),
-                                                          color:
-                                                              Color(0xFF3A3F47),
-                                                          fontSize: 30.0,
-                                                          letterSpacing: 0.0,
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .displaySmall
+                                                      .override(
+                                                        font: GoogleFonts
+                                                            .interTight(
                                                           fontWeight:
                                                               FontWeight.bold,
                                                           fontStyle:
@@ -849,9 +826,20 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                                                   .displaySmall
                                                                   .fontStyle,
                                                         ),
-                                                  ),
-                                                ],
-                                              ),
+                                                        color:
+                                                            Color(0xFF3A3F47),
+                                                        fontSize: 30.0,
+                                                        letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .displaySmall
+                                                                .fontStyle,
+                                                      ),
+                                                ),
+                                              ],
                                             ),
                                           ],
                                         ),
@@ -861,7 +849,7 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                 ),
                               ),
                             ),
-                          if (_model.nonVisable)
+                          if (FFAppState().BakeryVis)
                             InkWell(
                               splashColor: Colors.transparent,
                               focusColor: Colors.transparent,
@@ -883,7 +871,7 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                   borderRadius: BorderRadius.circular(12.0),
                                 ),
                                 child: Container(
-                                  height: 200.0,
+                                  height: 400.0,
                                   decoration: BoxDecoration(
                                     color: Colors.white,
                                     borderRadius: BorderRadius.circular(12.0),
@@ -918,98 +906,86 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                                 Padding(
                                                   padding: EdgeInsetsDirectional
                                                       .fromSTEB(
-                                                          0.0, 0.0, 0.0, 45.0),
+                                                          0.0, 0.0, 0.0, 20.0),
                                                   child: Icon(
                                                     FFIcons.kbakery,
                                                     color: Color(0xFF3A3F47),
-                                                    size: 90.0,
+                                                    size: 85.0,
                                                   ),
                                                 ),
-                                                Padding(
-                                                  padding: EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                          50.0, 0.0, 0.0, 0.0),
-                                                  child: Column(
-                                                    mainAxisSize:
-                                                        MainAxisSize.max,
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment
-                                                            .center,
-                                                    children: [
-                                                      Text(
-                                                        FFLocalizations.of(
-                                                                context)
-                                                            .getText(
-                                                          'mci7fwkc' /* Bakery */,
-                                                        ),
-                                                        style:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .displayMedium
-                                                                .override(
-                                                                  font: GoogleFonts
-                                                                      .interTight(
-                                                                    fontWeight:
-                                                                        FontWeight
-                                                                            .w800,
-                                                                    fontStyle: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .displayMedium
-                                                                        .fontStyle,
-                                                                  ),
-                                                                  color: Color(
-                                                                      0xFF3A3F47),
-                                                                  fontSize:
-                                                                      32.0,
-                                                                  letterSpacing:
-                                                                      0.0,
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .w800,
-                                                                  fontStyle: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .displayMedium
-                                                                      .fontStyle,
-                                                                ),
+                                                Column(
+                                                  mainAxisSize:
+                                                      MainAxisSize.max,
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  children: [
+                                                    Text(
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        '41hbstok' /* Bakery */,
                                                       ),
-                                                      Text(
-                                                        FFLocalizations.of(
-                                                                context)
-                                                            .getText(
-                                                          'upksgoth' /* مخبوزات */,
-                                                        ),
-                                                        style:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .displaySmall
-                                                                .override(
-                                                                  font: GoogleFonts
-                                                                      .interTight(
-                                                                    fontWeight:
-                                                                        FontWeight
-                                                                            .w800,
-                                                                    fontStyle: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .displaySmall
-                                                                        .fontStyle,
-                                                                  ),
-                                                                  color: Color(
-                                                                      0xFF3A3F47),
-                                                                  fontSize:
-                                                                      30.0,
-                                                                  letterSpacing:
-                                                                      0.0,
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .w800,
-                                                                  fontStyle: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .displaySmall
-                                                                      .fontStyle,
-                                                                ),
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .displayMedium
+                                                          .override(
+                                                            font: GoogleFonts
+                                                                .interTight(
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w800,
+                                                              fontStyle: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .displayMedium
+                                                                  .fontStyle,
+                                                            ),
+                                                            color: Color(
+                                                                0xFF3A3F47),
+                                                            fontSize: 30.0,
+                                                            letterSpacing: 0.0,
+                                                            fontWeight:
+                                                                FontWeight.w800,
+                                                            fontStyle:
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .displayMedium
+                                                                    .fontStyle,
+                                                          ),
+                                                    ),
+                                                    Text(
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        'hmc3dhr3' /* مخبوزات */,
                                                       ),
-                                                    ],
-                                                  ),
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .displaySmall
+                                                          .override(
+                                                            font: GoogleFonts
+                                                                .interTight(
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w800,
+                                                              fontStyle: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .displaySmall
+                                                                  .fontStyle,
+                                                            ),
+                                                            color: Color(
+                                                                0xFF3A3F47),
+                                                            fontSize: 30.0,
+                                                            letterSpacing: 0.0,
+                                                            fontWeight:
+                                                                FontWeight.w800,
+                                                            fontStyle:
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .displaySmall
+                                                                    .fontStyle,
+                                                          ),
+                                                    ),
+                                                  ],
                                                 ),
                                               ],
                                             ),
@@ -1021,7 +997,7 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                 ),
                               ),
                             ),
-                          if (_model.nonVisable)
+                          if (FFAppState().BakeryVis)
                             InkWell(
                               splashColor: Colors.transparent,
                               focusColor: Colors.transparent,
@@ -1031,7 +1007,7 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                 await _model.wholePrint(
                                   context,
                                   depart: 'Grocery',
-                                  departDisplayName: 'Grocery | البقالة',
+                                  departDisplayName: 'Grocery | بقالة',
                                   departChar: 'G',
                                 );
                               },
@@ -1042,17 +1018,17 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                   borderRadius: BorderRadius.circular(12.0),
                                 ),
                                 child: Container(
-                                  height: 200.0,
+                                  height: 400.0,
                                   decoration: BoxDecoration(
                                     color: Colors.white,
                                     borderRadius: BorderRadius.circular(12.0),
                                   ),
-                                  child: Row(
-                                    mainAxisSize: MainAxisSize.max,
-                                    children: [
-                                      Padding(
-                                        padding: EdgeInsets.all(6.0),
-                                        child: Container(
+                                  child: Padding(
+                                    padding: EdgeInsets.all(6.0),
+                                    child: Row(
+                                      mainAxisSize: MainAxisSize.max,
+                                      children: [
+                                        Container(
                                           width: 12.0,
                                           height: double.infinity,
                                           decoration: BoxDecoration(
@@ -1066,98 +1042,104 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                             ),
                                           ),
                                         ),
-                                      ),
-                                      Expanded(
-                                        child: Row(
-                                          mainAxisSize: MainAxisSize.max,
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceAround,
-                                          children: [
-                                            Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      0.0, 0.0, 0.0, 20.0),
-                                              child: Icon(
-                                                FFIcons.kgrocery,
-                                                color: Color(0xFF3A3F47),
-                                                size: 100.0,
-                                              ),
-                                            ),
-                                            Column(
+                                        Expanded(
+                                          child: Padding(
+                                            padding: EdgeInsets.all(12.0),
+                                            child: Row(
                                               mainAxisSize: MainAxisSize.max,
                                               mainAxisAlignment:
-                                                  MainAxisAlignment.center,
+                                                  MainAxisAlignment.spaceAround,
                                               children: [
-                                                Text(
-                                                  FFLocalizations.of(context)
-                                                      .getText(
-                                                    '90y1ksv1' /* Grocery */,
+                                                Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          0.0, 0.0, 0.0, 20.0),
+                                                  child: Icon(
+                                                    FFIcons.kgrocery,
+                                                    color: Color(0xFF3A3F47),
+                                                    size: 85.0,
                                                   ),
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .displaySmall
-                                                      .override(
-                                                        font: GoogleFonts
-                                                            .interTight(
-                                                          fontWeight:
-                                                              FontWeight.w800,
-                                                          fontStyle:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .displaySmall
-                                                                  .fontStyle,
-                                                        ),
-                                                        color:
-                                                            Color(0xFF3A3F47),
-                                                        fontSize: 32.0,
-                                                        letterSpacing: 0.0,
-                                                        fontWeight:
-                                                            FontWeight.w800,
-                                                        fontStyle:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .displaySmall
-                                                                .fontStyle,
-                                                      ),
                                                 ),
-                                                Text(
-                                                  FFLocalizations.of(context)
-                                                      .getText(
-                                                    '295tzppp' /* بقالة */,
-                                                  ),
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .displaySmall
-                                                      .override(
-                                                        font: GoogleFonts
-                                                            .interTight(
-                                                          fontWeight:
-                                                              FontWeight.w800,
-                                                          fontStyle:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
+                                                Column(
+                                                  mainAxisSize:
+                                                      MainAxisSize.max,
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  children: [
+                                                    Text(
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        'j9ieuay5' /* Grocery */,
+                                                      ),
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .displayMedium
+                                                          .override(
+                                                            font: GoogleFonts
+                                                                .interTight(
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w800,
+                                                              fontStyle: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .displayMedium
+                                                                  .fontStyle,
+                                                            ),
+                                                            color: Color(
+                                                                0xFF3A3F47),
+                                                            fontSize: 30.0,
+                                                            letterSpacing: 0.0,
+                                                            fontWeight:
+                                                                FontWeight.w800,
+                                                            fontStyle:
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .displayMedium
+                                                                    .fontStyle,
+                                                          ),
+                                                    ),
+                                                    Text(
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        'agbz0yqe' /* بقالة */,
+                                                      ),
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .displaySmall
+                                                          .override(
+                                                            font: GoogleFonts
+                                                                .interTight(
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w800,
+                                                              fontStyle: FlutterFlowTheme
+                                                                      .of(context)
                                                                   .displaySmall
                                                                   .fontStyle,
-                                                        ),
-                                                        color:
-                                                            Color(0xFF3A3F47),
-                                                        fontSize: 32.0,
-                                                        letterSpacing: 0.0,
-                                                        fontWeight:
-                                                            FontWeight.w800,
-                                                        fontStyle:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .displaySmall
-                                                                .fontStyle,
-                                                      ),
+                                                            ),
+                                                            color: Color(
+                                                                0xFF3A3F47),
+                                                            fontSize: 30.0,
+                                                            letterSpacing: 0.0,
+                                                            fontWeight:
+                                                                FontWeight.w800,
+                                                            fontStyle:
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .displaySmall
+                                                                    .fontStyle,
+                                                          ),
+                                                    ),
+                                                  ],
                                                 ),
                                               ],
                                             ),
-                                          ],
+                                          ),
                                         ),
-                                      ),
-                                    ],
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ),
@@ -1199,138 +1181,170 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                     child: Image.asset(
                                       'assets/images/output-onlinepngtools_1_200x200.png',
                                       width: 230.8,
-                                      height: 94.99,
+                                      height: 95.0,
                                       fit: BoxFit.cover,
                                     ),
                                   ),
                                 ],
                               ),
-                              Row(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    dateTimeFormat(
-                                      "EEEE",
-                                      getCurrentTimestamp,
-                                      locale: FFLocalizations.of(context)
-                                          .languageCode,
+                              Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 0.0, 70.0, 0.0),
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          6.0, 0.0, 6.0, 0.0),
+                                      child: Icon(
+                                        Icons.calendar_today_rounded,
+                                        color: Color(0xFF616161),
+                                        size: 20.0,
+                                      ),
                                     ),
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          font: GoogleFonts.inter(
+                                    Text(
+                                      dateTimeFormat(
+                                        "EEEE",
+                                        getCurrentTimestamp,
+                                        locale: FFLocalizations.of(context)
+                                            .languageCode,
+                                      ),
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .override(
+                                            font: GoogleFonts.inter(
+                                              fontWeight: FontWeight.w500,
+                                              fontStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .fontStyle,
+                                            ),
+                                            color: Color(0xFF616161),
+                                            fontSize: 20.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.w500,
                                             fontStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .bodyMedium
                                                     .fontStyle,
                                           ),
-                                          color: Color(0xFF616161),
-                                          fontSize: 20.0,
-                                          letterSpacing: 0.0,
-                                          fontWeight: FontWeight.w500,
-                                          fontStyle:
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyMedium
-                                                  .fontStyle,
-                                        ),
-                                  ),
-                                  Text(
-                                    dateTimeFormat(
-                                      "d/M/y",
-                                      getCurrentTimestamp,
-                                      locale: FFLocalizations.of(context)
-                                          .languageCode,
                                     ),
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          font: GoogleFonts.inter(
+                                    Text(
+                                      dateTimeFormat(
+                                        "d/M/y",
+                                        getCurrentTimestamp,
+                                        locale: FFLocalizations.of(context)
+                                            .languageCode,
+                                      ),
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .override(
+                                            font: GoogleFonts.inter(
+                                              fontWeight: FontWeight.w500,
+                                              fontStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .fontStyle,
+                                            ),
+                                            color: Color(0xFF616161),
+                                            fontSize: 20.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.w500,
                                             fontStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .bodyMedium
                                                     .fontStyle,
                                           ),
-                                          color: Color(0xFF616161),
-                                          fontSize: 20.0,
-                                          letterSpacing: 0.0,
-                                          fontWeight: FontWeight.w500,
-                                          fontStyle:
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyMedium
-                                                  .fontStyle,
-                                        ),
-                                  ),
-                                  Text(
-                                    dateTimeFormat(
-                                      "jms",
-                                      getCurrentTimestamp,
-                                      locale: FFLocalizations.of(context)
-                                          .languageCode,
                                     ),
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          font: GoogleFonts.inter(
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          16.0, 0.0, 16.0, 0.0),
+                                      child: Icon(
+                                        Icons.access_time_rounded,
+                                        color: Color(0xFF616161),
+                                        size: 20.0,
+                                      ),
+                                    ),
+                                    Text(
+                                      dateTimeFormat(
+                                        "jms",
+                                        getCurrentTimestamp,
+                                        locale: FFLocalizations.of(context)
+                                            .languageCode,
+                                      ),
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .override(
+                                            font: GoogleFonts.inter(
+                                              fontWeight: FontWeight.w500,
+                                              fontStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .fontStyle,
+                                            ),
+                                            color: Color(0xFF616161),
+                                            fontSize: 20.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.w500,
                                             fontStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .bodyMedium
                                                     .fontStyle,
                                           ),
-                                          color: Color(0xFF616161),
-                                          fontSize: 20.0,
-                                          letterSpacing: 0.0,
-                                          fontWeight: FontWeight.w500,
-                                          fontStyle:
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyMedium
-                                                  .fontStyle,
-                                        ),
-                                  ),
-                                ].divide(SizedBox(width: 32.0)),
+                                    ),
+                                  ].divide(SizedBox(width: 32.0)),
+                                ),
                               ),
                               Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 50.0, 0.0),
-                                child: FFButtonWidget(
-                                  onPressed: () async {
+                                child: InkWell(
+                                  splashColor: Colors.transparent,
+                                  focusColor: Colors.transparent,
+                                  hoverColor: Colors.transparent,
+                                  highlightColor: Colors.transparent,
+                                  onDoubleTap: () async {
                                     context.pushNamed(LoginWidget.routeName);
                                   },
-                                  text: '',
-                                  icon: Icon(
-                                    Icons.settings_rounded,
-                                    size: 20.0,
-                                  ),
-                                  options: FFButtonOptions(
-                                    width: 50.0,
-                                    height: 50.0,
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 0.0, 0.0, 0.0),
-                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                        10.0, 0.0, 0.0, 0.0),
-                                    color: Color(0xFF3A3F47),
-                                    textStyle: FlutterFlowTheme.of(context)
-                                        .titleSmall
-                                        .override(
-                                          font: GoogleFonts.interTight(
+                                  child: FFButtonWidget(
+                                    onPressed: () {
+                                      print('Button pressed ...');
+                                    },
+                                    text: '',
+                                    icon: Icon(
+                                      Icons.settings_rounded,
+                                      size: 20.0,
+                                    ),
+                                    options: FFButtonOptions(
+                                      width: 50.0,
+                                      height: 50.0,
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          0.0, 0.0, 0.0, 0.0),
+                                      iconPadding:
+                                          EdgeInsetsDirectional.fromSTEB(
+                                              10.0, 0.0, 0.0, 0.0),
+                                      color: Color(0xFF3A3F47),
+                                      textStyle: FlutterFlowTheme.of(context)
+                                          .titleSmall
+                                          .override(
+                                            font: GoogleFonts.interTight(
+                                              fontWeight: FontWeight.bold,
+                                              fontStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleSmall
+                                                      .fontStyle,
+                                            ),
+                                            color: Colors.white,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.bold,
                                             fontStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .titleSmall
                                                     .fontStyle,
                                           ),
-                                          color: Colors.white,
-                                          letterSpacing: 0.0,
-                                          fontWeight: FontWeight.bold,
-                                          fontStyle:
-                                              FlutterFlowTheme.of(context)
-                                                  .titleSmall
-                                                  .fontStyle,
-                                        ),
-                                    borderRadius: BorderRadius.circular(20.0),
+                                      borderRadius: BorderRadius.circular(20.0),
+                                    ),
                                   ),
                                 ),
                               ),

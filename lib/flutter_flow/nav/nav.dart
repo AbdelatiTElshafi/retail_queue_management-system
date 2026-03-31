@@ -72,14 +72,19 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => TheSelectionScreenWidget(),
         ),
         FFRoute(
-          name: TheSelectionScreenCopyWidget.routeName,
-          path: TheSelectionScreenCopyWidget.routePath,
-          builder: (context, params) => TheSelectionScreenCopyWidget(),
+          name: SettingPageWidget.routeName,
+          path: SettingPageWidget.routePath,
+          builder: (context, params) => SettingPageWidget(),
         ),
         FFRoute(
           name: LoginWidget.routeName,
           path: LoginWidget.routePath,
           builder: (context, params) => LoginWidget(),
+        ),
+        FFRoute(
+          name: LoginpageWidget.routeName,
+          path: LoginpageWidget.routePath,
+          builder: (context, params) => LoginpageWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

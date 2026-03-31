@@ -177,59 +177,59 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Select a department | إختر قسم',
       'ar': '',
     },
-    '7uqnxzvd': {
+    'ribst16h': {
       'en': 'Fresh Meat',
       'ar': '',
     },
-    '4oxfdkqx': {
+    'k6w5hxba': {
       'en': 'اللحوم الطازجه',
       'ar': '',
     },
-    'upqjqovr': {
+    'gl62fo0h': {
       'en': 'Poultry',
       'ar': '',
     },
-    '1fmjwzrl': {
+    'a5ho6g8q': {
       'en': 'دواجن',
       'ar': '',
     },
-    '4uw1l33k': {
+    'i5bly60w': {
       'en': 'Fish',
       'ar': '',
     },
-    '0tnm2nt0': {
+    '8gyilj9f': {
       'en': 'اسماك',
       'ar': '',
     },
-    'xjr8y3d2': {
+    'fdcnn2sj': {
       'en': 'Spices',
       'ar': '',
     },
-    '19xgs1ul': {
+    'sh743yud': {
       'en': 'عطارة',
       'ar': '',
     },
-    'o62lacte': {
+    'a512uads': {
       'en': 'Frozen Meat',
       'ar': '',
     },
-    'wzjgqlk7': {
+    'q0t6l157': {
       'en': 'اللحوم المجمدة',
       'ar': '',
     },
-    'mci7fwkc': {
+    '41hbstok': {
       'en': 'Bakery',
       'ar': '',
     },
-    'upksgoth': {
+    'hmc3dhr3': {
       'en': 'مخبوزات',
       'ar': '',
     },
-    '90y1ksv1': {
+    'j9ieuay5': {
       'en': 'Grocery',
       'ar': '',
     },
-    '295tzppp': {
+    'agbz0yqe': {
       'en': 'بقالة',
       'ar': '',
     },
@@ -238,38 +238,66 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'بيت',
     },
   },
-  // TheSelectionScreenCopy
+  // SettingPage
   {
-    'veiyz4p0': {
-      'en': 'Reset Page ',
+    '39wi9stu': {
+      'en': 'Settings  | الإعدادات ',
       'ar': '',
     },
-    'wk8r3npa': {
-      'en': 'Meat | لحوم',
+    '5notua5o': {
+      'en': 'Fresh Meat',
       'ar': '',
     },
-    '9xbxlkv0': {
-      'en': 'Cheese |الجبن',
+    'rrgeyrwp': {
+      'en': 'اللحوم الطازجه',
       'ar': '',
     },
-    'ucv5vyk2': {
-      'en': 'Bakery |مخبوزات  ',
-      'ar': 'مخبز | معجنات',
-    },
-    'lqt13w4g': {
-      'en': 'Fruits & Vegetables | خضار وفاكهة',
-      'ar': 'فواكه وخضروات | خضار وفاكهة',
-    },
-    'kvkpipsp': {
-      'en': 'Fish |أسماك',
-      'ar': 'السمك',
-    },
-    'gktqnzsz': {
-      'en': '|',
+    'wxhdbojc': {
+      'en': 'Poultry',
       'ar': '',
     },
-    '0u9uqu2m': {
-      'en': 'Retail Tec \nQueue Management System',
+    'axg60isb': {
+      'en': 'دواجن',
+      'ar': '',
+    },
+    'xgtio3qg': {
+      'en': 'Fish',
+      'ar': '',
+    },
+    'wxo6azt5': {
+      'en': 'اسماك',
+      'ar': '',
+    },
+    'drjy09ux': {
+      'en': 'Spices',
+      'ar': '',
+    },
+    'jnrblj7q': {
+      'en': 'عطارة',
+      'ar': '',
+    },
+    'c8ts6xla': {
+      'en': 'Frozen Meat',
+      'ar': '',
+    },
+    'gilfhqbs': {
+      'en': 'اللحوم المجمدة',
+      'ar': '',
+    },
+    '3v7rcb73': {
+      'en': 'Bakery',
+      'ar': '',
+    },
+    'kq1h7gfu': {
+      'en': 'مخبوزات',
+      'ar': '',
+    },
+    'heuolhld': {
+      'en': 'Grocery',
+      'ar': '',
+    },
+    '7qnas99n': {
+      'en': 'بقالة',
       'ar': '',
     },
     '09j8qslx': {
@@ -279,11 +307,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // login
   {
-    'xc0gizz0': {
+    'gktqnzsz': {
       'en': '|',
       'ar': '',
     },
-    '71iosem1': {
+    '0u9uqu2m': {
       'en': 'Retail Tec \nQueue Management System',
       'ar': '',
     },
@@ -306,6 +334,33 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'k0j0ld88': {
       'en': 'Home',
       'ar': 'بيت',
+    },
+  },
+  // loginpage
+  {
+    '41858vcz': {
+      'en': 'Login Page',
+      'ar': '',
+    },
+    '6cbhp6jh': {
+      'en': 'Retail Tec',
+      'ar': '',
+    },
+    'itz5b5ei': {
+      'en': 'Queue Management System',
+      'ar': '',
+    },
+    'ewvbhw4z': {
+      'en': 'Username',
+      'ar': '',
+    },
+    'tf3haxvm': {
+      'en': 'Password',
+      'ar': '',
+    },
+    'ilw34yyh': {
+      'en': 'Login',
+      'ar': '',
     },
   },
   // Erorr

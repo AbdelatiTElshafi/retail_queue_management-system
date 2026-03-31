@@ -164,7 +164,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                             0.0, 10.0, 0.0, 0.0),
                                         child: Text(
                                           FFLocalizations.of(context).getText(
-                                            'xc0gizz0' /* | */,
+                                            'gktqnzsz' /* | */,
                                           ),
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
@@ -197,7 +197,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                   0.0, 40.0, 0.0, 0.0),
                                           child: Text(
                                             FFLocalizations.of(context).getText(
-                                              '71iosem1' /* Retail Tec 
+                                              '0u9uqu2m' /* Retail Tec 
 Queue Management S... */
                                               ,
                                             ),
@@ -316,7 +316,7 @@ Queue Management S... */
                                         ),
                                         focusedBorder: OutlineInputBorder(
                                           borderSide: BorderSide(
-                                            color: Color(0xFF4B39EF),
+                                            color: Color(0xFFF5A623),
                                             width: 2.0,
                                           ),
                                           borderRadius:
@@ -412,7 +412,7 @@ Queue Management S... */
                                         ),
                                         focusedBorder: OutlineInputBorder(
                                           borderSide: BorderSide(
-                                            color: Color(0xFF4B39EF),
+                                            color: Color(0xFFF5A623),
                                             width: 2.0,
                                           ),
                                           borderRadius:
@@ -492,8 +492,7 @@ Queue Management S... */
                                           ? true
                                           : false) {
                                         context.pushNamed(
-                                            TheSelectionScreenCopyWidget
-                                                .routeName);
+                                            SettingPageWidget.routeName);
                                       } else {
                                         var confirmDialogResponse =
                                             await showDialog<bool>(
