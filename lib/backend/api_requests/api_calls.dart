@@ -12,7 +12,7 @@ const _kPrivateApiFunctionName = 'ffPrivateApiCall';
 
 class TakeANumberAPIGroupGroup {
   static String getBaseUrl() =>
-      'https://47c4-197-36-207-117.ngrok-free.app/BackEnd_Server';
+      'http://10.0.36.88:8002/BackEnd_Server';
   static Map<String, String> headers = {};
   static GetDepartServingnoCall getDepartServingnoCall =
       GetDepartServingnoCall();
