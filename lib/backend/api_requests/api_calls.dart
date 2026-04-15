@@ -12,7 +12,7 @@ const _kPrivateApiFunctionName = 'ffPrivateApiCall';
 
 class TakeANumberAPIGroupGroup {
   static String getBaseUrl() =>
-      'https://47c4-197-36-207-117.ngrok-free.app/BackEnd_Server';
+      'https://keyla-vistaless-henrietta.ngrok-free.dev/BackEnd_Server';
   static Map<String, String> headers = {};
   static GetDepartServingnoCall getDepartServingnoCall =
       GetDepartServingnoCall();
@@ -54,6 +54,10 @@ class GetDepartServingnoCall {
   String? peopleAhead(dynamic response) => castToType<String>(getJsonField(
         response,
         r'''$.PeopleAhead''',
+      ));
+  String? avgServingTime(dynamic response) => castToType<String>(getJsonField(
+        response,
+        r'''$.AverageServingTime''',
       ));
 }
 

@@ -7,8 +7,8 @@ import '/flutter_flow/instant_timer.dart';
 import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'setting_page_model.dart';
 export 'setting_page_model.dart';
 
@@ -53,8 +53,6 @@ class _SettingPageWidgetState extends State<SettingPageWidget> {
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
-
     return GestureDetector(
       onTap: () {
         FocusScope.of(context).unfocus();
@@ -87,9 +85,7 @@ class _SettingPageWidgetState extends State<SettingPageWidget> {
                             ),
                             alignment: AlignmentDirectional(0.0, 0.0),
                             child: Text(
-                              FFLocalizations.of(context).getText(
-                                '39wi9stu' /* Settings  | الإعدادات  */,
-                              ),
+                              'Settings  | الإعدادات ',
                               style: FlutterFlowTheme.of(context)
                                   .displaySmall
                                   .override(
@@ -112,7 +108,7 @@ class _SettingPageWidgetState extends State<SettingPageWidget> {
                         ),
                         Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(
-                              16.0, 10.0, 16.0, 0.0),
+                              16.0, 10.0, 16.0, 300.0),
                           child: ListView(
                             padding: EdgeInsets.zero,
                             shrinkWrap: true,
@@ -131,15 +127,149 @@ class _SettingPageWidgetState extends State<SettingPageWidget> {
                                         hoverColor: Colors.transparent,
                                         highlightColor: Colors.transparent,
                                         onTap: () async {
-                                          if (FFAppState().freshcheck) {
-                                            FFAppState().FreshMeatVis = false;
-                                            FFAppState().freshcheck = false;
-                                            safeSetState(() {});
-                                          } else {
-                                            FFAppState().FreshMeatVis = true;
-                                            FFAppState().freshcheck = true;
-                                            safeSetState(() {});
-                                          }
+                                          context.pushNamed(
+                                              ChooseDepartWidget.routeName);
+                                        },
+                                        child: Container(
+                                          width: double.infinity,
+                                          height: 100.0,
+                                          decoration: BoxDecoration(
+                                            color: FlutterFlowTheme.of(context)
+                                                .primaryText,
+                                            borderRadius:
+                                                BorderRadius.circular(12.0),
+                                            border: Border.all(
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .alternate,
+                                              width: 1.0,
+                                            ),
+                                          ),
+                                          child: Padding(
+                                            padding: EdgeInsets.all(12.0),
+                                            child: Row(
+                                              mainAxisSize: MainAxisSize.min,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment
+                                                      .spaceBetween,
+                                              children: [
+                                                Row(
+                                                  mainAxisSize:
+                                                      MainAxisSize.max,
+                                                  children: [
+                                                    Container(
+                                                      width: 70.0,
+                                                      height: 70.0,
+                                                      decoration: BoxDecoration(
+                                                        color:
+                                                            Color(0xFFFFF3E0),
+                                                        shape: BoxShape.circle,
+                                                      ),
+                                                      child: Align(
+                                                        alignment:
+                                                            AlignmentDirectional(
+                                                                0.0, 0.0),
+                                                        child: FaIcon(
+                                                          FontAwesomeIcons.bars,
+                                                          color:
+                                                              Color(0xFFF5A623),
+                                                          size: 50.0,
+                                                        ),
+                                                      ),
+                                                    ),
+                                                    Column(
+                                                      mainAxisSize:
+                                                          MainAxisSize.min,
+                                                      crossAxisAlignment:
+                                                          CrossAxisAlignment
+                                                              .start,
+                                                      children: [
+                                                        Text(
+                                                          'Choosing Visable Departments  ',
+                                                          style: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .displaySmall
+                                                              .override(
+                                                                font: GoogleFonts
+                                                                    .interTight(
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w800,
+                                                                  fontStyle: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .displaySmall
+                                                                      .fontStyle,
+                                                                ),
+                                                                color: Color(
+                                                                    0xFF3A3F47),
+                                                                fontSize: 20.0,
+                                                                letterSpacing:
+                                                                    0.0,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .w800,
+                                                                fontStyle: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .displaySmall
+                                                                    .fontStyle,
+                                                              ),
+                                                        ),
+                                                        Text(
+                                                          'اختيار الاقسام الظاهرة ',
+                                                          style: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .displaySmall
+                                                              .override(
+                                                                font: GoogleFonts
+                                                                    .interTight(
+                                                                  fontWeight: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .displaySmall
+                                                                      .fontWeight,
+                                                                  fontStyle: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .displaySmall
+                                                                      .fontStyle,
+                                                                ),
+                                                                color: Color(
+                                                                    0xFF3A3F47),
+                                                                fontSize: 20.0,
+                                                                letterSpacing:
+                                                                    0.0,
+                                                                fontWeight: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .displaySmall
+                                                                    .fontWeight,
+                                                                fontStyle: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .displaySmall
+                                                                    .fontStyle,
+                                                              ),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                  ].divide(
+                                                      SizedBox(width: 12.0)),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  Expanded(
+                                    child: Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          16.0, 4.0, 16.0, 4.0),
+                                      child: InkWell(
+                                        splashColor: Colors.transparent,
+                                        focusColor: Colors.transparent,
+                                        hoverColor: Colors.transparent,
+                                        highlightColor: Colors.transparent,
+                                        onTap: () async {
+                                          context.pushNamed(
+                                              EditPrintFieldsWidget.routeName);
                                         },
                                         child: Container(
                                           width: double.infinity,
@@ -181,7 +311,8 @@ class _SettingPageWidgetState extends State<SettingPageWidget> {
                                                             AlignmentDirectional(
                                                                 0.0, 0.0),
                                                         child: Icon(
-                                                          FFIcons.kfreshMeat,
+                                                          Icons
+                                                              .local_print_shop_outlined,
                                                           color:
                                                               Color(0xFFF5A623),
                                                           size: 50.0,
@@ -196,11 +327,7 @@ class _SettingPageWidgetState extends State<SettingPageWidget> {
                                                               .start,
                                                       children: [
                                                         Text(
-                                                          FFLocalizations.of(
-                                                                  context)
-                                                              .getText(
-                                                            '5notua5o' /* Fresh Meat */,
-                                                          ),
+                                                          'Edit Print Fields ',
                                                           style: FlutterFlowTheme
                                                                   .of(context)
                                                               .displaySmall
@@ -230,11 +357,7 @@ class _SettingPageWidgetState extends State<SettingPageWidget> {
                                                               ),
                                                         ),
                                                         Text(
-                                                          FFLocalizations.of(
-                                                                  context)
-                                                              .getText(
-                                                            'rrgeyrwp' /* اللحوم الطازجه */,
-                                                          ),
+                                                          'تعديل بيانات الطباعة',
                                                           style: FlutterFlowTheme
                                                                   .of(context)
                                                               .displaySmall
@@ -270,1360 +393,7 @@ class _SettingPageWidgetState extends State<SettingPageWidget> {
                                                   ].divide(
                                                       SizedBox(width: 12.0)),
                                                 ),
-                                                Theme(
-                                                  data: ThemeData(
-                                                    checkboxTheme:
-                                                        CheckboxThemeData(
-                                                      visualDensity:
-                                                          VisualDensity.compact,
-                                                      materialTapTargetSize:
-                                                          MaterialTapTargetSize
-                                                              .shrinkWrap,
-                                                      shape:
-                                                          RoundedRectangleBorder(
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(4.0),
-                                                      ),
-                                                    ),
-                                                    unselectedWidgetColor:
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .alternate,
-                                                  ),
-                                                  child: Checkbox(
-                                                    value: _model
-                                                            .freshmeatcheckValue ??=
-                                                        FFAppState().freshcheck,
-                                                    onChanged:
-                                                        (newValue) async {
-                                                      safeSetState(() => _model
-                                                              .freshmeatcheckValue =
-                                                          newValue!);
-                                                    },
-                                                    side: (FlutterFlowTheme.of(
-                                                                    context)
-                                                                .alternate !=
-                                                            null)
-                                                        ? BorderSide(
-                                                            width: 2,
-                                                            color: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .alternate,
-                                                          )
-                                                        : null,
-                                                    activeColor:
-                                                        Color(0xFFF5A623),
-                                                    checkColor:
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .info,
-                                                  ),
-                                                ),
                                               ],
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  Expanded(
-                                    child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          16.0, 4.0, 16.0, 4.0),
-                                      child: InkWell(
-                                        splashColor: Colors.transparent,
-                                        focusColor: Colors.transparent,
-                                        hoverColor: Colors.transparent,
-                                        highlightColor: Colors.transparent,
-                                        onTap: () async {
-                                          if (FFAppState().poultrycheck) {
-                                            FFAppState().PoultryVis = false;
-                                            FFAppState().poultrycheck = false;
-                                            safeSetState(() {});
-                                          } else {
-                                            FFAppState().PoultryVis = true;
-                                            FFAppState().poultrycheck = true;
-                                            safeSetState(() {});
-                                          }
-                                        },
-                                        child: Container(
-                                          width: double.infinity,
-                                          height: 100.0,
-                                          decoration: BoxDecoration(
-                                            color: FlutterFlowTheme.of(context)
-                                                .primaryText,
-                                            borderRadius:
-                                                BorderRadius.circular(12.0),
-                                            border: Border.all(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .alternate,
-                                              width: 1.0,
-                                            ),
-                                          ),
-                                          child: Padding(
-                                            padding: EdgeInsets.all(12.0),
-                                            child: Row(
-                                              mainAxisSize: MainAxisSize.min,
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment
-                                                      .spaceBetween,
-                                              children: [
-                                                Row(
-                                                  mainAxisSize:
-                                                      MainAxisSize.max,
-                                                  children: [
-                                                    Container(
-                                                      width: 70.0,
-                                                      height: 70.0,
-                                                      decoration: BoxDecoration(
-                                                        color:
-                                                            Color(0xFFFFF3E0),
-                                                        shape: BoxShape.circle,
-                                                      ),
-                                                      child: Align(
-                                                        alignment:
-                                                            AlignmentDirectional(
-                                                                0.0, 0.0),
-                                                        child: Padding(
-                                                          padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      0.0,
-                                                                      0.0,
-                                                                      0.0,
-                                                                      10.0),
-                                                          child: Icon(
-                                                            FFIcons.kchicken,
-                                                            color: Color(
-                                                                0xFFF5A623),
-                                                            size: 50.0,
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    ),
-                                                    Column(
-                                                      mainAxisSize:
-                                                          MainAxisSize.min,
-                                                      crossAxisAlignment:
-                                                          CrossAxisAlignment
-                                                              .start,
-                                                      children: [
-                                                        Text(
-                                                          FFLocalizations.of(
-                                                                  context)
-                                                              .getText(
-                                                            'wxhdbojc' /* Poultry */,
-                                                          ),
-                                                          style: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .displaySmall
-                                                              .override(
-                                                                font: GoogleFonts
-                                                                    .interTight(
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .w800,
-                                                                  fontStyle: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .displaySmall
-                                                                      .fontStyle,
-                                                                ),
-                                                                color: Color(
-                                                                    0xFF3A3F47),
-                                                                fontSize: 20.0,
-                                                                letterSpacing:
-                                                                    0.0,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .w800,
-                                                                fontStyle: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .displaySmall
-                                                                    .fontStyle,
-                                                              ),
-                                                        ),
-                                                        Text(
-                                                          FFLocalizations.of(
-                                                                  context)
-                                                              .getText(
-                                                            'axg60isb' /* دواجن */,
-                                                          ),
-                                                          style: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .displaySmall
-                                                              .override(
-                                                                font: GoogleFonts
-                                                                    .interTight(
-                                                                  fontWeight: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .displaySmall
-                                                                      .fontWeight,
-                                                                  fontStyle: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .displaySmall
-                                                                      .fontStyle,
-                                                                ),
-                                                                color: Color(
-                                                                    0xFF3A3F47),
-                                                                fontSize: 20.0,
-                                                                letterSpacing:
-                                                                    0.0,
-                                                                fontWeight: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .displaySmall
-                                                                    .fontWeight,
-                                                                fontStyle: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .displaySmall
-                                                                    .fontStyle,
-                                                              ),
-                                                        ),
-                                                      ],
-                                                    ),
-                                                  ].divide(
-                                                      SizedBox(width: 12.0)),
-                                                ),
-                                                Theme(
-                                                  data: ThemeData(
-                                                    checkboxTheme:
-                                                        CheckboxThemeData(
-                                                      visualDensity:
-                                                          VisualDensity.compact,
-                                                      materialTapTargetSize:
-                                                          MaterialTapTargetSize
-                                                              .shrinkWrap,
-                                                      shape:
-                                                          RoundedRectangleBorder(
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(4.0),
-                                                      ),
-                                                    ),
-                                                    unselectedWidgetColor:
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .alternate,
-                                                  ),
-                                                  child: Checkbox(
-                                                    value: _model
-                                                            .poultrycheckValue ??=
-                                                        FFAppState()
-                                                            .poultrycheck,
-                                                    onChanged:
-                                                        (newValue) async {
-                                                      safeSetState(() => _model
-                                                              .poultrycheckValue =
-                                                          newValue!);
-                                                    },
-                                                    side: (FlutterFlowTheme.of(
-                                                                    context)
-                                                                .alternate !=
-                                                            null)
-                                                        ? BorderSide(
-                                                            width: 2,
-                                                            color: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .alternate,
-                                                          )
-                                                        : null,
-                                                    activeColor:
-                                                        Color(0xFFF5A623),
-                                                    checkColor:
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .info,
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              Row(
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  Expanded(
-                                    child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          16.0, 4.0, 16.0, 4.0),
-                                      child: InkWell(
-                                        splashColor: Colors.transparent,
-                                        focusColor: Colors.transparent,
-                                        hoverColor: Colors.transparent,
-                                        highlightColor: Colors.transparent,
-                                        onTap: () async {
-                                          if (FFAppState().fishcheck) {
-                                            FFAppState().fishcheck = false;
-                                            FFAppState().FishVis = false;
-                                            safeSetState(() {});
-                                          } else {
-                                            FFAppState().fishcheck = true;
-                                            FFAppState().FishVis = true;
-                                            safeSetState(() {});
-                                          }
-                                        },
-                                        child: Container(
-                                          width: double.infinity,
-                                          height: 100.0,
-                                          decoration: BoxDecoration(
-                                            color: FlutterFlowTheme.of(context)
-                                                .primaryText,
-                                            borderRadius:
-                                                BorderRadius.circular(12.0),
-                                            border: Border.all(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .alternate,
-                                              width: 1.0,
-                                            ),
-                                          ),
-                                          child: Padding(
-                                            padding: EdgeInsets.all(12.0),
-                                            child: Row(
-                                              mainAxisSize: MainAxisSize.min,
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment
-                                                      .spaceBetween,
-                                              children: [
-                                                Row(
-                                                  mainAxisSize:
-                                                      MainAxisSize.max,
-                                                  children: [
-                                                    Container(
-                                                      width: 70.0,
-                                                      height: 70.0,
-                                                      decoration: BoxDecoration(
-                                                        color:
-                                                            Color(0xFFFFF3E0),
-                                                        shape: BoxShape.circle,
-                                                      ),
-                                                      child: Align(
-                                                        alignment:
-                                                            AlignmentDirectional(
-                                                                0.0, 0.0),
-                                                        child: Icon(
-                                                          FFIcons.kfish,
-                                                          color:
-                                                              Color(0xFFF5A623),
-                                                          size: 50.0,
-                                                        ),
-                                                      ),
-                                                    ),
-                                                    Column(
-                                                      mainAxisSize:
-                                                          MainAxisSize.min,
-                                                      crossAxisAlignment:
-                                                          CrossAxisAlignment
-                                                              .start,
-                                                      children: [
-                                                        Text(
-                                                          FFLocalizations.of(
-                                                                  context)
-                                                              .getText(
-                                                            'xgtio3qg' /* Fish */,
-                                                          ),
-                                                          style: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .displaySmall
-                                                              .override(
-                                                                font: GoogleFonts
-                                                                    .interTight(
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .w800,
-                                                                  fontStyle: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .displaySmall
-                                                                      .fontStyle,
-                                                                ),
-                                                                color: Color(
-                                                                    0xFF3A3F47),
-                                                                fontSize: 20.0,
-                                                                letterSpacing:
-                                                                    0.0,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .w800,
-                                                                fontStyle: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .displaySmall
-                                                                    .fontStyle,
-                                                              ),
-                                                        ),
-                                                        Text(
-                                                          FFLocalizations.of(
-                                                                  context)
-                                                              .getText(
-                                                            'wxo6azt5' /* اسماك */,
-                                                          ),
-                                                          style: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .displaySmall
-                                                              .override(
-                                                                font: GoogleFonts
-                                                                    .interTight(
-                                                                  fontWeight: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .displaySmall
-                                                                      .fontWeight,
-                                                                  fontStyle: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .displaySmall
-                                                                      .fontStyle,
-                                                                ),
-                                                                color: Color(
-                                                                    0xFF3A3F47),
-                                                                fontSize: 20.0,
-                                                                letterSpacing:
-                                                                    0.0,
-                                                                fontWeight: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .displaySmall
-                                                                    .fontWeight,
-                                                                fontStyle: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .displaySmall
-                                                                    .fontStyle,
-                                                              ),
-                                                        ),
-                                                      ],
-                                                    ),
-                                                  ].divide(
-                                                      SizedBox(width: 12.0)),
-                                                ),
-                                                Theme(
-                                                  data: ThemeData(
-                                                    checkboxTheme:
-                                                        CheckboxThemeData(
-                                                      visualDensity:
-                                                          VisualDensity.compact,
-                                                      materialTapTargetSize:
-                                                          MaterialTapTargetSize
-                                                              .shrinkWrap,
-                                                      shape:
-                                                          RoundedRectangleBorder(
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(4.0),
-                                                      ),
-                                                    ),
-                                                    unselectedWidgetColor:
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .alternate,
-                                                  ),
-                                                  child: Checkbox(
-                                                    value: _model
-                                                            .fishcheckValue ??=
-                                                        FFAppState().fishcheck,
-                                                    onChanged:
-                                                        (newValue) async {
-                                                      safeSetState(() => _model
-                                                              .fishcheckValue =
-                                                          newValue!);
-                                                    },
-                                                    side: (FlutterFlowTheme.of(
-                                                                    context)
-                                                                .alternate !=
-                                                            null)
-                                                        ? BorderSide(
-                                                            width: 2,
-                                                            color: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .alternate,
-                                                          )
-                                                        : null,
-                                                    activeColor:
-                                                        Color(0xFFF5A623),
-                                                    checkColor:
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .info,
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  Expanded(
-                                    child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          16.0, 4.0, 16.0, 4.0),
-                                      child: InkWell(
-                                        splashColor: Colors.transparent,
-                                        focusColor: Colors.transparent,
-                                        hoverColor: Colors.transparent,
-                                        highlightColor: Colors.transparent,
-                                        onTap: () async {
-                                          if (FFAppState().spicescheck) {
-                                            FFAppState().spicescheck = false;
-                                            FFAppState().SpicesVis = false;
-                                            safeSetState(() {});
-                                          } else {
-                                            FFAppState().spicescheck = true;
-                                            FFAppState().SpicesVis = true;
-                                            safeSetState(() {});
-                                          }
-                                        },
-                                        child: Container(
-                                          width: double.infinity,
-                                          height: 100.0,
-                                          decoration: BoxDecoration(
-                                            color: FlutterFlowTheme.of(context)
-                                                .primaryText,
-                                            borderRadius:
-                                                BorderRadius.circular(12.0),
-                                            border: Border.all(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .alternate,
-                                              width: 1.0,
-                                            ),
-                                          ),
-                                          child: Padding(
-                                            padding: EdgeInsets.all(12.0),
-                                            child: Row(
-                                              mainAxisSize: MainAxisSize.min,
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment
-                                                      .spaceBetween,
-                                              children: [
-                                                Row(
-                                                  mainAxisSize:
-                                                      MainAxisSize.max,
-                                                  children: [
-                                                    Container(
-                                                      width: 70.0,
-                                                      height: 70.0,
-                                                      decoration: BoxDecoration(
-                                                        color:
-                                                            Color(0xFFFFF3E0),
-                                                        shape: BoxShape.circle,
-                                                      ),
-                                                      child: Align(
-                                                        alignment:
-                                                            AlignmentDirectional(
-                                                                0.0, 0.0),
-                                                        child: Icon(
-                                                          FFIcons.kspices,
-                                                          color:
-                                                              Color(0xFFF5A623),
-                                                          size: 50.0,
-                                                        ),
-                                                      ),
-                                                    ),
-                                                    Column(
-                                                      mainAxisSize:
-                                                          MainAxisSize.min,
-                                                      crossAxisAlignment:
-                                                          CrossAxisAlignment
-                                                              .start,
-                                                      children: [
-                                                        Text(
-                                                          FFLocalizations.of(
-                                                                  context)
-                                                              .getText(
-                                                            'drjy09ux' /* Spices */,
-                                                          ),
-                                                          style: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .displaySmall
-                                                              .override(
-                                                                font: GoogleFonts
-                                                                    .interTight(
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .w800,
-                                                                  fontStyle: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .displaySmall
-                                                                      .fontStyle,
-                                                                ),
-                                                                color: Color(
-                                                                    0xFF3A3F47),
-                                                                fontSize: 20.0,
-                                                                letterSpacing:
-                                                                    0.0,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .w800,
-                                                                fontStyle: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .displaySmall
-                                                                    .fontStyle,
-                                                              ),
-                                                        ),
-                                                        Text(
-                                                          FFLocalizations.of(
-                                                                  context)
-                                                              .getText(
-                                                            'jnrblj7q' /* عطارة */,
-                                                          ),
-                                                          style: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .displaySmall
-                                                              .override(
-                                                                font: GoogleFonts
-                                                                    .interTight(
-                                                                  fontWeight: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .displaySmall
-                                                                      .fontWeight,
-                                                                  fontStyle: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .displaySmall
-                                                                      .fontStyle,
-                                                                ),
-                                                                color: Color(
-                                                                    0xFF3A3F47),
-                                                                fontSize: 20.0,
-                                                                letterSpacing:
-                                                                    0.0,
-                                                                fontWeight: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .displaySmall
-                                                                    .fontWeight,
-                                                                fontStyle: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .displaySmall
-                                                                    .fontStyle,
-                                                              ),
-                                                        ),
-                                                      ],
-                                                    ),
-                                                  ].divide(
-                                                      SizedBox(width: 12.0)),
-                                                ),
-                                                Theme(
-                                                  data: ThemeData(
-                                                    checkboxTheme:
-                                                        CheckboxThemeData(
-                                                      visualDensity:
-                                                          VisualDensity.compact,
-                                                      materialTapTargetSize:
-                                                          MaterialTapTargetSize
-                                                              .shrinkWrap,
-                                                      shape:
-                                                          RoundedRectangleBorder(
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(4.0),
-                                                      ),
-                                                    ),
-                                                    unselectedWidgetColor:
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .alternate,
-                                                  ),
-                                                  child: Checkbox(
-                                                    value: _model
-                                                            .spicescheckValue ??=
-                                                        FFAppState()
-                                                            .spicescheck,
-                                                    onChanged:
-                                                        (newValue) async {
-                                                      safeSetState(() => _model
-                                                              .spicescheckValue =
-                                                          newValue!);
-                                                    },
-                                                    side: (FlutterFlowTheme.of(
-                                                                    context)
-                                                                .alternate !=
-                                                            null)
-                                                        ? BorderSide(
-                                                            width: 2,
-                                                            color: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .alternate,
-                                                          )
-                                                        : null,
-                                                    activeColor:
-                                                        Color(0xFFF5A623),
-                                                    checkColor:
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .info,
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              Row(
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  Expanded(
-                                    child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          16.0, 4.0, 16.0, 4.0),
-                                      child: InkWell(
-                                        splashColor: Colors.transparent,
-                                        focusColor: Colors.transparent,
-                                        hoverColor: Colors.transparent,
-                                        highlightColor: Colors.transparent,
-                                        onTap: () async {
-                                          if (FFAppState().frozencheck) {
-                                            FFAppState().FrozenMeatVis = false;
-                                            FFAppState().frozencheck = false;
-                                            safeSetState(() {});
-                                          } else {
-                                            FFAppState().FrozenMeatVis = true;
-                                            FFAppState().frozencheck = true;
-                                            safeSetState(() {});
-                                          }
-                                        },
-                                        child: Container(
-                                          width: double.infinity,
-                                          height: 100.0,
-                                          decoration: BoxDecoration(
-                                            color: FlutterFlowTheme.of(context)
-                                                .primaryText,
-                                            borderRadius:
-                                                BorderRadius.circular(12.0),
-                                            border: Border.all(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .alternate,
-                                              width: 1.0,
-                                            ),
-                                          ),
-                                          child: Padding(
-                                            padding: EdgeInsets.all(12.0),
-                                            child: Row(
-                                              mainAxisSize: MainAxisSize.min,
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment
-                                                      .spaceBetween,
-                                              children: [
-                                                Row(
-                                                  mainAxisSize:
-                                                      MainAxisSize.max,
-                                                  children: [
-                                                    Container(
-                                                      width: 70.0,
-                                                      height: 70.0,
-                                                      decoration: BoxDecoration(
-                                                        color:
-                                                            Color(0xFFFFF3E0),
-                                                        shape: BoxShape.circle,
-                                                      ),
-                                                      child: Align(
-                                                        alignment:
-                                                            AlignmentDirectional(
-                                                                0.0, 0.0),
-                                                        child: Icon(
-                                                          FFIcons.kfrozen,
-                                                          color:
-                                                              Color(0xFFF5A623),
-                                                          size: 50.0,
-                                                        ),
-                                                      ),
-                                                    ),
-                                                    Column(
-                                                      mainAxisSize:
-                                                          MainAxisSize.min,
-                                                      crossAxisAlignment:
-                                                          CrossAxisAlignment
-                                                              .start,
-                                                      children: [
-                                                        Text(
-                                                          FFLocalizations.of(
-                                                                  context)
-                                                              .getText(
-                                                            'c8ts6xla' /* Frozen Meat */,
-                                                          ),
-                                                          style: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .displaySmall
-                                                              .override(
-                                                                font: GoogleFonts
-                                                                    .interTight(
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .w800,
-                                                                  fontStyle: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .displaySmall
-                                                                      .fontStyle,
-                                                                ),
-                                                                color: Color(
-                                                                    0xFF3A3F47),
-                                                                fontSize: 20.0,
-                                                                letterSpacing:
-                                                                    0.0,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .w800,
-                                                                fontStyle: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .displaySmall
-                                                                    .fontStyle,
-                                                              ),
-                                                        ),
-                                                        Text(
-                                                          FFLocalizations.of(
-                                                                  context)
-                                                              .getText(
-                                                            'gilfhqbs' /* اللحوم المجمدة */,
-                                                          ),
-                                                          style: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .displaySmall
-                                                              .override(
-                                                                font: GoogleFonts
-                                                                    .interTight(
-                                                                  fontWeight: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .displaySmall
-                                                                      .fontWeight,
-                                                                  fontStyle: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .displaySmall
-                                                                      .fontStyle,
-                                                                ),
-                                                                color: Color(
-                                                                    0xFF3A3F47),
-                                                                fontSize: 20.0,
-                                                                letterSpacing:
-                                                                    0.0,
-                                                                fontWeight: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .displaySmall
-                                                                    .fontWeight,
-                                                                fontStyle: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .displaySmall
-                                                                    .fontStyle,
-                                                              ),
-                                                        ),
-                                                      ],
-                                                    ),
-                                                  ].divide(
-                                                      SizedBox(width: 12.0)),
-                                                ),
-                                                Theme(
-                                                  data: ThemeData(
-                                                    checkboxTheme:
-                                                        CheckboxThemeData(
-                                                      visualDensity:
-                                                          VisualDensity.compact,
-                                                      materialTapTargetSize:
-                                                          MaterialTapTargetSize
-                                                              .shrinkWrap,
-                                                      shape:
-                                                          RoundedRectangleBorder(
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(4.0),
-                                                      ),
-                                                    ),
-                                                    unselectedWidgetColor:
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .alternate,
-                                                  ),
-                                                  child: Checkbox(
-                                                    value: _model
-                                                            .frozencheckValue ??=
-                                                        FFAppState()
-                                                            .frozencheck,
-                                                    onChanged:
-                                                        (newValue) async {
-                                                      safeSetState(() => _model
-                                                              .frozencheckValue =
-                                                          newValue!);
-                                                    },
-                                                    side: (FlutterFlowTheme.of(
-                                                                    context)
-                                                                .alternate !=
-                                                            null)
-                                                        ? BorderSide(
-                                                            width: 2,
-                                                            color: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .alternate,
-                                                          )
-                                                        : null,
-                                                    activeColor:
-                                                        Color(0xFFF5A623),
-                                                    checkColor:
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .info,
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  Expanded(
-                                    child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          16.0, 4.0, 16.0, 4.0),
-                                      child: InkWell(
-                                        splashColor: Colors.transparent,
-                                        focusColor: Colors.transparent,
-                                        hoverColor: Colors.transparent,
-                                        highlightColor: Colors.transparent,
-                                        onTap: () async {
-                                          if (FFAppState().bakerycheck) {
-                                            FFAppState().BakeryVis = false;
-                                            FFAppState().bakerycheck = false;
-                                            safeSetState(() {});
-                                          } else {
-                                            FFAppState().BakeryVis = true;
-                                            FFAppState().bakerycheck = true;
-                                            safeSetState(() {});
-                                          }
-                                        },
-                                        child: Container(
-                                          width: double.infinity,
-                                          height: 100.0,
-                                          decoration: BoxDecoration(
-                                            color: FlutterFlowTheme.of(context)
-                                                .primaryText,
-                                            borderRadius:
-                                                BorderRadius.circular(12.0),
-                                            border: Border.all(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .alternate,
-                                              width: 1.0,
-                                            ),
-                                          ),
-                                          child: Padding(
-                                            padding: EdgeInsets.all(12.0),
-                                            child: Row(
-                                              mainAxisSize: MainAxisSize.min,
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment
-                                                      .spaceBetween,
-                                              children: [
-                                                Row(
-                                                  mainAxisSize:
-                                                      MainAxisSize.max,
-                                                  children: [
-                                                    Container(
-                                                      width: 70.0,
-                                                      height: 70.0,
-                                                      decoration: BoxDecoration(
-                                                        color:
-                                                            Color(0xFFFFF3E0),
-                                                        shape: BoxShape.circle,
-                                                      ),
-                                                      child: Align(
-                                                        alignment:
-                                                            AlignmentDirectional(
-                                                                0.0, 0.0),
-                                                        child: Padding(
-                                                          padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      0.0,
-                                                                      0.0,
-                                                                      10.0,
-                                                                      10.0),
-                                                          child: Icon(
-                                                            FFIcons.kbakery,
-                                                            color: Color(
-                                                                0xFFF5A623),
-                                                            size: 40.0,
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    ),
-                                                    Column(
-                                                      mainAxisSize:
-                                                          MainAxisSize.min,
-                                                      crossAxisAlignment:
-                                                          CrossAxisAlignment
-                                                              .start,
-                                                      children: [
-                                                        Text(
-                                                          FFLocalizations.of(
-                                                                  context)
-                                                              .getText(
-                                                            '3v7rcb73' /* Bakery */,
-                                                          ),
-                                                          style: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .displaySmall
-                                                              .override(
-                                                                font: GoogleFonts
-                                                                    .interTight(
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .w800,
-                                                                  fontStyle: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .displaySmall
-                                                                      .fontStyle,
-                                                                ),
-                                                                color: Color(
-                                                                    0xFF3A3F47),
-                                                                fontSize: 20.0,
-                                                                letterSpacing:
-                                                                    0.0,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .w800,
-                                                                fontStyle: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .displaySmall
-                                                                    .fontStyle,
-                                                              ),
-                                                        ),
-                                                        Text(
-                                                          FFLocalizations.of(
-                                                                  context)
-                                                              .getText(
-                                                            'kq1h7gfu' /* مخبوزات */,
-                                                          ),
-                                                          style: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .displaySmall
-                                                              .override(
-                                                                font: GoogleFonts
-                                                                    .interTight(
-                                                                  fontWeight: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .displaySmall
-                                                                      .fontWeight,
-                                                                  fontStyle: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .displaySmall
-                                                                      .fontStyle,
-                                                                ),
-                                                                color: Color(
-                                                                    0xFF3A3F47),
-                                                                fontSize: 20.0,
-                                                                letterSpacing:
-                                                                    0.0,
-                                                                fontWeight: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .displaySmall
-                                                                    .fontWeight,
-                                                                fontStyle: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .displaySmall
-                                                                    .fontStyle,
-                                                              ),
-                                                        ),
-                                                      ],
-                                                    ),
-                                                  ].divide(
-                                                      SizedBox(width: 12.0)),
-                                                ),
-                                                Theme(
-                                                  data: ThemeData(
-                                                    checkboxTheme:
-                                                        CheckboxThemeData(
-                                                      visualDensity:
-                                                          VisualDensity.compact,
-                                                      materialTapTargetSize:
-                                                          MaterialTapTargetSize
-                                                              .shrinkWrap,
-                                                      shape:
-                                                          RoundedRectangleBorder(
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(4.0),
-                                                      ),
-                                                    ),
-                                                    unselectedWidgetColor:
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .alternate,
-                                                  ),
-                                                  child: Checkbox(
-                                                    value: _model
-                                                            .bakerycheckValue ??=
-                                                        FFAppState()
-                                                            .bakerycheck,
-                                                    onChanged:
-                                                        (newValue) async {
-                                                      safeSetState(() => _model
-                                                              .bakerycheckValue =
-                                                          newValue!);
-                                                    },
-                                                    side: (FlutterFlowTheme.of(
-                                                                    context)
-                                                                .alternate !=
-                                                            null)
-                                                        ? BorderSide(
-                                                            width: 2,
-                                                            color: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .alternate,
-                                                          )
-                                                        : null,
-                                                    activeColor:
-                                                        Color(0xFFF5A623),
-                                                    checkColor:
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .info,
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              Row(
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  Expanded(
-                                    child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          16.0, 4.0, 16.0, 4.0),
-                                      child: InkWell(
-                                        splashColor: Colors.transparent,
-                                        focusColor: Colors.transparent,
-                                        hoverColor: Colors.transparent,
-                                        highlightColor: Colors.transparent,
-                                        onTap: () async {
-                                          if (!FFAppState().grocerycheck) {
-                                            FFAppState().GroceryVis = true;
-                                            safeSetState(() {});
-                                          }
-                                        },
-                                        child: Container(
-                                          width: double.infinity,
-                                          height: 100.0,
-                                          decoration: BoxDecoration(
-                                            color: FlutterFlowTheme.of(context)
-                                                .primaryText,
-                                            borderRadius:
-                                                BorderRadius.circular(12.0),
-                                            border: Border.all(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .alternate,
-                                              width: 1.0,
-                                            ),
-                                          ),
-                                          child: Padding(
-                                            padding: EdgeInsets.all(12.0),
-                                            child: Row(
-                                              mainAxisSize: MainAxisSize.min,
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment
-                                                      .spaceBetween,
-                                              children: [
-                                                Row(
-                                                  mainAxisSize:
-                                                      MainAxisSize.max,
-                                                  children: [
-                                                    Container(
-                                                      width: 70.0,
-                                                      height: 70.0,
-                                                      decoration: BoxDecoration(
-                                                        color:
-                                                            Color(0xFFFFF3E0),
-                                                        shape: BoxShape.circle,
-                                                      ),
-                                                      child: Align(
-                                                        alignment:
-                                                            AlignmentDirectional(
-                                                                0.0, 0.0),
-                                                        child: Padding(
-                                                          padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      0.0,
-                                                                      0.0,
-                                                                      0.0,
-                                                                      10.0),
-                                                          child: Icon(
-                                                            FFIcons.kgrocery,
-                                                            color: Color(
-                                                                0xFFF5A623),
-                                                            size: 50.0,
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    ),
-                                                    Column(
-                                                      mainAxisSize:
-                                                          MainAxisSize.min,
-                                                      crossAxisAlignment:
-                                                          CrossAxisAlignment
-                                                              .start,
-                                                      children: [
-                                                        Text(
-                                                          FFLocalizations.of(
-                                                                  context)
-                                                              .getText(
-                                                            'heuolhld' /* Grocery */,
-                                                          ),
-                                                          style: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .displaySmall
-                                                              .override(
-                                                                font: GoogleFonts
-                                                                    .interTight(
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .w800,
-                                                                  fontStyle: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .displaySmall
-                                                                      .fontStyle,
-                                                                ),
-                                                                color: Color(
-                                                                    0xFF3A3F47),
-                                                                fontSize: 20.0,
-                                                                letterSpacing:
-                                                                    0.0,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .w800,
-                                                                fontStyle: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .displaySmall
-                                                                    .fontStyle,
-                                                              ),
-                                                        ),
-                                                        Text(
-                                                          FFLocalizations.of(
-                                                                  context)
-                                                              .getText(
-                                                            '7qnas99n' /* بقالة */,
-                                                          ),
-                                                          style: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .displaySmall
-                                                              .override(
-                                                                font: GoogleFonts
-                                                                    .interTight(
-                                                                  fontWeight: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .displaySmall
-                                                                      .fontWeight,
-                                                                  fontStyle: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .displaySmall
-                                                                      .fontStyle,
-                                                                ),
-                                                                color: Color(
-                                                                    0xFF3A3F47),
-                                                                fontSize: 20.0,
-                                                                letterSpacing:
-                                                                    0.0,
-                                                                fontWeight: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .displaySmall
-                                                                    .fontWeight,
-                                                                fontStyle: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .displaySmall
-                                                                    .fontStyle,
-                                                              ),
-                                                        ),
-                                                      ],
-                                                    ),
-                                                  ].divide(
-                                                      SizedBox(width: 12.0)),
-                                                ),
-                                                Theme(
-                                                  data: ThemeData(
-                                                    checkboxTheme:
-                                                        CheckboxThemeData(
-                                                      visualDensity:
-                                                          VisualDensity.compact,
-                                                      materialTapTargetSize:
-                                                          MaterialTapTargetSize
-                                                              .shrinkWrap,
-                                                      shape:
-                                                          RoundedRectangleBorder(
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(4.0),
-                                                      ),
-                                                    ),
-                                                    unselectedWidgetColor:
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .alternate,
-                                                  ),
-                                                  child: Checkbox(
-                                                    value: _model
-                                                            .grocerycheckValue ??=
-                                                        FFAppState()
-                                                            .grocerycheck,
-                                                    onChanged:
-                                                        (newValue) async {
-                                                      safeSetState(() => _model
-                                                              .grocerycheckValue =
-                                                          newValue!);
-                                                    },
-                                                    side: (FlutterFlowTheme.of(
-                                                                    context)
-                                                                .alternate !=
-                                                            null)
-                                                        ? BorderSide(
-                                                            width: 2,
-                                                            color: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .alternate,
-                                                          )
-                                                        : null,
-                                                    activeColor:
-                                                        Color(0xFFF5A623),
-                                                    checkColor:
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .info,
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  Expanded(
-                                    child: Opacity(
-                                      opacity: 0.0,
-                                      child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            16.0, 4.0, 16.0, 4.0),
-                                        child: Container(
-                                          width: double.infinity,
-                                          height: 100.0,
-                                          decoration: BoxDecoration(
-                                            color: FlutterFlowTheme.of(context)
-                                                .primaryBackground,
-                                            borderRadius:
-                                                BorderRadius.circular(12.0),
-                                            border: Border.all(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .alternate,
-                                              width: 1.0,
                                             ),
                                           ),
                                         ),
@@ -1667,14 +437,7 @@ class _SettingPageWidgetState extends State<SettingPageWidget> {
                                               MainAxisAlignment.center,
                                           children: [
                                             ClipRRect(
-                                              borderRadius: BorderRadius.only(
-                                                bottomLeft:
-                                                    Radius.circular(0.0),
-                                                bottomRight:
-                                                    Radius.circular(0.0),
-                                                topLeft: Radius.circular(0.0),
-                                                topRight: Radius.circular(0.0),
-                                              ),
+                                              borderRadius: BorderRadius.only(),
                                               child: Image.asset(
                                                 'assets/images/output-onlinepngtools_1_200x200.png',
                                                 width: 230.8,
@@ -1819,63 +582,51 @@ class _SettingPageWidgetState extends State<SettingPageWidget> {
                                           padding:
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 50.0, 0.0),
-                                          child: InkWell(
-                                            splashColor: Colors.transparent,
-                                            focusColor: Colors.transparent,
-                                            hoverColor: Colors.transparent,
-                                            highlightColor: Colors.transparent,
-                                            onDoubleTap: () async {
+                                          child: FFButtonWidget(
+                                            onPressed: () async {
                                               context.pushNamed(
                                                   TheSelectionScreenWidget
                                                       .routeName);
                                             },
-                                            child: FFButtonWidget(
-                                              onPressed: () {
-                                                print('Button pressed ...');
-                                              },
-                                              text: '',
-                                              icon: Icon(
-                                                Icons.home,
-                                                size: 20.0,
-                                              ),
-                                              options: FFButtonOptions(
-                                                width: 50.0,
-                                                height: 50.0,
-                                                padding: EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        0.0, 0.0, 0.0, 0.0),
-                                                iconPadding:
-                                                    EdgeInsetsDirectional
-                                                        .fromSTEB(10.0, 0.0,
-                                                            0.0, 0.0),
-                                                color: Color(0xFF3A3F47),
-                                                textStyle:
-                                                    FlutterFlowTheme.of(context)
-                                                        .titleSmall
-                                                        .override(
-                                                          font: GoogleFonts
-                                                              .interTight(
-                                                            fontWeight:
-                                                                FontWeight.bold,
-                                                            fontStyle:
-                                                                FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .titleSmall
-                                                                    .fontStyle,
-                                                          ),
-                                                          color: Colors.white,
-                                                          letterSpacing: 0.0,
-                                                          fontWeight:
-                                                              FontWeight.bold,
-                                                          fontStyle:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .titleSmall
-                                                                  .fontStyle,
-                                                        ),
-                                                borderRadius:
-                                                    BorderRadius.circular(20.0),
-                                              ),
+                                            text: '',
+                                            icon: Icon(
+                                              Icons.home,
+                                              size: 20.0,
+                                            ),
+                                            options: FFButtonOptions(
+                                              width: 50.0,
+                                              height: 50.0,
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                              iconPadding: EdgeInsetsDirectional
+                                                  .fromSTEB(
+                                                      10.0, 0.0, 0.0, 0.0),
+                                              color: Color(0xFF3A3F47),
+                                              textStyle: FlutterFlowTheme.of(
+                                                      context)
+                                                  .titleSmall
+                                                  .override(
+                                                    font:
+                                                        GoogleFonts.interTight(
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                      fontStyle:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .titleSmall
+                                                              .fontStyle,
+                                                    ),
+                                                    color: Colors.white,
+                                                    letterSpacing: 0.0,
+                                                    fontWeight: FontWeight.bold,
+                                                    fontStyle:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .titleSmall
+                                                            .fontStyle,
+                                                  ),
+                                              borderRadius:
+                                                  BorderRadius.circular(20.0),
                                             ),
                                           ),
                                         ),

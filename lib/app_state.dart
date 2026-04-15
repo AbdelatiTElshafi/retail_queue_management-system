@@ -58,6 +58,31 @@ class FFAppState extends ChangeNotifier {
     _safeInit(() {
       _grocerycheck = prefs.getBool('ff_grocerycheck') ?? _grocerycheck;
     });
+    _safeInit(() {
+      _branchnamestate =
+          prefs.getString('ff_branchnamestate') ?? _branchnamestate;
+    });
+    _safeInit(() {
+      _note = prefs.getString('ff_note') ?? _note;
+    });
+    _safeInit(() {
+      _branchsize = prefs.getInt('ff_branchsize') ?? _branchsize;
+    });
+    _safeInit(() {
+      _dpetsize = prefs.getInt('ff_dpetsize') ?? _dpetsize;
+    });
+    _safeInit(() {
+      _datesize = prefs.getInt('ff_datesize') ?? _datesize;
+    });
+    _safeInit(() {
+      _ticketsize = prefs.getInt('ff_ticketsize') ?? _ticketsize;
+    });
+    _safeInit(() {
+      _peoplesize = prefs.getInt('ff_peoplesize') ?? _peoplesize;
+    });
+    _safeInit(() {
+      _notesize = prefs.getInt('ff_notesize') ?? _notesize;
+    });
   }
 
   void update(VoidCallback callback) {
@@ -163,6 +188,62 @@ class FFAppState extends ChangeNotifier {
   set grocerycheck(bool value) {
     _grocerycheck = value;
     prefs.setBool('ff_grocerycheck', value);
+  }
+
+  String _branchnamestate = '';
+  String get branchnamestate => _branchnamestate;
+  set branchnamestate(String value) {
+    _branchnamestate = value;
+    prefs.setString('ff_branchnamestate', value);
+  }
+
+  String _note = '';
+  String get note => _note;
+  set note(String value) {
+    _note = value;
+    prefs.setString('ff_note', value);
+  }
+
+  int _branchsize = 0;
+  int get branchsize => _branchsize;
+  set branchsize(int value) {
+    _branchsize = value;
+    prefs.setInt('ff_branchsize', value);
+  }
+
+  int _dpetsize = 0;
+  int get dpetsize => _dpetsize;
+  set dpetsize(int value) {
+    _dpetsize = value;
+    prefs.setInt('ff_dpetsize', value);
+  }
+
+  int _datesize = 0;
+  int get datesize => _datesize;
+  set datesize(int value) {
+    _datesize = value;
+    prefs.setInt('ff_datesize', value);
+  }
+
+  int _ticketsize = 0;
+  int get ticketsize => _ticketsize;
+  set ticketsize(int value) {
+    _ticketsize = value;
+    prefs.setInt('ff_ticketsize', value);
+  }
+
+  int _peoplesize = 0;
+  int get peoplesize => _peoplesize;
+  set peoplesize(int value) {
+    _peoplesize = value;
+    prefs.setInt('ff_peoplesize', value);
+  }
+
+  int _notesize = 0;
+  int get notesize => _notesize;
+  set notesize(int value) {
+    _notesize = value;
+    prefs.setInt('ff_notesize', value);
   }
 }
 

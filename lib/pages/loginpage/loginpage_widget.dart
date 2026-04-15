@@ -1,7 +1,10 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/flutter_flow/instant_timer.dart';
+import '/index.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'loginpage_model.dart';
 export 'loginpage_model.dart';
@@ -57,11 +60,22 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
     super.initState();
     _model = createModel(context, () => LoginpageModel());
 
-    _model.textController1 ??= TextEditingController();
-    _model.textFieldFocusNode1 ??= FocusNode();
+    // On page load action.
+    SchedulerBinding.instance.addPostFrameCallback((_) async {
+      _model.instantTimer = InstantTimer.periodic(
+        duration: Duration(milliseconds: 1000),
+        callback: (timer) async {
+          safeSetState(() {});
+        },
+        startImmediately: true,
+      );
+    });
 
-    _model.textController2 ??= TextEditingController();
-    _model.textFieldFocusNode2 ??= FocusNode();
+    _model.emailTextController ??= TextEditingController();
+    _model.emailFocusNode ??= FocusNode();
+
+    _model.passTextController ??= TextEditingController();
+    _model.passFocusNode ??= FocusNode();
   }
 
   @override
@@ -84,43 +98,6 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
         body: Column(
           mainAxisSize: MainAxisSize.max,
           children: [
-            Container(
-              width: double.infinity,
-              height: 56.0,
-              decoration: BoxDecoration(
-                color: Color(0xFF3A3F47),
-              ),
-              child: Padding(
-                padding: EdgeInsets.all(12.0),
-                child: Row(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      FFLocalizations.of(context).getText(
-                        '41858vcz' /* Login Page */,
-                      ),
-                      textAlign: TextAlign.center,
-                      style: FlutterFlowTheme.of(context).titleMedium.override(
-                            font: GoogleFonts.interTight(
-                              fontWeight: FontWeight.bold,
-                              fontStyle: FlutterFlowTheme.of(context)
-                                  .titleMedium
-                                  .fontStyle,
-                            ),
-                            color: Colors.white,
-                            fontSize: 18.0,
-                            letterSpacing: 0.0,
-                            fontWeight: FontWeight.bold,
-                            fontStyle: FlutterFlowTheme.of(context)
-                                .titleMedium
-                                .fontStyle,
-                          ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
             Expanded(
               child: Column(
                 mainAxisSize: MainAxisSize.max,
@@ -158,8 +135,7 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
                             width: 200.0,
                             height: 100.0,
                             decoration: BoxDecoration(
-                              color: FlutterFlowTheme.of(context)
-                                  .secondaryBackground,
+                              color: FlutterFlowTheme.of(context).primaryText,
                               borderRadius: BorderRadius.circular(12.0),
                             ),
                             child: ClipRRect(
@@ -176,9 +152,7 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 10.0, 0.0, 2.0),
                             child: Text(
-                              FFLocalizations.of(context).getText(
-                                '6cbhp6jh' /* Retail Tec */,
-                              ),
+                              'Retail Tec',
                               style: FlutterFlowTheme.of(context)
                                   .headlineSmall
                                   .override(
@@ -189,7 +163,7 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
                                           .fontStyle,
                                     ),
                                     color: FlutterFlowTheme.of(context)
-                                        .secondaryBackground,
+                                        .primaryText,
                                     fontSize: 22.0,
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.bold,
@@ -203,9 +177,7 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 28.0),
                             child: Text(
-                              FFLocalizations.of(context).getText(
-                                'itz5b5ei' /* Queue Management System */,
-                              ),
+                              'Queue Management System',
                               style: FlutterFlowTheme.of(context)
                                   .bodySmall
                                   .override(
@@ -216,7 +188,7 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
                                           .fontStyle,
                                     ),
                                     color: FlutterFlowTheme.of(context)
-                                        .secondaryBackground,
+                                        .primaryText,
                                     fontSize: 12.0,
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.normal,
@@ -233,16 +205,13 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 TextFormField(
-                                  controller: _model.textController1,
-                                  focusNode: _model.textFieldFocusNode1,
+                                  controller: _model.emailTextController,
+                                  focusNode: _model.emailFocusNode,
                                   autofocus: false,
                                   textInputAction: TextInputAction.next,
                                   obscureText: false,
                                   decoration: InputDecoration(
-                                    hintText:
-                                        FFLocalizations.of(context).getText(
-                                      'ewvbhw4z' /* Username */,
-                                    ),
+                                    hintText: 'Username',
                                     hintStyle: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
@@ -331,20 +300,17 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
                                             .fontStyle,
                                       ),
                                   keyboardType: TextInputType.emailAddress,
-                                  validator: _model.textController1Validator
+                                  validator: _model.emailTextControllerValidator
                                       .asValidator(context),
                                 ),
                                 TextFormField(
-                                  controller: _model.textController2,
-                                  focusNode: _model.textFieldFocusNode2,
+                                  controller: _model.passTextController,
+                                  focusNode: _model.passFocusNode,
                                   autofocus: false,
                                   textInputAction: TextInputAction.done,
-                                  obscureText: !_model.passwordVisibility,
+                                  obscureText: !_model.passVisibility,
                                   decoration: InputDecoration(
-                                    hintText:
-                                        FFLocalizations.of(context).getText(
-                                      'tf3haxvm' /* Password */,
-                                    ),
+                                    hintText: 'Password',
                                     hintStyle: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
@@ -411,12 +377,12 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
                                     suffixIcon: InkWell(
                                       onTap: () async {
                                         safeSetState(() =>
-                                            _model.passwordVisibility =
-                                                !_model.passwordVisibility);
+                                            _model.passVisibility =
+                                                !_model.passVisibility);
                                       },
                                       focusNode: FocusNode(skipTraversal: true),
                                       child: Icon(
-                                        _model.passwordVisibility
+                                        _model.passVisibility
                                             ? Icons.visibility_outlined
                                             : Icons.visibility_off_outlined,
                                         size: 22,
@@ -446,16 +412,50 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
                                             .bodyMedium
                                             .fontStyle,
                                       ),
-                                  validator: _model.textController2Validator
+                                  validator: _model.passTextControllerValidator
                                       .asValidator(context),
                                 ),
                                 FFButtonWidget(
-                                  onPressed: () {
-                                    print('Button pressed ...');
+                                  onPressed: () async {
+                                    if ((_model.emailTextController.text ==
+                                                'Admin') &&
+                                            (_model.passTextController.text ==
+                                                'Admin')
+                                        ? true
+                                        : false) {
+                                      context.pushNamed(
+                                          SettingPageWidget.routeName);
+                                    } else {
+                                      var confirmDialogResponse =
+                                          await showDialog<bool>(
+                                                context: context,
+                                                builder: (alertDialogContext) {
+                                                  return AlertDialog(
+                                                    title: Text(
+                                                        'Password or User Name Incorrect'),
+                                                    actions: [
+                                                      TextButton(
+                                                        onPressed: () =>
+                                                            Navigator.pop(
+                                                                alertDialogContext,
+                                                                false),
+                                                        child: Text('Cancel'),
+                                                      ),
+                                                      TextButton(
+                                                        onPressed: () =>
+                                                            Navigator.pop(
+                                                                alertDialogContext,
+                                                                true),
+                                                        child: Text('Confirm'),
+                                                      ),
+                                                    ],
+                                                  );
+                                                },
+                                              ) ??
+                                              false;
+                                    }
                                   },
-                                  text: FFLocalizations.of(context).getText(
-                                    'ilw34yyh' /* Login */,
-                                  ),
+                                  text: 'Login',
                                   options: FFButtonOptions(
                                     width: double.infinity,
                                     height: 48.0,

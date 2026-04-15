@@ -5,10 +5,10 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/instant_timer.dart';
 import '/index.dart';
-import 'setting_page_widget.dart' show SettingPageWidget;
+import 'choose_depart_widget.dart' show ChooseDepartWidget;
 import 'package:flutter/material.dart';
 
-class SettingPageModel extends FlutterFlowModel<SettingPageWidget> {
+class ChooseDepartModel extends FlutterFlowModel<ChooseDepartWidget> {
   ///  Local state fields for this page.
 
   bool loadingVisability = false;
@@ -18,6 +18,20 @@ class SettingPageModel extends FlutterFlowModel<SettingPageWidget> {
   ///  State fields for stateful widgets in this page.
 
   InstantTimer? instantTimer;
+  // State field(s) for Freshmeatcheck widget.
+  bool? freshmeatcheckValue;
+  // State field(s) for Poultrycheck widget.
+  bool? poultrycheckValue;
+  // State field(s) for Fishcheck widget.
+  bool? fishcheckValue;
+  // State field(s) for Spicescheck widget.
+  bool? spicescheckValue;
+  // State field(s) for Frozencheck widget.
+  bool? frozencheckValue;
+  // State field(s) for Bakerycheck widget.
+  bool? bakerycheckValue;
+  // State field(s) for Grocerycheck widget.
+  bool? grocerycheckValue;
   // Model for Loading component.
   late LoadingModel loadingModel;
   // Model for Erorr component.

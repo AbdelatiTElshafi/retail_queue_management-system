@@ -124,6 +124,14 @@ class TheSelectionScreenModel
         peopleAhead!,
         departname!,
         departchar!,
+        FFAppState().branchnamestate,
+        FFAppState().note,
+        FFAppState().branchsize,
+        FFAppState().dpetsize,
+        FFAppState().datesize,
+        FFAppState().ticketsize,
+        FFAppState().peoplesize,
+        FFAppState().notesize,
       );
     }
   }
@@ -159,8 +167,24 @@ class TheSelectionScreenModel
           )!,
           departDisplayName!,
           departChar!,
+          FFAppState().branchnamestate,
+          FFAppState().note,
+          FFAppState().branchsize,
+          FFAppState().dpetsize,
+          FFAppState().datesize,
+          FFAppState().ticketsize,
+          FFAppState().peoplesize,
+          FFAppState().notesize,
         );
+      } else {
+        await Future.delayed(
+          Duration(
+            milliseconds: 3000,
+          ),
+        );
+        loadingVisability = false;
       }
+
       loadingVisability = false;
     } else {
       await Future.delayed(

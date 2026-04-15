@@ -78,8 +78,6 @@ class _LoginWidgetState extends State<LoginWidget> {
                             borderRadius: BorderRadius.only(
                               bottomLeft: Radius.circular(16.0),
                               bottomRight: Radius.circular(16.0),
-                              topLeft: Radius.circular(0.0),
-                              topRight: Radius.circular(0.0),
                             ),
                           ),
                           alignment: AlignmentDirectional(-1.0, 0.0),
@@ -163,9 +161,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 10.0, 0.0, 0.0),
                                         child: Text(
-                                          FFLocalizations.of(context).getText(
-                                            'gktqnzsz' /* | */,
-                                          ),
+                                          '|',
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
@@ -196,11 +192,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 40.0, 0.0, 0.0),
                                           child: Text(
-                                            FFLocalizations.of(context).getText(
-                                              '0u9uqu2m' /* Retail Tec 
-Queue Management S... */
-                                              ,
-                                            ),
+                                            'Retail Tec \nQueue Management System',
                                             textAlign: TextAlign.start,
                                             style: FlutterFlowTheme.of(context)
                                                 .displayMedium
@@ -243,9 +235,7 @@ Queue Management S... */
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  FFLocalizations.of(context).getText(
-                                    'ds7tymza' /* Admin Login  */,
-                                  ),
+                                  'Admin Login ',
                                   style: FlutterFlowTheme.of(context)
                                       .displayMedium
                                       .override(
@@ -283,10 +273,7 @@ Queue Management S... */
                                       autofillHints: [AutofillHints.email],
                                       obscureText: false,
                                       decoration: InputDecoration(
-                                        labelText:
-                                            FFLocalizations.of(context).getText(
-                                          '48psayxp' /* User Name */,
-                                        ),
+                                        labelText: 'User Name',
                                         labelStyle: FlutterFlowTheme.of(context)
                                             .labelMedium
                                             .override(
@@ -379,10 +366,7 @@ Queue Management S... */
                                       autofillHints: [AutofillHints.password],
                                       obscureText: !_model.passwordVisibility,
                                       decoration: InputDecoration(
-                                        labelText:
-                                            FFLocalizations.of(context).getText(
-                                          'lqm785uj' /* Password */,
-                                        ),
+                                        labelText: 'Password',
                                         labelStyle: FlutterFlowTheme.of(context)
                                             .labelMedium
                                             .override(
@@ -492,7 +476,7 @@ Queue Management S... */
                                           ? true
                                           : false) {
                                         context.pushNamed(
-                                            SettingPageWidget.routeName);
+                                            ChooseDepartWidget.routeName);
                                       } else {
                                         var confirmDialogResponse =
                                             await showDialog<bool>(
@@ -525,9 +509,7 @@ Queue Management S... */
                                                 false;
                                       }
                                     },
-                                    text: FFLocalizations.of(context).getText(
-                                      'uvmx5hqi' /* LOGIN */,
-                                    ),
+                                    text: 'LOGIN',
                                     options: FFButtonOptions(
                                       width: 370.0,
                                       height: 44.0,

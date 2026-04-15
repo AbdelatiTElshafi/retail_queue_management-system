@@ -9,6 +9,7 @@ import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'ticket_screen_model.dart';
 export 'ticket_screen_model.dart';
 
@@ -66,6 +67,8 @@ class _TicketScreenWidgetState extends State<TicketScreenWidget> {
 
   @override
   Widget build(BuildContext context) {
+    context.watch<FFAppState>();
+
     return GestureDetector(
       onTap: () {
         FocusScope.of(context).unfocus();
@@ -159,9 +162,7 @@ class _TicketScreenWidgetState extends State<TicketScreenWidget> {
                                         CrossAxisAlignment.center,
                                     children: [
                                       Text(
-                                        FFLocalizations.of(context).getText(
-                                          '2y9zj1eh' /* Now Serving */,
-                                        ),
+                                        'Now Serving',
                                         textAlign: TextAlign.center,
                                         style: FlutterFlowTheme.of(context)
                                             .titleMedium
@@ -186,9 +187,7 @@ class _TicketScreenWidgetState extends State<TicketScreenWidget> {
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 4.0, 0.0, 0.0),
                                         child: Text(
-                                          FFLocalizations.of(context).getText(
-                                            'c1lo91gu' /* يخدم الآن */,
-                                          ),
+                                          'يخدم الآن',
                                           textAlign: TextAlign.center,
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
@@ -280,9 +279,7 @@ class _TicketScreenWidgetState extends State<TicketScreenWidget> {
                                         CrossAxisAlignment.center,
                                     children: [
                                       Text(
-                                        FFLocalizations.of(context).getText(
-                                          'ed7deqlu' /* People Ahead */,
-                                        ),
+                                        'People Ahead',
                                         textAlign: TextAlign.center,
                                         style: FlutterFlowTheme.of(context)
                                             .titleMedium
@@ -307,9 +304,7 @@ class _TicketScreenWidgetState extends State<TicketScreenWidget> {
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 4.0, 0.0, 0.0),
                                         child: Text(
-                                          FFLocalizations.of(context).getText(
-                                            '3gdk4osi' /* العدد امامك */,
-                                          ),
+                                          'العدد امامك',
                                           textAlign: TextAlign.center,
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
@@ -417,6 +412,14 @@ class _TicketScreenWidgetState extends State<TicketScreenWidget> {
                               widget.peopleAhead!,
                               widget.deptCode!,
                               widget.departChar!,
+                              FFAppState().branchnamestate,
+                              FFAppState().note,
+                              FFAppState().branchsize,
+                              FFAppState().dpetsize,
+                              FFAppState().datesize,
+                              FFAppState().ticketsize,
+                              FFAppState().peoplesize,
+                              FFAppState().notesize,
                             );
                             _model.loadingticket = false;
                             safeSetState(() {});
@@ -430,9 +433,7 @@ class _TicketScreenWidgetState extends State<TicketScreenWidget> {
 
                           safeSetState(() {});
                         },
-                        text: FFLocalizations.of(context).getText(
-                          '78h3g5dz' /* Print Number | طباعة رقم */,
-                        ),
+                        text: 'Print Number | طباعة رقم',
                         icon: Icon(
                           Icons.print_rounded,
                           size: 24.0,
@@ -481,9 +482,7 @@ class _TicketScreenWidgetState extends State<TicketScreenWidget> {
                             context
                                 .pushNamed(TheSelectionScreenWidget.routeName);
                           },
-                          text: FFLocalizations.of(context).getText(
-                            '037xemsv' /* Back */,
-                          ),
+                          text: 'Back',
                           icon: Icon(
                             Icons.arrow_back_rounded,
                             size: 18.0,

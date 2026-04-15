@@ -72,9 +72,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => TheSelectionScreenWidget(),
         ),
         FFRoute(
-          name: SettingPageWidget.routeName,
-          path: SettingPageWidget.routePath,
-          builder: (context, params) => SettingPageWidget(),
+          name: ChooseDepartWidget.routeName,
+          path: ChooseDepartWidget.routePath,
+          builder: (context, params) => ChooseDepartWidget(),
         ),
         FFRoute(
           name: LoginWidget.routeName,
@@ -85,6 +85,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: LoginpageWidget.routeName,
           path: LoginpageWidget.routePath,
           builder: (context, params) => LoginpageWidget(),
+        ),
+        FFRoute(
+          name: SettingPageWidget.routeName,
+          path: SettingPageWidget.routePath,
+          builder: (context, params) => SettingPageWidget(),
+        ),
+        FFRoute(
+          name: EditPrintFieldsWidget.routeName,
+          path: EditPrintFieldsWidget.routePath,
+          builder: (context, params) => EditPrintFieldsWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

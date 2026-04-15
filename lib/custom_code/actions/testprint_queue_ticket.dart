@@ -10,11 +10,7 @@ import 'package:imin_printer/imin_printer.dart';
 import 'package:imin_printer/enums.dart';
 import 'package:imin_printer/imin_style.dart';
 
-Future<void> printQueueTicket(
-  String ticketNumber,
-  String peopleAhead,
-  String DepartName,
-  String DepartChar,
+Future<void> testprintQueueTicket(
   String branchname,
   String note,
   int branchsize,
@@ -49,7 +45,7 @@ Future<void> printQueueTicket(
 
   // Header
   await printer.printText(
-    DepartName,
+    "DepartName",
     style: IminTextStyle(
       align: IminPrintAlign.center,
       fontSize: deptsize,
@@ -67,7 +63,7 @@ Future<void> printQueueTicket(
   );
 
   await printer.printText(
-    ticketNumber,
+    "10",
     style: IminTextStyle(
       align: IminPrintAlign.center,
       fontSize: ticketsize,
@@ -77,7 +73,7 @@ Future<void> printQueueTicket(
 
   // Info
   await printer.printText(
-    'People Ahead | العملاء في النتظار : $peopleAhead',
+    'People Ahead | العملاء في النتظار : 20',
     style: IminTextStyle(
       align: IminPrintAlign.center,
       fontSize: peoplesize,

@@ -84,9 +84,7 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                       ),
                       alignment: AlignmentDirectional(0.0, 0.0),
                       child: Text(
-                        FFLocalizations.of(context).getText(
-                          'lnaaavsa' /* Select a department | إختر قسم */,
-                        ),
+                        'Select a department | إختر قسم',
                         style:
                             FlutterFlowTheme.of(context).displaySmall.override(
                                   font: GoogleFonts.interTight(
@@ -129,7 +127,7 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                               onTap: () async {
                                 await _model.wholePrint(
                                   context,
-                                  depart: 'Fresh Meat',
+                                  depart: 'Fresh_Meat',
                                   departDisplayName: 'Fresh Meat | ',
                                   departChar: 'FM',
                                 );
@@ -157,11 +155,9 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                           decoration: BoxDecoration(
                                             color: Color(0xFFF5A623),
                                             borderRadius: BorderRadius.only(
-                                              bottomLeft: Radius.circular(0.0),
+                                              topLeft: Radius.circular(12.0),
                                               bottomRight:
                                                   Radius.circular(12.0),
-                                              topLeft: Radius.circular(12.0),
-                                              topRight: Radius.circular(0.0),
                                             ),
                                           ),
                                         ),
@@ -188,10 +184,7 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                                   MainAxisAlignment.center,
                                               children: [
                                                 Text(
-                                                  FFLocalizations.of(context)
-                                                      .getText(
-                                                    'ribst16h' /* Fresh Meat */,
-                                                  ),
+                                                  'Fresh Meat',
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .displaySmall
@@ -220,10 +213,7 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                                       ),
                                                 ),
                                                 Text(
-                                                  FFLocalizations.of(context)
-                                                      .getText(
-                                                    'k6w5hxba' /* اللحوم الطازجه */,
-                                                  ),
+                                                  'اللحوم الطازجه',
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .displaySmall
@@ -304,11 +294,9 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                           decoration: BoxDecoration(
                                             color: Color(0xFFF5A623),
                                             borderRadius: BorderRadius.only(
-                                              bottomLeft: Radius.circular(0.0),
+                                              topLeft: Radius.circular(12.0),
                                               bottomRight:
                                                   Radius.circular(12.0),
-                                              topLeft: Radius.circular(12.0),
-                                              topRight: Radius.circular(0.0),
                                             ),
                                           ),
                                         ),
@@ -335,10 +323,7 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                                   MainAxisAlignment.center,
                                               children: [
                                                 Text(
-                                                  FFLocalizations.of(context)
-                                                      .getText(
-                                                    'gl62fo0h' /* Poultry */,
-                                                  ),
+                                                  'Poultry',
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .displaySmall
@@ -367,10 +352,7 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                                       ),
                                                 ),
                                                 Text(
-                                                  FFLocalizations.of(context)
-                                                      .getText(
-                                                    'a5ho6g8q' /* دواجن */,
-                                                  ),
+                                                  'دواجن',
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .displaySmall
@@ -445,11 +427,9 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                           decoration: BoxDecoration(
                                             color: Color(0xFFF5A623),
                                             borderRadius: BorderRadius.only(
-                                              bottomLeft: Radius.circular(0.0),
+                                              topLeft: Radius.circular(12.0),
                                               bottomRight:
                                                   Radius.circular(12.0),
-                                              topLeft: Radius.circular(12.0),
-                                              topRight: Radius.circular(0.0),
                                             ),
                                           ),
                                         ),
@@ -476,10 +456,7 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                                   MainAxisAlignment.center,
                                               children: [
                                                 Text(
-                                                  FFLocalizations.of(context)
-                                                      .getText(
-                                                    'i5bly60w' /* Fish */,
-                                                  ),
+                                                  'Fish',
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .displaySmall
@@ -508,10 +485,7 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                                       ),
                                                 ),
                                                 Text(
-                                                  FFLocalizations.of(context)
-                                                      .getText(
-                                                    '8gyilj9f' /* اسماك */,
-                                                  ),
+                                                  'اسماك',
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .displaySmall
@@ -592,11 +566,9 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                           decoration: BoxDecoration(
                                             color: Color(0xFFF5A623),
                                             borderRadius: BorderRadius.only(
-                                              bottomLeft: Radius.circular(0.0),
+                                              topLeft: Radius.circular(12.0),
                                               bottomRight:
                                                   Radius.circular(12.0),
-                                              topLeft: Radius.circular(12.0),
-                                              topRight: Radius.circular(0.0),
                                             ),
                                           ),
                                         ),
@@ -630,11 +602,7 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                                       MainAxisAlignment.center,
                                                   children: [
                                                     Text(
-                                                      FFLocalizations.of(
-                                                              context)
-                                                          .getText(
-                                                        'fdcnn2sj' /* Spices */,
-                                                      ),
+                                                      'Spices',
                                                       style: FlutterFlowTheme
                                                               .of(context)
                                                           .displaySmall
@@ -663,11 +631,7 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                                           ),
                                                     ),
                                                     Text(
-                                                      FFLocalizations.of(
-                                                              context)
-                                                          .getText(
-                                                        'sh743yud' /* عطارة */,
-                                                      ),
+                                                      'عطارة',
                                                       style: FlutterFlowTheme
                                                               .of(context)
                                                           .displaySmall
@@ -716,7 +680,7 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                               onTap: () async {
                                 await _model.wholePrint(
                                   context,
-                                  depart: 'Frozen Meat',
+                                  depart: 'Frozen_Meat',
                                   departDisplayName:
                                       'Frozen Meat | اللحوم المجمدة',
                                   departChar: 'FOM',
@@ -745,11 +709,9 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                           decoration: BoxDecoration(
                                             color: Color(0xFFF5A623),
                                             borderRadius: BorderRadius.only(
-                                              bottomLeft: Radius.circular(0.0),
+                                              topLeft: Radius.circular(12.0),
                                               bottomRight:
                                                   Radius.circular(12.0),
-                                              topLeft: Radius.circular(12.0),
-                                              topRight: Radius.circular(0.0),
                                             ),
                                           ),
                                         ),
@@ -776,10 +738,7 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                                   MainAxisAlignment.center,
                                               children: [
                                                 Text(
-                                                  FFLocalizations.of(context)
-                                                      .getText(
-                                                    'a512uads' /* Frozen Meat */,
-                                                  ),
+                                                  'Frozen Meat',
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .displaySmall
@@ -808,10 +767,7 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                                       ),
                                                 ),
                                                 Text(
-                                                  FFLocalizations.of(context)
-                                                      .getText(
-                                                    'q0t6l157' /* اللحوم المجمدة */,
-                                                  ),
+                                                  'اللحوم المجمدة',
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .displaySmall
@@ -887,11 +843,9 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                           decoration: BoxDecoration(
                                             color: Color(0xFFF5A623),
                                             borderRadius: BorderRadius.only(
-                                              bottomLeft: Radius.circular(0.0),
+                                              topLeft: Radius.circular(12.0),
                                               bottomRight:
                                                   Radius.circular(12.0),
-                                              topLeft: Radius.circular(12.0),
-                                              topRight: Radius.circular(0.0),
                                             ),
                                           ),
                                         ),
@@ -920,11 +874,7 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                                       MainAxisAlignment.center,
                                                   children: [
                                                     Text(
-                                                      FFLocalizations.of(
-                                                              context)
-                                                          .getText(
-                                                        '41hbstok' /* Bakery */,
-                                                      ),
+                                                      'Bakery',
                                                       style: FlutterFlowTheme
                                                               .of(context)
                                                           .displayMedium
@@ -953,11 +903,7 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                                           ),
                                                     ),
                                                     Text(
-                                                      FFLocalizations.of(
-                                                              context)
-                                                          .getText(
-                                                        'hmc3dhr3' /* مخبوزات */,
-                                                      ),
+                                                      'مخبوزات',
                                                       style: FlutterFlowTheme
                                                               .of(context)
                                                           .displaySmall
@@ -997,7 +943,7 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                 ),
                               ),
                             ),
-                          if (FFAppState().BakeryVis)
+                          if (FFAppState().GroceryVis)
                             InkWell(
                               splashColor: Colors.transparent,
                               focusColor: Colors.transparent,
@@ -1034,11 +980,9 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                           decoration: BoxDecoration(
                                             color: Color(0xFFF5A623),
                                             borderRadius: BorderRadius.only(
-                                              bottomLeft: Radius.circular(0.0),
+                                              topLeft: Radius.circular(12.0),
                                               bottomRight:
                                                   Radius.circular(12.0),
-                                              topLeft: Radius.circular(12.0),
-                                              topRight: Radius.circular(0.0),
                                             ),
                                           ),
                                         ),
@@ -1067,11 +1011,7 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                                       MainAxisAlignment.center,
                                                   children: [
                                                     Text(
-                                                      FFLocalizations.of(
-                                                              context)
-                                                          .getText(
-                                                        'j9ieuay5' /* Grocery */,
-                                                      ),
+                                                      'Grocery',
                                                       style: FlutterFlowTheme
                                                               .of(context)
                                                           .displayMedium
@@ -1100,11 +1040,7 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                                           ),
                                                     ),
                                                     Text(
-                                                      FFLocalizations.of(
-                                                              context)
-                                                          .getText(
-                                                        'agbz0yqe' /* بقالة */,
-                                                      ),
+                                                      'بقالة',
                                                       style: FlutterFlowTheme
                                                               .of(context)
                                                           .displaySmall
@@ -1172,12 +1108,7 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   ClipRRect(
-                                    borderRadius: BorderRadius.only(
-                                      bottomLeft: Radius.circular(0.0),
-                                      bottomRight: Radius.circular(0.0),
-                                      topLeft: Radius.circular(0.0),
-                                      topRight: Radius.circular(0.0),
-                                    ),
+                                    borderRadius: BorderRadius.only(),
                                     child: Image.asset(
                                       'assets/images/output-onlinepngtools_1_200x200.png',
                                       width: 230.8,
@@ -1305,7 +1236,8 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                   hoverColor: Colors.transparent,
                                   highlightColor: Colors.transparent,
                                   onDoubleTap: () async {
-                                    context.pushNamed(LoginWidget.routeName);
+                                    context
+                                        .pushNamed(LoginpageWidget.routeName);
                                   },
                                   child: FFButtonWidget(
                                     onPressed: () {
