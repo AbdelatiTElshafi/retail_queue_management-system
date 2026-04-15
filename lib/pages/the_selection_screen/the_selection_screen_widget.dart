@@ -128,7 +128,8 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                 await _model.wholePrint(
                                   context,
                                   depart: 'Fresh_Meat',
-                                  departDisplayName: 'Fresh Meat | ',
+                                  departDisplayName:
+                                      'Fresh Meat | اللحوم الطازجة',
                                   departChar: 'FM',
                                 );
                               },
@@ -815,8 +816,7 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                 await _model.wholePrint(
                                   context,
                                   depart: 'Bakery',
-                                  departDisplayName:
-                                      'Bakery | المخبوزات | المخبوزات',
+                                  departDisplayName: 'Bakery | المخبوزات',
                                   departChar: 'B',
                                 );
                               },
