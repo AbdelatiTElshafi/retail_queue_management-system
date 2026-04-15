@@ -140,8 +140,8 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
                             ),
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(8.0),
-                              child: Image.network(
-                                'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/retail-queue-management-system-h9s0zi/assets/xofpht0hlvl8/output-onlinepngtools_1_200x200.png',
+                              child: Image.asset(
+                                'assets/images/output-onlinepngtools_1_200x200.png',
                                 width: 320.39,
                                 height: 120.0,
                                 fit: BoxFit.cover,
