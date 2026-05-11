@@ -107,6 +107,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: EditIPWidget.routeName,
           path: EditIPWidget.routePath,
           builder: (context, params) => EditIPWidget(),
+        ),
+        FFRoute(
+          name: EditIPCopyWidget.routeName,
+          path: EditIPCopyWidget.routePath,
+          builder: (context, params) => EditIPCopyWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
