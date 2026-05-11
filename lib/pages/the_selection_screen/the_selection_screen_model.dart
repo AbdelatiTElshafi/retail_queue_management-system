@@ -156,6 +156,7 @@ class TheSelectionScreenModel
       printNumberApiResult =
           await TakeANumberAPIGroupGroup.printNumberCall.call(
         depart: depart,
+        serveripapi: FFAppState().Severip,
       );
 
       if ((printNumberApiResult.succeeded ?? true)) {
