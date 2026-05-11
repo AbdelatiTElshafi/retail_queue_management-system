@@ -83,6 +83,57 @@ class FFAppState extends ChangeNotifier {
     _safeInit(() {
       _notesize = prefs.getInt('ff_notesize') ?? _notesize;
     });
+    _safeInit(() {
+      _eddycheck = prefs.getBool('ff_eddycheck') ?? _eddycheck;
+    });
+    _safeInit(() {
+      _freshvegcheck = prefs.getBool('ff_freshvegcheck') ?? _freshvegcheck;
+    });
+    _safeInit(() {
+      _frozenvegcheck = prefs.getBool('ff_frozenvegcheck') ?? _frozenvegcheck;
+    });
+    _safeInit(() {
+      _restcheck = prefs.getBool('ff_restcheck') ?? _restcheck;
+    });
+    _safeInit(() {
+      _tahinicheck = prefs.getBool('ff_tahinicheck') ?? _tahinicheck;
+    });
+    _safeInit(() {
+      _pastiriescheck = prefs.getBool('ff_pastiriescheck') ?? _pastiriescheck;
+    });
+    _safeInit(() {
+      _abuaufcheck = prefs.getBool('ff_abuaufcheck') ?? _abuaufcheck;
+    });
+    _safeInit(() {
+      _eddysvis = prefs.getBool('ff_eddysvis') ?? _eddysvis;
+    });
+    _safeInit(() {
+      _freshvegvis = prefs.getBool('ff_freshvegvis') ?? _freshvegvis;
+    });
+    _safeInit(() {
+      _Frozenvegvis = prefs.getBool('ff_Frozenvegvis') ?? _Frozenvegvis;
+    });
+    _safeInit(() {
+      _Restvis = prefs.getBool('ff_Restvis') ?? _Restvis;
+    });
+    _safeInit(() {
+      _Freshjuicevis = prefs.getBool('ff_Freshjuicevis') ?? _Freshjuicevis;
+    });
+    _safeInit(() {
+      _Tahinivis = prefs.getBool('ff_Tahinivis') ?? _Tahinivis;
+    });
+    _safeInit(() {
+      _Pastriesvis = prefs.getBool('ff_Pastriesvis') ?? _Pastriesvis;
+    });
+    _safeInit(() {
+      _AbuAufvis = prefs.getBool('ff_AbuAufvis') ?? _AbuAufvis;
+    });
+    _safeInit(() {
+      _customercheck = prefs.getBool('ff_customercheck') ?? _customercheck;
+    });
+    _safeInit(() {
+      _customerVis = prefs.getBool('ff_customerVis') ?? _customerVis;
+    });
   }
 
   void update(VoidCallback callback) {
@@ -244,6 +295,131 @@ class FFAppState extends ChangeNotifier {
   set notesize(int value) {
     _notesize = value;
     prefs.setInt('ff_notesize', value);
+  }
+
+  bool _eddycheck = false;
+  bool get eddycheck => _eddycheck;
+  set eddycheck(bool value) {
+    _eddycheck = value;
+    prefs.setBool('ff_eddycheck', value);
+  }
+
+  bool _freshvegcheck = false;
+  bool get freshvegcheck => _freshvegcheck;
+  set freshvegcheck(bool value) {
+    _freshvegcheck = value;
+    prefs.setBool('ff_freshvegcheck', value);
+  }
+
+  bool _frozenvegcheck = false;
+  bool get frozenvegcheck => _frozenvegcheck;
+  set frozenvegcheck(bool value) {
+    _frozenvegcheck = value;
+    prefs.setBool('ff_frozenvegcheck', value);
+  }
+
+  bool _restcheck = false;
+  bool get restcheck => _restcheck;
+  set restcheck(bool value) {
+    _restcheck = value;
+    prefs.setBool('ff_restcheck', value);
+  }
+
+  bool _freshjuicecheck = false;
+  bool get freshjuicecheck => _freshjuicecheck;
+  set freshjuicecheck(bool value) {
+    _freshjuicecheck = value;
+  }
+
+  bool _tahinicheck = false;
+  bool get tahinicheck => _tahinicheck;
+  set tahinicheck(bool value) {
+    _tahinicheck = value;
+    prefs.setBool('ff_tahinicheck', value);
+  }
+
+  bool _pastiriescheck = false;
+  bool get pastiriescheck => _pastiriescheck;
+  set pastiriescheck(bool value) {
+    _pastiriescheck = value;
+    prefs.setBool('ff_pastiriescheck', value);
+  }
+
+  bool _abuaufcheck = false;
+  bool get abuaufcheck => _abuaufcheck;
+  set abuaufcheck(bool value) {
+    _abuaufcheck = value;
+    prefs.setBool('ff_abuaufcheck', value);
+  }
+
+  bool _eddysvis = false;
+  bool get eddysvis => _eddysvis;
+  set eddysvis(bool value) {
+    _eddysvis = value;
+    prefs.setBool('ff_eddysvis', value);
+  }
+
+  bool _freshvegvis = false;
+  bool get freshvegvis => _freshvegvis;
+  set freshvegvis(bool value) {
+    _freshvegvis = value;
+    prefs.setBool('ff_freshvegvis', value);
+  }
+
+  bool _Frozenvegvis = false;
+  bool get Frozenvegvis => _Frozenvegvis;
+  set Frozenvegvis(bool value) {
+    _Frozenvegvis = value;
+    prefs.setBool('ff_Frozenvegvis', value);
+  }
+
+  bool _Restvis = false;
+  bool get Restvis => _Restvis;
+  set Restvis(bool value) {
+    _Restvis = value;
+    prefs.setBool('ff_Restvis', value);
+  }
+
+  bool _Freshjuicevis = false;
+  bool get Freshjuicevis => _Freshjuicevis;
+  set Freshjuicevis(bool value) {
+    _Freshjuicevis = value;
+    prefs.setBool('ff_Freshjuicevis', value);
+  }
+
+  bool _Tahinivis = false;
+  bool get Tahinivis => _Tahinivis;
+  set Tahinivis(bool value) {
+    _Tahinivis = value;
+    prefs.setBool('ff_Tahinivis', value);
+  }
+
+  bool _Pastriesvis = false;
+  bool get Pastriesvis => _Pastriesvis;
+  set Pastriesvis(bool value) {
+    _Pastriesvis = value;
+    prefs.setBool('ff_Pastriesvis', value);
+  }
+
+  bool _AbuAufvis = false;
+  bool get AbuAufvis => _AbuAufvis;
+  set AbuAufvis(bool value) {
+    _AbuAufvis = value;
+    prefs.setBool('ff_AbuAufvis', value);
+  }
+
+  bool _customercheck = false;
+  bool get customercheck => _customercheck;
+  set customercheck(bool value) {
+    _customercheck = value;
+    prefs.setBool('ff_customercheck', value);
+  }
+
+  bool _customerVis = false;
+  bool get customerVis => _customerVis;
+  set customerVis(bool value) {
+    _customerVis = value;
+    prefs.setBool('ff_customerVis', value);
   }
 }
 

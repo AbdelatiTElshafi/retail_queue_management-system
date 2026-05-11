@@ -1,7 +1,8 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:from_css_color/from_css_color.dart';
+
+import '/backend/schema/structs/index.dart';
 
 import '../../flutter_flow/lat_lng.dart';
 import '../../flutter_flow/place.dart';
@@ -9,9 +10,14 @@ import '../../flutter_flow/uploaded_file.dart';
 
 /// SERIALIZATION HELPERS
 
+String dateTimeToString(DateTime dateTime) =>
+    '${dateTime.isUtc ? 'u' : 'l'}${dateTime.millisecondsSinceEpoch}';
+
 String dateTimeRangeToString(DateTimeRange dateTimeRange) {
-  final startStr = dateTimeRange.start.millisecondsSinceEpoch.toString();
-  final endStr = dateTimeRange.end.millisecondsSinceEpoch.toString();
+  final start = dateTimeRange.start;
+  final end = dateTimeRange.end;
+  final startStr = '${start.isUtc ? 'u' : 'l'}${start.millisecondsSinceEpoch}';
+  final endStr = '${end.isUtc ? 'u' : 'l'}${end.millisecondsSinceEpoch}';
   return '$startStr|$endStr';
 }
 
@@ -56,7 +62,7 @@ String? serializeParam(
       case ParamType.bool:
         data = param ? 'true' : 'false';
       case ParamType.DateTime:
-        data = (param as DateTime).millisecondsSinceEpoch.toString();
+        data = dateTimeToString(param as DateTime);
       case ParamType.DateTimeRange:
         data = dateTimeRangeToString(param as DateTimeRange);
       case ParamType.LatLng:
@@ -69,6 +75,9 @@ String? serializeParam(
         data = uploadedFileToString(param as FFUploadedFile);
       case ParamType.JSON:
         data = json.encode(param);
+
+      case ParamType.DataStruct:
+        data = param is BaseStruct ? param.serialize() : null;
 
       default:
         data = null;
@@ -84,14 +93,46 @@ String? serializeParam(
 
 /// DESERIALIZATION HELPERS
 
+DateTime? dateTimeFromString(String? dateTimeStr) {
+  if (dateTimeStr == null || dateTimeStr.isEmpty) {
+    return null;
+  }
+  final hasPrefix = dateTimeStr.startsWith('u') || dateTimeStr.startsWith('l');
+  final milliseconds = int.tryParse(
+    hasPrefix ? dateTimeStr.substring(1) : dateTimeStr,
+  );
+  return milliseconds != null
+      ? DateTime.fromMillisecondsSinceEpoch(
+          milliseconds,
+          isUtc: hasPrefix ? dateTimeStr.startsWith('u') : false,
+        )
+      : null;
+}
+
 DateTimeRange? dateTimeRangeFromString(String dateTimeRangeStr) {
   final pieces = dateTimeRangeStr.split('|');
   if (pieces.length != 2) {
     return null;
   }
+  DateTime? parseDateTime(String value) {
+    final hasPrefix = value.startsWith('u') || value.startsWith('l');
+    final milliseconds = int.tryParse(hasPrefix ? value.substring(1) : value);
+    return milliseconds != null
+        ? DateTime.fromMillisecondsSinceEpoch(
+            milliseconds,
+            isUtc: hasPrefix ? value.startsWith('u') : false,
+          )
+        : null;
+  }
+
+  final start = parseDateTime(pieces.first);
+  final end = parseDateTime(pieces.last);
+  if (start == null || end == null) {
+    return null;
+  }
   return DateTimeRange(
-    start: DateTime.fromMillisecondsSinceEpoch(int.parse(pieces.first)),
-    end: DateTime.fromMillisecondsSinceEpoch(int.parse(pieces.last)),
+    start: start,
+    end: end,
   );
 }
 
@@ -145,13 +186,16 @@ enum ParamType {
   FFPlace,
   FFUploadedFile,
   JSON,
+
+  DataStruct,
 }
 
 dynamic deserializeParam<T>(
   String? param,
   ParamType paramType,
-  bool isList,
-) {
+  bool isList, {
+  StructBuilder<T>? structBuilder,
+}) {
   try {
     if (param == null) {
       return null;
@@ -164,7 +208,12 @@ dynamic deserializeParam<T>(
       return paramValues
           .where((p) => p is String)
           .map((p) => p as String)
-          .map((p) => deserializeParam<T>(p, paramType, false))
+          .map((p) => deserializeParam<T>(
+                p,
+                paramType,
+                false,
+                structBuilder: structBuilder,
+              ))
           .where((p) => p != null)
           .map((p) => p! as T)
           .toList();
@@ -179,10 +228,7 @@ dynamic deserializeParam<T>(
       case ParamType.bool:
         return param == 'true';
       case ParamType.DateTime:
-        final milliseconds = int.tryParse(param);
-        return milliseconds != null
-            ? DateTime.fromMillisecondsSinceEpoch(milliseconds)
-            : null;
+        return dateTimeFromString(param);
       case ParamType.DateTimeRange:
         return dateTimeRangeFromString(param);
       case ParamType.LatLng:
@@ -195,6 +241,10 @@ dynamic deserializeParam<T>(
         return uploadedFileFromString(param);
       case ParamType.JSON:
         return json.decode(param);
+
+      case ParamType.DataStruct:
+        final data = json.decode(param) as Map<String, dynamic>? ?? {};
+        return structBuilder != null ? structBuilder(data) : null;
 
       default:
         return null;

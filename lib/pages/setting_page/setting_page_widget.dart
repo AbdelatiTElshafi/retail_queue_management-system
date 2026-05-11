@@ -42,6 +42,8 @@ class _SettingPageWidgetState extends State<SettingPageWidget> {
         startImmediately: true,
       );
     });
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override

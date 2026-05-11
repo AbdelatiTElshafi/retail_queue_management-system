@@ -1,12 +1,14 @@
 import '/backend/api_requests/api_calls.dart';
+import '/components/erorr/erorr_widget.dart';
+import '/components/loading/loading_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/instant_timer.dart';
 import '/index.dart';
-import 'choose_depart_widget.dart' show ChooseDepartWidget;
+import 'add_new_depart_widget.dart' show AddNewDepartWidget;
 import 'package:flutter/material.dart';
 
-class ChooseDepartModel extends FlutterFlowModel<ChooseDepartWidget> {
+class AddNewDepartModel extends FlutterFlowModel<AddNewDepartWidget> {
   ///  Local state fields for this page.
 
   bool loadingVisability = false;
@@ -16,45 +18,36 @@ class ChooseDepartModel extends FlutterFlowModel<ChooseDepartWidget> {
   ///  State fields for stateful widgets in this page.
 
   InstantTimer? instantTimer;
-  // State field(s) for Freshmeatcheck widget.
-  bool? freshmeatcheckValue;
-  // State field(s) for Poultrycheck widget.
-  bool? poultrycheckValue;
-  // State field(s) for Fishcheck widget.
-  bool? fishcheckValue;
-  // State field(s) for Spicescheck widget.
-  bool? spicescheckValue;
-  // State field(s) for Frozencheck widget.
-  bool? frozencheckValue;
-  // State field(s) for Bakerycheck widget.
-  bool? bakerycheckValue;
-  // State field(s) for Grocerycheck widget.
-  bool? grocerycheckValue;
-  // State field(s) for Eddycheck widget.
-  bool? eddycheckValue;
-  // State field(s) for frshvegcheck widget.
-  bool? frshvegcheckValue;
-  // State field(s) for frozenvegcheck widget.
-  bool? frozenvegcheckValue;
-  // State field(s) for Restcheck widget.
-  bool? restcheckValue;
-  // State field(s) for Freshjuicecheck widget.
-  bool? freshjuicecheckValue;
-  // State field(s) for tahinacheck widget.
-  bool? tahinacheckValue;
-  // State field(s) for Pastirescheck widget.
-  bool? pastirescheckValue;
-  // State field(s) for Abuaufcheck widget.
-  bool? abuaufcheckValue;
-  // State field(s) for customecheck widget.
-  bool? customecheckValue;
+  // State field(s) for nameinenglish widget.
+  FocusNode? nameinenglishFocusNode;
+  TextEditingController? nameinenglishTextController;
+  String? Function(BuildContext, String?)? nameinenglishTextControllerValidator;
+  // State field(s) for nameinarabic widget.
+  FocusNode? nameinarabicFocusNode;
+  TextEditingController? nameinarabicTextController;
+  String? Function(BuildContext, String?)? nameinarabicTextControllerValidator;
+  // Model for Loading component.
+  late LoadingModel loadingModel;
+  // Model for Erorr component.
+  late ErorrModel erorrModel;
 
   @override
-  void initState(BuildContext context) {}
+  void initState(BuildContext context) {
+    loadingModel = createModel(context, () => LoadingModel());
+    erorrModel = createModel(context, () => ErorrModel());
+  }
 
   @override
   void dispose() {
     instantTimer?.cancel();
+    nameinenglishFocusNode?.dispose();
+    nameinenglishTextController?.dispose();
+
+    nameinarabicFocusNode?.dispose();
+    nameinarabicTextController?.dispose();
+
+    loadingModel.dispose();
+    erorrModel.dispose();
   }
 
   /// Action blocks.

@@ -8,3 +8,5 @@ export '/pages/loginpage/loginpage_widget.dart' show LoginpageWidget;
 export '/pages/setting_page/setting_page_widget.dart' show SettingPageWidget;
 export '/pages/edit_print_fields/edit_print_fields_widget.dart'
     show EditPrintFieldsWidget;
+export '/pages/add_new_depart/add_new_depart_widget.dart'
+    show AddNewDepartWidget;

@@ -76,6 +76,8 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
 
     _model.passTextController ??= TextEditingController();
     _model.passFocusNode ??= FocusNode();
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
@@ -511,19 +513,28 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Container(
-                        width: 44.0,
-                        height: 44.0,
-                        decoration: BoxDecoration(
-                          color: Color(0xFF4A5056),
-                          borderRadius: BorderRadius.circular(8.0),
-                        ),
-                        child: Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
-                          child: Icon(
-                            Icons.home_rounded,
-                            color: Colors.white,
-                            size: 22.0,
+                      InkWell(
+                        splashColor: Colors.transparent,
+                        focusColor: Colors.transparent,
+                        hoverColor: Colors.transparent,
+                        highlightColor: Colors.transparent,
+                        onTap: () async {
+                          context.pushNamed(TheSelectionScreenWidget.routeName);
+                        },
+                        child: Container(
+                          width: 44.0,
+                          height: 44.0,
+                          decoration: BoxDecoration(
+                            color: Color(0xFF4A5056),
+                            borderRadius: BorderRadius.circular(8.0),
+                          ),
+                          child: Align(
+                            alignment: AlignmentDirectional(0.0, 0.0),
+                            child: Icon(
+                              Icons.home_rounded,
+                              color: Colors.white,
+                              size: 22.0,
+                            ),
                           ),
                         ),
                       ),

@@ -53,6 +53,8 @@ class _EditPrintFieldsWidgetState extends State<EditPrintFieldsWidget> {
     _model.additionalnoteTextController ??=
         TextEditingController(text: FFAppState().note);
     _model.additionalnoteFocusNode ??= FocusNode();
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override

@@ -56,6 +56,8 @@ class _TicketScreenWidgetState extends State<TicketScreenWidget> {
         startImmediately: true,
       );
     });
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override

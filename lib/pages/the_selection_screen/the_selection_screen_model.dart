@@ -176,6 +176,7 @@ class TheSelectionScreenModel
           FFAppState().peoplesize,
           FFAppState().notesize,
         );
+        loadingVisability = false;
       } else {
         await Future.delayed(
           Duration(
@@ -184,8 +185,6 @@ class TheSelectionScreenModel
         );
         loadingVisability = false;
       }
-
-      loadingVisability = false;
     } else {
       await Future.delayed(
         Duration(

@@ -141,6 +141,27 @@ flutter:
     - family: Chicken
       fonts:
         - asset: assets/fonts/Chicken.ttf
+    - family: MyFlutterApp
+      fonts:
+        - asset: assets/fonts/MyFlutterApp.ttf
+    - family: Eddys
+      fonts:
+        - asset: assets/fonts/Eddys.ttf
+    - family: AbuAUff
+      fonts:
+        - asset: assets/fonts/AbuAUff.ttf
+    - family: Abuauf
+      fonts:
+        - asset: assets/fonts/Abuauf.ttf
+    - family: Additionalkit
+      fonts:
+        - asset: assets/fonts/Additionalkit.ttf
+    - family: Juice
+      fonts:
+        - asset: assets/fonts/Juice.ttf
+    - family: Customer
+      fonts:
+        - asset: assets/fonts/Customer.ttf
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

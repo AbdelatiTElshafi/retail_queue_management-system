@@ -43,6 +43,8 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
         startImmediately: true,
       );
     });
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
@@ -1041,6 +1043,1246 @@ class _TheSelectionScreenWidgetState extends State<TheSelectionScreenWidget> {
                                                     ),
                                                     Text(
                                                       'بقالة',
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .displaySmall
+                                                          .override(
+                                                            font: GoogleFonts
+                                                                .interTight(
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w800,
+                                                              fontStyle: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .displaySmall
+                                                                  .fontStyle,
+                                                            ),
+                                                            color: Color(
+                                                                0xFF3A3F47),
+                                                            fontSize: 30.0,
+                                                            letterSpacing: 0.0,
+                                                            fontWeight:
+                                                                FontWeight.w800,
+                                                            fontStyle:
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .displaySmall
+                                                                    .fontStyle,
+                                                          ),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          if (FFAppState().eddysvis)
+                            InkWell(
+                              splashColor: Colors.transparent,
+                              focusColor: Colors.transparent,
+                              hoverColor: Colors.transparent,
+                              highlightColor: Colors.transparent,
+                              onTap: () async {
+                                await _model.wholePrint(
+                                  context,
+                                  depart: 'Eddy_Bakery',
+                                  departDisplayName:
+                                      'Eddy\'s Bakery | مخبوزات ايدي ',
+                                  departChar: 'B',
+                                );
+                              },
+                              child: Material(
+                                color: Colors.transparent,
+                                elevation: 2.0,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(12.0),
+                                ),
+                                child: Container(
+                                  height: 400.0,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(12.0),
+                                  ),
+                                  child: Padding(
+                                    padding: EdgeInsets.all(6.0),
+                                    child: Row(
+                                      mainAxisSize: MainAxisSize.max,
+                                      children: [
+                                        Container(
+                                          width: 12.0,
+                                          height: double.infinity,
+                                          decoration: BoxDecoration(
+                                            color: Color(0xFFF5A623),
+                                            borderRadius: BorderRadius.only(
+                                              topLeft: Radius.circular(12.0),
+                                              bottomRight:
+                                                  Radius.circular(12.0),
+                                            ),
+                                          ),
+                                        ),
+                                        Expanded(
+                                          child: Padding(
+                                            padding: EdgeInsets.all(12.0),
+                                            child: Row(
+                                              mainAxisSize: MainAxisSize.max,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.spaceAround,
+                                              children: [
+                                                Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          0.0, 0.0, 0.0, 20.0),
+                                                  child: Icon(
+                                                    FFIcons
+                                                        .k3407550468966315847496371088742731949076319NRemovebgPreview,
+                                                    color: Color(0xFF3A3F47),
+                                                    size: 110.0,
+                                                  ),
+                                                ),
+                                                Column(
+                                                  mainAxisSize:
+                                                      MainAxisSize.max,
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  children: [
+                                                    Text(
+                                                      'EDDY\'S Bakery',
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .displayMedium
+                                                          .override(
+                                                            font: GoogleFonts
+                                                                .interTight(
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w800,
+                                                              fontStyle: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .displayMedium
+                                                                  .fontStyle,
+                                                            ),
+                                                            color: Color(
+                                                                0xFF3A3F47),
+                                                            fontSize: 20.0,
+                                                            letterSpacing: 0.0,
+                                                            fontWeight:
+                                                                FontWeight.w800,
+                                                            fontStyle:
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .displayMedium
+                                                                    .fontStyle,
+                                                          ),
+                                                    ),
+                                                    Text(
+                                                      'مخبوزات ايدي',
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .displaySmall
+                                                          .override(
+                                                            font: GoogleFonts
+                                                                .interTight(
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w800,
+                                                              fontStyle: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .displaySmall
+                                                                  .fontStyle,
+                                                            ),
+                                                            color: Color(
+                                                                0xFF3A3F47),
+                                                            fontSize: 20.0,
+                                                            letterSpacing: 0.0,
+                                                            fontWeight:
+                                                                FontWeight.w800,
+                                                            fontStyle:
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .displaySmall
+                                                                    .fontStyle,
+                                                          ),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          if (FFAppState().freshvegvis)
+                            InkWell(
+                              splashColor: Colors.transparent,
+                              focusColor: Colors.transparent,
+                              hoverColor: Colors.transparent,
+                              highlightColor: Colors.transparent,
+                              onTap: () async {
+                                await _model.wholePrint(
+                                  context,
+                                  depart: 'Fresh_Vegetables',
+                                  departDisplayName:
+                                      'Fresh Vegetables | خضروات طازجة',
+                                  departChar: 'G',
+                                );
+                              },
+                              child: Material(
+                                color: Colors.transparent,
+                                elevation: 2.0,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(12.0),
+                                ),
+                                child: Container(
+                                  height: 400.0,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(12.0),
+                                  ),
+                                  child: Padding(
+                                    padding: EdgeInsets.all(6.0),
+                                    child: Row(
+                                      mainAxisSize: MainAxisSize.max,
+                                      children: [
+                                        Container(
+                                          width: 12.0,
+                                          height: double.infinity,
+                                          decoration: BoxDecoration(
+                                            color: Color(0xFFF5A623),
+                                            borderRadius: BorderRadius.only(
+                                              topLeft: Radius.circular(12.0),
+                                              bottomRight:
+                                                  Radius.circular(12.0),
+                                            ),
+                                          ),
+                                        ),
+                                        Expanded(
+                                          child: Padding(
+                                            padding: EdgeInsets.all(12.0),
+                                            child: Row(
+                                              mainAxisSize: MainAxisSize.max,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.spaceAround,
+                                              children: [
+                                                Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          0.0, 0.0, 0.0, 20.0),
+                                                  child: Icon(
+                                                    FFIcons.kvegetable,
+                                                    color: Color(0xFF3A3F47),
+                                                    size: 85.0,
+                                                  ),
+                                                ),
+                                                Column(
+                                                  mainAxisSize:
+                                                      MainAxisSize.max,
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  children: [
+                                                    Text(
+                                                      'Fresh Vegetables',
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .displayMedium
+                                                          .override(
+                                                            font: GoogleFonts
+                                                                .interTight(
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w800,
+                                                              fontStyle: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .displayMedium
+                                                                  .fontStyle,
+                                                            ),
+                                                            color: Color(
+                                                                0xFF3A3F47),
+                                                            fontSize: 20.0,
+                                                            letterSpacing: 0.0,
+                                                            fontWeight:
+                                                                FontWeight.w800,
+                                                            fontStyle:
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .displayMedium
+                                                                    .fontStyle,
+                                                          ),
+                                                    ),
+                                                    Text(
+                                                      'خضراوات طازجة',
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .displaySmall
+                                                          .override(
+                                                            font: GoogleFonts
+                                                                .interTight(
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w800,
+                                                              fontStyle: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .displaySmall
+                                                                  .fontStyle,
+                                                            ),
+                                                            color: Color(
+                                                                0xFF3A3F47),
+                                                            fontSize: 20.0,
+                                                            letterSpacing: 0.0,
+                                                            fontWeight:
+                                                                FontWeight.w800,
+                                                            fontStyle:
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .displaySmall
+                                                                    .fontStyle,
+                                                          ),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          if (FFAppState().freshvegvis)
+                            InkWell(
+                              splashColor: Colors.transparent,
+                              focusColor: Colors.transparent,
+                              hoverColor: Colors.transparent,
+                              highlightColor: Colors.transparent,
+                              onTap: () async {
+                                await _model.wholePrint(
+                                  context,
+                                  depart: 'Frozen_Vegetables',
+                                  departDisplayName:
+                                      'Frozen Vegetables | خضروات مجمدة',
+                                  departChar: 'G',
+                                );
+                              },
+                              child: Material(
+                                color: Colors.transparent,
+                                elevation: 2.0,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(12.0),
+                                ),
+                                child: Container(
+                                  height: 400.0,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(12.0),
+                                  ),
+                                  child: Padding(
+                                    padding: EdgeInsets.all(6.0),
+                                    child: Row(
+                                      mainAxisSize: MainAxisSize.max,
+                                      children: [
+                                        Container(
+                                          width: 12.0,
+                                          height: double.infinity,
+                                          decoration: BoxDecoration(
+                                            color: Color(0xFFF5A623),
+                                            borderRadius: BorderRadius.only(
+                                              topLeft: Radius.circular(12.0),
+                                              bottomRight:
+                                                  Radius.circular(12.0),
+                                            ),
+                                          ),
+                                        ),
+                                        Expanded(
+                                          child: Padding(
+                                            padding: EdgeInsets.all(12.0),
+                                            child: Row(
+                                              mainAxisSize: MainAxisSize.max,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.spaceAround,
+                                              children: [
+                                                Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          0.0, 0.0, 0.0, 20.0),
+                                                  child: Icon(
+                                                    FFIcons.kfrozenGoods,
+                                                    color: Color(0xFF3A3F47),
+                                                    size: 70.0,
+                                                  ),
+                                                ),
+                                                Column(
+                                                  mainAxisSize:
+                                                      MainAxisSize.max,
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  children: [
+                                                    Text(
+                                                      'Frozen Vegetables',
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .displayMedium
+                                                          .override(
+                                                            font: GoogleFonts
+                                                                .interTight(
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w800,
+                                                              fontStyle: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .displayMedium
+                                                                  .fontStyle,
+                                                            ),
+                                                            color: Color(
+                                                                0xFF3A3F47),
+                                                            fontSize: 20.0,
+                                                            letterSpacing: 0.0,
+                                                            fontWeight:
+                                                                FontWeight.w800,
+                                                            fontStyle:
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .displayMedium
+                                                                    .fontStyle,
+                                                          ),
+                                                    ),
+                                                    Text(
+                                                      'خضراوات مجمدة',
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .displaySmall
+                                                          .override(
+                                                            font: GoogleFonts
+                                                                .interTight(
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w800,
+                                                              fontStyle: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .displaySmall
+                                                                  .fontStyle,
+                                                            ),
+                                                            color: Color(
+                                                                0xFF3A3F47),
+                                                            fontSize: 20.0,
+                                                            letterSpacing: 0.0,
+                                                            fontWeight:
+                                                                FontWeight.w800,
+                                                            fontStyle:
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .displaySmall
+                                                                    .fontStyle,
+                                                          ),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          if (FFAppState().Freshjuicevis)
+                            InkWell(
+                              splashColor: Colors.transparent,
+                              focusColor: Colors.transparent,
+                              hoverColor: Colors.transparent,
+                              highlightColor: Colors.transparent,
+                              onTap: () async {
+                                await _model.wholePrint(
+                                  context,
+                                  depart: 'Fresh_Juice',
+                                  departDisplayName:
+                                      'Fresh Juice | عصائر طازجة',
+                                  departChar: 'G',
+                                );
+                              },
+                              child: Material(
+                                color: Colors.transparent,
+                                elevation: 2.0,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(12.0),
+                                ),
+                                child: Container(
+                                  height: 400.0,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(12.0),
+                                  ),
+                                  child: Padding(
+                                    padding: EdgeInsets.all(6.0),
+                                    child: Row(
+                                      mainAxisSize: MainAxisSize.max,
+                                      children: [
+                                        Container(
+                                          width: 12.0,
+                                          height: double.infinity,
+                                          decoration: BoxDecoration(
+                                            color: Color(0xFFF5A623),
+                                            borderRadius: BorderRadius.only(
+                                              topLeft: Radius.circular(12.0),
+                                              bottomRight:
+                                                  Radius.circular(12.0),
+                                            ),
+                                          ),
+                                        ),
+                                        Expanded(
+                                          child: Padding(
+                                            padding: EdgeInsets.all(12.0),
+                                            child: Row(
+                                              mainAxisSize: MainAxisSize.max,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.spaceAround,
+                                              children: [
+                                                Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          0.0, 0.0, 0.0, 20.0),
+                                                  child: Icon(
+                                                    FFIcons.kjuice,
+                                                    color: Color(0xFF3A3F47),
+                                                    size: 85.0,
+                                                  ),
+                                                ),
+                                                Column(
+                                                  mainAxisSize:
+                                                      MainAxisSize.max,
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  children: [
+                                                    Text(
+                                                      'Fresh Juice',
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .displayMedium
+                                                          .override(
+                                                            font: GoogleFonts
+                                                                .interTight(
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w800,
+                                                              fontStyle: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .displayMedium
+                                                                  .fontStyle,
+                                                            ),
+                                                            color: Color(
+                                                                0xFF3A3F47),
+                                                            fontSize: 30.0,
+                                                            letterSpacing: 0.0,
+                                                            fontWeight:
+                                                                FontWeight.w800,
+                                                            fontStyle:
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .displayMedium
+                                                                    .fontStyle,
+                                                          ),
+                                                    ),
+                                                    Text(
+                                                      'عصائر طازجة',
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .displaySmall
+                                                          .override(
+                                                            font: GoogleFonts
+                                                                .interTight(
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w800,
+                                                              fontStyle: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .displaySmall
+                                                                  .fontStyle,
+                                                            ),
+                                                            color: Color(
+                                                                0xFF3A3F47),
+                                                            fontSize: 30.0,
+                                                            letterSpacing: 0.0,
+                                                            fontWeight:
+                                                                FontWeight.w800,
+                                                            fontStyle:
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .displaySmall
+                                                                    .fontStyle,
+                                                          ),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          if (FFAppState().Restvis)
+                            InkWell(
+                              splashColor: Colors.transparent,
+                              focusColor: Colors.transparent,
+                              hoverColor: Colors.transparent,
+                              highlightColor: Colors.transparent,
+                              onTap: () async {
+                                await _model.wholePrint(
+                                  context,
+                                  depart: 'Restaurant',
+                                  departDisplayName: 'Restaurant | المطعم',
+                                  departChar: 'G',
+                                );
+                              },
+                              child: Material(
+                                color: Colors.transparent,
+                                elevation: 2.0,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(12.0),
+                                ),
+                                child: Container(
+                                  height: 400.0,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(12.0),
+                                  ),
+                                  child: Padding(
+                                    padding: EdgeInsets.all(6.0),
+                                    child: Row(
+                                      mainAxisSize: MainAxisSize.max,
+                                      children: [
+                                        Container(
+                                          width: 12.0,
+                                          height: double.infinity,
+                                          decoration: BoxDecoration(
+                                            color: Color(0xFFF5A623),
+                                            borderRadius: BorderRadius.only(
+                                              topLeft: Radius.circular(12.0),
+                                              bottomRight:
+                                                  Radius.circular(12.0),
+                                            ),
+                                          ),
+                                        ),
+                                        Expanded(
+                                          child: Padding(
+                                            padding: EdgeInsets.all(12.0),
+                                            child: Row(
+                                              mainAxisSize: MainAxisSize.max,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.spaceAround,
+                                              children: [
+                                                Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          0.0, 0.0, 0.0, 20.0),
+                                                  child: Icon(
+                                                    FFIcons.krestaurant,
+                                                    color: Color(0xFF3A3F47),
+                                                    size: 85.0,
+                                                  ),
+                                                ),
+                                                Column(
+                                                  mainAxisSize:
+                                                      MainAxisSize.max,
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  children: [
+                                                    Text(
+                                                      'Restaurant',
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .displayMedium
+                                                          .override(
+                                                            font: GoogleFonts
+                                                                .interTight(
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w800,
+                                                              fontStyle: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .displayMedium
+                                                                  .fontStyle,
+                                                            ),
+                                                            color: Color(
+                                                                0xFF3A3F47),
+                                                            fontSize: 30.0,
+                                                            letterSpacing: 0.0,
+                                                            fontWeight:
+                                                                FontWeight.w800,
+                                                            fontStyle:
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .displayMedium
+                                                                    .fontStyle,
+                                                          ),
+                                                    ),
+                                                    Text(
+                                                      'المطعم',
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .displaySmall
+                                                          .override(
+                                                            font: GoogleFonts
+                                                                .interTight(
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w800,
+                                                              fontStyle: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .displaySmall
+                                                                  .fontStyle,
+                                                            ),
+                                                            color: Color(
+                                                                0xFF3A3F47),
+                                                            fontSize: 30.0,
+                                                            letterSpacing: 0.0,
+                                                            fontWeight:
+                                                                FontWeight.w800,
+                                                            fontStyle:
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .displaySmall
+                                                                    .fontStyle,
+                                                          ),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          if (FFAppState().Tahinivis)
+                            InkWell(
+                              splashColor: Colors.transparent,
+                              focusColor: Colors.transparent,
+                              hoverColor: Colors.transparent,
+                              highlightColor: Colors.transparent,
+                              onTap: () async {
+                                await _model.wholePrint(
+                                  context,
+                                  depart: 'Tahini',
+                                  departDisplayName: 'Tahini | الطحينة',
+                                  departChar: 'G',
+                                );
+                              },
+                              child: Material(
+                                color: Colors.transparent,
+                                elevation: 2.0,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(12.0),
+                                ),
+                                child: Container(
+                                  height: 400.0,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(12.0),
+                                  ),
+                                  child: Padding(
+                                    padding: EdgeInsets.all(6.0),
+                                    child: Row(
+                                      mainAxisSize: MainAxisSize.max,
+                                      children: [
+                                        Container(
+                                          width: 12.0,
+                                          height: double.infinity,
+                                          decoration: BoxDecoration(
+                                            color: Color(0xFFF5A623),
+                                            borderRadius: BorderRadius.only(
+                                              topLeft: Radius.circular(12.0),
+                                              bottomRight:
+                                                  Radius.circular(12.0),
+                                            ),
+                                          ),
+                                        ),
+                                        Expanded(
+                                          child: Padding(
+                                            padding: EdgeInsets.all(12.0),
+                                            child: Row(
+                                              mainAxisSize: MainAxisSize.max,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.spaceAround,
+                                              children: [
+                                                Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          0.0, 0.0, 0.0, 20.0),
+                                                  child: Icon(
+                                                    FFIcons.ktahini,
+                                                    color: Color(0xFF3A3F47),
+                                                    size: 110.0,
+                                                  ),
+                                                ),
+                                                Column(
+                                                  mainAxisSize:
+                                                      MainAxisSize.max,
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  children: [
+                                                    Text(
+                                                      'Tahini',
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .displayMedium
+                                                          .override(
+                                                            font: GoogleFonts
+                                                                .interTight(
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w800,
+                                                              fontStyle: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .displayMedium
+                                                                  .fontStyle,
+                                                            ),
+                                                            color: Color(
+                                                                0xFF3A3F47),
+                                                            fontSize: 30.0,
+                                                            letterSpacing: 0.0,
+                                                            fontWeight:
+                                                                FontWeight.w800,
+                                                            fontStyle:
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .displayMedium
+                                                                    .fontStyle,
+                                                          ),
+                                                    ),
+                                                    Text(
+                                                      'الطحينة',
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .displaySmall
+                                                          .override(
+                                                            font: GoogleFonts
+                                                                .interTight(
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w800,
+                                                              fontStyle: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .displaySmall
+                                                                  .fontStyle,
+                                                            ),
+                                                            color: Color(
+                                                                0xFF3A3F47),
+                                                            fontSize: 30.0,
+                                                            letterSpacing: 0.0,
+                                                            fontWeight:
+                                                                FontWeight.w800,
+                                                            fontStyle:
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .displaySmall
+                                                                    .fontStyle,
+                                                          ),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          if (FFAppState().Pastriesvis)
+                            InkWell(
+                              splashColor: Colors.transparent,
+                              focusColor: Colors.transparent,
+                              hoverColor: Colors.transparent,
+                              highlightColor: Colors.transparent,
+                              onTap: () async {
+                                await _model.wholePrint(
+                                  context,
+                                  depart: 'Pastries',
+                                  departDisplayName: 'Pastries | حلويات',
+                                  departChar: 'G',
+                                );
+                              },
+                              child: Material(
+                                color: Colors.transparent,
+                                elevation: 2.0,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(12.0),
+                                ),
+                                child: Container(
+                                  height: 400.0,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(12.0),
+                                  ),
+                                  child: Padding(
+                                    padding: EdgeInsets.all(6.0),
+                                    child: Row(
+                                      mainAxisSize: MainAxisSize.max,
+                                      children: [
+                                        Container(
+                                          width: 12.0,
+                                          height: double.infinity,
+                                          decoration: BoxDecoration(
+                                            color: Color(0xFFF5A623),
+                                            borderRadius: BorderRadius.only(
+                                              topLeft: Radius.circular(12.0),
+                                              bottomRight:
+                                                  Radius.circular(12.0),
+                                            ),
+                                          ),
+                                        ),
+                                        Expanded(
+                                          child: Padding(
+                                            padding: EdgeInsets.all(12.0),
+                                            child: Row(
+                                              mainAxisSize: MainAxisSize.max,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.spaceAround,
+                                              children: [
+                                                Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          0.0, 0.0, 0.0, 20.0),
+                                                  child: Icon(
+                                                    FFIcons.kcupcake,
+                                                    color: Color(0xFF3A3F47),
+                                                    size: 110.0,
+                                                  ),
+                                                ),
+                                                Column(
+                                                  mainAxisSize:
+                                                      MainAxisSize.max,
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  children: [
+                                                    Text(
+                                                      'Pastries',
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .displayMedium
+                                                          .override(
+                                                            font: GoogleFonts
+                                                                .interTight(
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w800,
+                                                              fontStyle: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .displayMedium
+                                                                  .fontStyle,
+                                                            ),
+                                                            color: Color(
+                                                                0xFF3A3F47),
+                                                            fontSize: 30.0,
+                                                            letterSpacing: 0.0,
+                                                            fontWeight:
+                                                                FontWeight.w800,
+                                                            fontStyle:
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .displayMedium
+                                                                    .fontStyle,
+                                                          ),
+                                                    ),
+                                                    Text(
+                                                      'حلويات',
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .displaySmall
+                                                          .override(
+                                                            font: GoogleFonts
+                                                                .interTight(
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w800,
+                                                              fontStyle: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .displaySmall
+                                                                  .fontStyle,
+                                                            ),
+                                                            color: Color(
+                                                                0xFF3A3F47),
+                                                            fontSize: 30.0,
+                                                            letterSpacing: 0.0,
+                                                            fontWeight:
+                                                                FontWeight.w800,
+                                                            fontStyle:
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .displaySmall
+                                                                    .fontStyle,
+                                                          ),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          if (FFAppState().AbuAufvis)
+                            InkWell(
+                              splashColor: Colors.transparent,
+                              focusColor: Colors.transparent,
+                              hoverColor: Colors.transparent,
+                              highlightColor: Colors.transparent,
+                              onTap: () async {
+                                await _model.wholePrint(
+                                  context,
+                                  depart: 'Abuauf',
+                                  departDisplayName: 'Abu Auf | ابو عوف',
+                                  departChar: 'G',
+                                );
+                              },
+                              child: Material(
+                                color: Colors.transparent,
+                                elevation: 2.0,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(12.0),
+                                ),
+                                child: Container(
+                                  height: 400.0,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(12.0),
+                                  ),
+                                  child: Padding(
+                                    padding: EdgeInsets.all(6.0),
+                                    child: Row(
+                                      mainAxisSize: MainAxisSize.max,
+                                      children: [
+                                        Container(
+                                          width: 12.0,
+                                          height: double.infinity,
+                                          decoration: BoxDecoration(
+                                            color: Color(0xFFF5A623),
+                                            borderRadius: BorderRadius.only(
+                                              topLeft: Radius.circular(12.0),
+                                              bottomRight:
+                                                  Radius.circular(12.0),
+                                            ),
+                                          ),
+                                        ),
+                                        Expanded(
+                                          child: Padding(
+                                            padding: EdgeInsets.all(12.0),
+                                            child: Row(
+                                              mainAxisSize: MainAxisSize.max,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.spaceAround,
+                                              children: [
+                                                Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(0.0, 0.0, 100.0,
+                                                          20.0),
+                                                  child: Icon(
+                                                    FFIcons
+                                                        .kimageRemovebgPreview1,
+                                                    color: Color(0xFF3A3F47),
+                                                    size: 40.0,
+                                                  ),
+                                                ),
+                                                Column(
+                                                  mainAxisSize:
+                                                      MainAxisSize.max,
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  children: [
+                                                    Text(
+                                                      'AbuAuf',
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .displayMedium
+                                                          .override(
+                                                            font: GoogleFonts
+                                                                .interTight(
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w800,
+                                                              fontStyle: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .displayMedium
+                                                                  .fontStyle,
+                                                            ),
+                                                            color: Color(
+                                                                0xFF3A3F47),
+                                                            fontSize: 30.0,
+                                                            letterSpacing: 0.0,
+                                                            fontWeight:
+                                                                FontWeight.w800,
+                                                            fontStyle:
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .displayMedium
+                                                                    .fontStyle,
+                                                          ),
+                                                    ),
+                                                    Text(
+                                                      'ابو عوف',
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .displaySmall
+                                                          .override(
+                                                            font: GoogleFonts
+                                                                .interTight(
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w800,
+                                                              fontStyle: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .displaySmall
+                                                                  .fontStyle,
+                                                            ),
+                                                            color: Color(
+                                                                0xFF3A3F47),
+                                                            fontSize: 30.0,
+                                                            letterSpacing: 0.0,
+                                                            fontWeight:
+                                                                FontWeight.w800,
+                                                            fontStyle:
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .displaySmall
+                                                                    .fontStyle,
+                                                          ),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          if (FFAppState().customerVis)
+                            InkWell(
+                              splashColor: Colors.transparent,
+                              focusColor: Colors.transparent,
+                              hoverColor: Colors.transparent,
+                              highlightColor: Colors.transparent,
+                              onTap: () async {
+                                await _model.wholePrint(
+                                  context,
+                                  depart: 'customer_service',
+                                  departDisplayName:
+                                      'Customer Service  | خدمة العملاء ',
+                                  departChar: 'G',
+                                );
+                              },
+                              child: Material(
+                                color: Colors.transparent,
+                                elevation: 2.0,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(12.0),
+                                ),
+                                child: Container(
+                                  height: 400.0,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(12.0),
+                                  ),
+                                  child: Padding(
+                                    padding: EdgeInsets.all(6.0),
+                                    child: Row(
+                                      mainAxisSize: MainAxisSize.max,
+                                      children: [
+                                        Container(
+                                          width: 12.0,
+                                          height: double.infinity,
+                                          decoration: BoxDecoration(
+                                            color: Color(0xFFF5A623),
+                                            borderRadius: BorderRadius.only(
+                                              topLeft: Radius.circular(12.0),
+                                              bottomRight:
+                                                  Radius.circular(12.0),
+                                            ),
+                                          ),
+                                        ),
+                                        Expanded(
+                                          child: Padding(
+                                            padding: EdgeInsets.all(12.0),
+                                            child: Row(
+                                              mainAxisSize: MainAxisSize.max,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.spaceAround,
+                                              children: [
+                                                Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          0.0, 0.0, 0.0, 20.0),
+                                                  child: Icon(
+                                                    FFIcons.ksupport,
+                                                    color: Color(0xFF3A3F47),
+                                                    size: 80.0,
+                                                  ),
+                                                ),
+                                                Column(
+                                                  mainAxisSize:
+                                                      MainAxisSize.max,
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  children: [
+                                                    Text(
+                                                      'Customer Service',
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .displayMedium
+                                                          .override(
+                                                            font: GoogleFonts
+                                                                .interTight(
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w800,
+                                                              fontStyle: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .displayMedium
+                                                                  .fontStyle,
+                                                            ),
+                                                            color: Color(
+                                                                0xFF3A3F47),
+                                                            fontSize: 20.0,
+                                                            letterSpacing: 0.0,
+                                                            fontWeight:
+                                                                FontWeight.w800,
+                                                            fontStyle:
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .displayMedium
+                                                                    .fontStyle,
+                                                          ),
+                                                    ),
+                                                    Text(
+                                                      'خدمة العملاء',
                                                       style: FlutterFlowTheme
                                                               .of(context)
                                                           .displaySmall

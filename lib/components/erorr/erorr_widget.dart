@@ -26,6 +26,8 @@ class _ErorrWidgetState extends State<ErorrWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => ErorrModel());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
