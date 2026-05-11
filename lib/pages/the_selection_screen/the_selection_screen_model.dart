@@ -149,6 +149,7 @@ class TheSelectionScreenModel
     getServingnoApiResult =
         await TakeANumberAPIGroupGroup.getDepartServingnoCall.call(
       departName: depart,
+      serveripapi: FFAppState().Severip,
     );
 
     if ((getServingnoApiResult.succeeded ?? true)) {

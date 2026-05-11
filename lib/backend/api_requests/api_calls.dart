@@ -12,8 +12,10 @@ const _kPrivateApiFunctionName = 'ffPrivateApiCall';
 /// Start TakeANumberAPIGroup Group Code
 
 class TakeANumberAPIGroupGroup {
-  static String getBaseUrl() =>
-      'https://keyla-vistaless-henrietta.ngrok-free.dev/BackEnd_Server';
+  static String getBaseUrl({
+    String? serveripapi = '',
+  }) =>
+      'http://${serveripapi}:8002/BackEnd_Server';
   static Map<String, String> headers = {};
   static GetDepartServingnoCall getDepartServingnoCall =
       GetDepartServingnoCall();
@@ -24,8 +26,11 @@ class TakeANumberAPIGroupGroup {
 class GetDepartServingnoCall {
   Future<ApiCallResponse> call({
     String? departName = '',
+    String? serveripapi = '',
   }) async {
-    final baseUrl = TakeANumberAPIGroupGroup.getBaseUrl();
+    final baseUrl = TakeANumberAPIGroupGroup.getBaseUrl(
+      serveripapi: serveripapi,
+    );
 
     final ffApiRequestBody = '''
 {
@@ -65,8 +70,11 @@ class GetDepartServingnoCall {
 class PrintNumberCall {
   Future<ApiCallResponse> call({
     String? depart = '',
+    String? serveripapi = '',
   }) async {
-    final baseUrl = TakeANumberAPIGroupGroup.getBaseUrl();
+    final baseUrl = TakeANumberAPIGroupGroup.getBaseUrl(
+      serveripapi: serveripapi,
+    );
 
     final ffApiRequestBody = '''
 {
@@ -98,8 +106,11 @@ class PrintNumberCall {
 class ResetDepartQueueCall {
   Future<ApiCallResponse> call({
     String? depart = '',
+    String? serveripapi = '',
   }) async {
-    final baseUrl = TakeANumberAPIGroupGroup.getBaseUrl();
+    final baseUrl = TakeANumberAPIGroupGroup.getBaseUrl(
+      serveripapi: serveripapi,
+    );
 
     final ffApiRequestBody = '''
 {

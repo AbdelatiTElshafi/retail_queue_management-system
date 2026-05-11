@@ -10,3 +10,4 @@ export '/pages/edit_print_fields/edit_print_fields_widget.dart'
     show EditPrintFieldsWidget;
 export '/pages/add_new_depart/add_new_depart_widget.dart'
     show AddNewDepartWidget;
+export '/pages/edit_i_p/edit_i_p_widget.dart' show EditIPWidget;

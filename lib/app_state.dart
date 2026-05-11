@@ -134,6 +134,9 @@ class FFAppState extends ChangeNotifier {
     _safeInit(() {
       _customerVis = prefs.getBool('ff_customerVis') ?? _customerVis;
     });
+    _safeInit(() {
+      _Severip = prefs.getString('ff_Severip') ?? _Severip;
+    });
   }
 
   void update(VoidCallback callback) {
@@ -241,7 +244,7 @@ class FFAppState extends ChangeNotifier {
     prefs.setBool('ff_grocerycheck', value);
   }
 
-  String _branchnamestate = '';
+  String _branchnamestate = 'مدينة بدر';
   String get branchnamestate => _branchnamestate;
   set branchnamestate(String value) {
     _branchnamestate = value;
@@ -255,42 +258,42 @@ class FFAppState extends ChangeNotifier {
     prefs.setString('ff_note', value);
   }
 
-  int _branchsize = 0;
+  int _branchsize = 75;
   int get branchsize => _branchsize;
   set branchsize(int value) {
     _branchsize = value;
     prefs.setInt('ff_branchsize', value);
   }
 
-  int _dpetsize = 0;
+  int _dpetsize = 60;
   int get dpetsize => _dpetsize;
   set dpetsize(int value) {
     _dpetsize = value;
     prefs.setInt('ff_dpetsize', value);
   }
 
-  int _datesize = 0;
+  int _datesize = 25;
   int get datesize => _datesize;
   set datesize(int value) {
     _datesize = value;
     prefs.setInt('ff_datesize', value);
   }
 
-  int _ticketsize = 0;
+  int _ticketsize = 100;
   int get ticketsize => _ticketsize;
   set ticketsize(int value) {
     _ticketsize = value;
     prefs.setInt('ff_ticketsize', value);
   }
 
-  int _peoplesize = 0;
+  int _peoplesize = 30;
   int get peoplesize => _peoplesize;
   set peoplesize(int value) {
     _peoplesize = value;
     prefs.setInt('ff_peoplesize', value);
   }
 
-  int _notesize = 0;
+  int _notesize = 25;
   int get notesize => _notesize;
   set notesize(int value) {
     _notesize = value;
@@ -420,6 +423,13 @@ class FFAppState extends ChangeNotifier {
   set customerVis(bool value) {
     _customerVis = value;
     prefs.setBool('ff_customerVis', value);
+  }
+
+  String _Severip = '10.0.48.218';
+  String get Severip => _Severip;
+  set Severip(String value) {
+    _Severip = value;
+    prefs.setString('ff_Severip', value);
   }
 }
 

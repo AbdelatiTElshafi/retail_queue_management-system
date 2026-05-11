@@ -102,6 +102,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: AddNewDepartWidget.routeName,
           path: AddNewDepartWidget.routePath,
           builder: (context, params) => AddNewDepartWidget(),
+        ),
+        FFRoute(
+          name: EditIPWidget.routeName,
+          path: EditIPWidget.routePath,
+          builder: (context, params) => EditIPWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

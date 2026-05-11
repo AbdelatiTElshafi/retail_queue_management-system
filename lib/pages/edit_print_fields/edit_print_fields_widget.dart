@@ -46,8 +46,11 @@ class _EditPrintFieldsWidgetState extends State<EditPrintFieldsWidget> {
       );
     });
 
-    _model.branchnameTextController ??=
-        TextEditingController(text: FFAppState().branchnamestate);
+    _model.branchnameTextController ??= TextEditingController(
+        text: valueOrDefault<String>(
+      FFAppState().branchnamestate,
+      'مدينة بدر',
+    ));
     _model.branchnameFocusNode ??= FocusNode();
 
     _model.additionalnoteTextController ??=
@@ -497,7 +500,10 @@ class _EditPrintFieldsWidgetState extends State<EditPrintFieldsWidget> {
                                               ),
                                               count: _model
                                                       .branchsizecountValue ??=
-                                                  FFAppState().branchsize,
+                                                  valueOrDefault<int>(
+                                                FFAppState().branchsize,
+                                                75,
+                                              ),
                                               updateCount: (count) =>
                                                   safeSetState(() => _model
                                                           .branchsizecountValue =
@@ -652,7 +658,10 @@ class _EditPrintFieldsWidgetState extends State<EditPrintFieldsWidget> {
                                               ),
                                               count: _model
                                                       .deptsizecounterValue ??=
-                                                  FFAppState().dpetsize,
+                                                  valueOrDefault<int>(
+                                                FFAppState().dpetsize,
+                                                60,
+                                              ),
                                               updateCount: (count) =>
                                                   safeSetState(() => _model
                                                           .deptsizecounterValue =
@@ -807,7 +816,10 @@ class _EditPrintFieldsWidgetState extends State<EditPrintFieldsWidget> {
                                               ),
                                               count: _model
                                                       .datesizecounterValue ??=
-                                                  FFAppState().datesize,
+                                                  valueOrDefault<int>(
+                                                FFAppState().datesize,
+                                                25,
+                                              ),
                                               updateCount: (count) =>
                                                   safeSetState(() => _model
                                                           .datesizecounterValue =
@@ -967,7 +979,10 @@ class _EditPrintFieldsWidgetState extends State<EditPrintFieldsWidget> {
                                               ),
                                               count: _model
                                                       .ticketsizecounterValue ??=
-                                                  FFAppState().ticketsize,
+                                                  valueOrDefault<int>(
+                                                FFAppState().ticketsize,
+                                                100,
+                                              ),
                                               updateCount: (count) =>
                                                   safeSetState(() => _model
                                                           .ticketsizecounterValue =
@@ -1122,7 +1137,10 @@ class _EditPrintFieldsWidgetState extends State<EditPrintFieldsWidget> {
                                               ),
                                               count: _model
                                                       .peoplesizecounterValue ??=
-                                                  FFAppState().peoplesize,
+                                                  valueOrDefault<int>(
+                                                FFAppState().peoplesize,
+                                                30,
+                                              ),
                                               updateCount: (count) =>
                                                   safeSetState(() => _model
                                                           .peoplesizecounterValue =
@@ -1277,7 +1295,10 @@ class _EditPrintFieldsWidgetState extends State<EditPrintFieldsWidget> {
                                               ),
                                               count: _model
                                                       .notesizecounterValue ??=
-                                                  FFAppState().notesize,
+                                                  valueOrDefault<int>(
+                                                FFAppState().notesize,
+                                                25,
+                                              ),
                                               updateCount: (count) =>
                                                   safeSetState(() => _model
                                                           .notesizecounterValue =
